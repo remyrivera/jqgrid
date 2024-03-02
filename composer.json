@@ -2,6 +2,7 @@
     "name": "rivcar/jqgrid",
     "description": "Grilla para Laravel",
     "type": "library",
+	"version": "1.0.0",
     "authors": [
         {
             "name": "Remy Rivera Rivera",
