@@ -1,8 +1,8 @@
 <?php
 namespace rivcar\jqGrid;
 use rivcar\jqgrid\jqGrid;
-use tecnickcom\tcpdf\TCPDF;
-use tecnickcom\tcpdf\TCPDF_COLORS;
+use rivcar\tcpdf\TCPDF;
+use rivcar\tcpdf\TCPDF_COLORS;
 
 ${"GLOBALS"}["xwprfqtb"] = "end";
 ${"GLOBALS"}["fyfcebgrkl"] = "maxColumn";
