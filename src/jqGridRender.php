@@ -1,0 +1,414 @@
+<?php
+namespace rivcar\jqGrid;
+use rivcar\jqgrid\jqGridEdit;
+use rivcar\jqgrid\jqCalendar;
+use rivcar\jqgrid\jqAutocomplete;
+${"GLOBALS"}["xferpok"]="gM";${"GLOBALS"}["thwfwqdhcrjs"]="aftersave";${"GLOBALS"}["gfqwmuc"]="eurl";${"GLOBALS"}["jcpefdohbjvd"]="expdf";${"GLOBALS"}["caqeqlcivmi"]="exexcel";${"GLOBALS"}["ykiyrsvo"]="err";${"GLOBALS"}["ntjyobzi"]="tmppg";${"GLOBALS"}["kmaamigbc"]="pager";${"GLOBALS"}["djexicbwver"]="tmptbl";${"GLOBALS"}["jlocuesbh"]="tblelement";${"GLOBALS"}["epnciqebbrqe"]="createtbl";
+${"GLOBALS"}["vxtownnuw"]="oper";${"GLOBALS"}["hgmypyy"]="edt";${"GLOBALS"}["powkurbnfs"]="ed";
+${"GLOBALS"}["bjumyfbs"]="summary";${"GLOBALS"}["gmnttmrarlhl"]="cmn";${"GLOBALS"}["tmsqwmhp"]="exptype";${"GLOBALS"}["vwnabmmcbecj"]="cm";${"GLOBALS"}["qqmtybuk"]="a";${"GLOBALS"}["jpeqvlbphdiy"]="b";${"GLOBALS"}["botxdtsn"]="cmcnt";${"GLOBALS"}["tgpiunmvnr"]="position";${"GLOBALS"}["sugqvilxzbu"]="aproperties";${"GLOBALS"}["etholjgqltl"]="pk";${"GLOBALS"}["yjwdrp"]="meta";${"GLOBALS"}["jrjnkhefyfne"]="colcount";${"GLOBALS"}["jbtnwepnd"]="names";${"GLOBALS"}["glrotwrci"]="labels";
+${"GLOBALS"}["cirdsopowgr"]="s\x32";${"GLOBALS"}["qcmqyujkxww"]="method";${"GLOBALS"}["txbfdetkhoqr"]="delay";${"GLOBALS"}["wbzevdxp"]="prm";${"GLOBALS"}["lhggmlt"]="code";${"GLOBALS"}["mdbmlmkrgll"]="event";${"GLOBALS"}["tfecovefh"]="module";${"GLOBALS"}["irmsnph"]="sanitations";${"GLOBALS"}["rmvclqf"]="validations";${"GLOBALS"}["okzsalzlmy"]="rule";${"GLOBALS"}["bdeythe"]="ud";${"GLOBALS"}["cbpqmqehv"]="searching";${"GLOBALS"}["qmwtkmv"]="script";${"GLOBALS"}["twbjvgquldl"]="target";${"GLOBALS"}["plcmyruuiqs"]="colname";${"GLOBALS"}["bbebcvgeb"]="editing";${"GLOBALS"}["lfvpwlclxcr"]="options";${"GLOBALS"}["nfwlwdyis"]="url";${"GLOBALS"}["qjxsgjndu"]="v";${"GLOBALS"}["uxmkxapxbtx"]="k";${"GLOBALS"}["bxtvycsmeycp"]="delim";${"GLOBALS"}["rufnkenbjwj"]="sep";${"GLOBALS"}["jllgjvvhrkhr"]="row";${"GLOBALS"}["gwikbjqt"]="aset";${"GLOBALS"}["qedijgkjqy"]="data";
+${"GLOBALS"}["qcvxakoeic"]="prop";${"GLOBALS"}["peefnrrvl"]="s\x31";${"GLOBALS"}["smdthdygw"]="subgr";${"GLOBALS"}["mjniglwk"]="anames";${"GLOBALS"}["fnxndhqdl"]="subgridnames";${"GLOBALS"}["uleedgle"]="setval";${"GLOBALS"}["bzrfdnpm"]="mapping";${"GLOBALS"}["atieziyire"]="subparams";${"GLOBALS"}["poamvfn"]="subnames";${"GLOBALS"}["igentarj"]="suburl";${"GLOBALS"}["ejvwieqxhzfi"]="subalign";${"GLOBALS"}["gkhvlpoooy"]="subwidth";${"GLOBALS"}["tqrbdfyynhf"]="i";${"GLOBALS"}["oegidzc"]="scount";${"GLOBALS"}["fwnhifbdp"]="newurl";${"GLOBALS"}["bjoypxcinjl"]="aoptions";${"GLOBALS"}["ekzdsgbfhm"]="key";
+class jqGridRender extends jqGridEdit
+{
+	protected$gridOptions=array("hoverrows"=>false,"viewrecords"=>true,"jsonReader"=>array("repeatitems"=>false,"subgrid"=>array("repeatitems"=>false)),"xmlReader"=>array("repeatitems"=>false,"subgrid"=>array("repeatitems"=>false)),"gridview"=>true);public$navigator=false;public$export=true;public$currentHidden=false;public$toolbarfilter=false;public$inlineNav=false;public$sharedEditOptions=false;public$sharedAddOptions=false;public$sharedDelOptions=false;protected$navOptions=array("edit"=>true,"add"=>true,"del"=>true,"search"=>true,"refresh"=>true,"view"=>false,"excel"=>true,"pdf"=>false,"csv"=>false,"columns"=>false);protected$editOptions=array("drag"=>true,"resize"=>true,"closeOnEscape"=>true,"dataheight"=>150,"errorTextFormat"=>"js:function(r){ return r.responseText;}");protected$addOptions=array("drag"=>true,"resize"=>true,"closeOnEscape"=>true,"dataheight"=>150,"errorTextFormat"=>"js:function(r){ return r.responseText;}");protected$viewOptions=array("drag"=>true,"resize"=>true,"closeOnEscape"=>true,"dataheight"=>150);protected$delOptions=array("errorTextFormat"=>"js:function(r){ return r.responseText;}");protected$searchOptions=array("drag"=>true,"closeAfterSearch"=>true,"multipleSearch"=>true);protected$filterOptions=array("stringResult"=>true);protected$colModel=array();protected$runSetCommands=true;protected$gridMethods=array();protected$customCode="";protected$expoptions=array("excel"=>array("caption"=>"","title"=>"Export To Excel","buttonicon"=>"ui-icon-newwin"),"pdf"=>array("caption"=>"","title"=>"Export To Pdf","buttonicon"=>"ui-icon-print"),"csv"=>array("caption"=>"","title"=>"Export To CSV","buttonicon"=>"ui-icon-document"),"columns"=>array("caption"=>"","title"=>"Visible Columns","buttonicon"=>"ui-icon-calculator","options"=>array()));protected$inlineNavOpt=array("addParams"=>array(),"editParams"=>array());public function getColModel(){return$this->colModel;}public function getGridOption($key){$ret=false;if(array_key_exists(${${"GLOBALS"}["ekzdsgbfhm"]},$this->gridOptions)){${"GLOBALS"}["jfdcdfgrfsgp"]="key";${"GLOBALS"}["yoeyfitwerjf"]="ret";${${"GLOBALS"}["yoeyfitwerjf"]}=$this->gridOptions[${${"GLOBALS"}["jfdcdfgrfsgp"]}];}return$ret;}
+	public function setGridOptions($aoptions)
+	{
+		${"GLOBALS"}["tabepuxj"]="aoptions";
+		if(is_array(${${"GLOBALS"}["tabepuxj"]}))
+		{
+			$this->gridOptions=jqGridUtils::array_extend($this->gridOptions,${${"GLOBALS"}["bjoypxcinjl"]});
+		}
+	}
+	public function setUrl($newurl)
+	{
+		if(!$this->runSetCommands)
+		{
+			return false;
+		}
+		if(strlen(${${"GLOBALS"}["fwnhifbdp"]})>0)
+		{
+			${"GLOBALS"}["cxowciydmcdp"]="newurl";
+			${"GLOBALS"}["qnhxqstwoof"]="newurl";
+			${"GLOBALS"}["lewyxzhsw"]="newurl";
+			$this->setGridOptions(array("url"=>${${"GLOBALS"}["qnhxqstwoof"]},"editurl"=>${${"GLOBALS"}["cxowciydmcdp"]},"cellurl"=>${${"GLOBALS"}["lewyxzhsw"]}));
+			return true;
+		}
+		return false;
+	}
+	public function setSubGrid($suburl='',$subnames=false,$subwidth=false,$subalign=false,$subparams=false,$mapping=false)
+	{
+		${"GLOBALS"}["pqhysasodj"]="subnames";$yaiamwpljpyu="subnames";if(!$this->runSetCommands){return false;}if(${${"GLOBALS"}["pqhysasodj"]}&&is_array(${$yaiamwpljpyu})){$mgiksijii="i";$uuzrmrthcuy="scount";${"GLOBALS"}["sjrjfuije"]="i";${"GLOBALS"}["mdenhymq"]="subnames";${${"GLOBALS"}["oegidzc"]}=count(${${"GLOBALS"}["mdenhymq"]});for(${$mgiksijii}=0;${${"GLOBALS"}["sjrjfuije"]}<${$uuzrmrthcuy};${${"GLOBALS"}["tqrbdfyynhf"]}++){$xpyvwqwrw="subwidth";if(!isset(${$xpyvwqwrw}[${${"GLOBALS"}["tqrbdfyynhf"]}])){${${"GLOBALS"}["gkhvlpoooy"]}[${${"GLOBALS"}["tqrbdfyynhf"]}]=100;}if(!isset(${${"GLOBALS"}["ejvwieqxhzfi"]}[${${"GLOBALS"}["tqrbdfyynhf"]}])){$ujegvvt="subalign";$dfzysawwmi="i";${$ujegvvt}[${$dfzysawwmi}]="center";}}$this->setGridOptions(array("gridview"=>false,"subGrid"=>true,"subGrid\x55rl"=>${${"GLOBALS"}["igentarj"]},"subGridModel"=>array(array("name"=>${${"GLOBALS"}["poamvfn"]},"width"=>${${"GLOBALS"}["gkhvlpoooy"]},"align"=>${${"GLOBALS"}["ejvwieqxhzfi"]},"params"=>${${"GLOBALS"}["atieziyire"]},"mapping"=>${${"GLOBALS"}["bzrfdnpm"]}))));return true;}return false;
+	}
+	public function setSubGridGrid($subgridurl,$subgridnames=null){if(!$this->runSetCommands){return false;}${"GLOBALS"}["csypxo"]="setval";$this->setGridOptions(array("subGrid"=>true,"gridview"=>false));${${"GLOBALS"}["uleedgle"]}=(is_array(${${"GLOBALS"}["fnxndhqdl"]})&&count(${${"GLOBALS"}["fnxndhqdl"]})>0)?"true":"false";${"GLOBALS"}["oppjchd"]="subgr";if(${${"GLOBALS"}["csypxo"]}=="true"){${${"GLOBALS"}["mjniglwk"]}=implode(",",${${"GLOBALS"}["fnxndhqdl"]});}else{${${"GLOBALS"}["mjniglwk"]}="";}${${"GLOBALS"}["smdthdygw"]}="function(subgridid,id)\n{\n\tvar\x20data\x20\x3d {subgrid:subgridid, rowid:id}\x3b\n\tif('$setval'\x20=\x3d 'true') {\n\t\tvar anm= \x27$anames'\x3b\n\t\tanm\x20\x3d anm\x2esplit(\",\")\x3b\n\t\tvar\x20rd \x3d jQuery(this).jqGrid('getRowData', id);\n\t\tif(rd) {\n\t\t\tfor(var i\x3d\x30; i<anm.length; i++) {\n\t\t\t\tif(rd[anm[i]]) {\n\t\t\t\t\tdata[anm[i]]\x20\x3d\x20rd[anm[i]];\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\tdata = \$\x2eisFunction(this\x2ep.serializeSubGridData)?\x20this.p\x2eserializeSubGridData\x2ecall(this,\x20data)\x20:\x20data\x3b\n\x20 \x20 \$(\"\x23\x22+jQuery.jgrid.jqID(subgridid))\x2eload(\x27$subgridurl\x27,data)\x3b\n}";$this->setGridEvent("subGridRowExpanded",${${"GLOBALS"}["oppjchd"]});return true;}public function setSelect($colname,$data,$formatter=true,$editing=true,$seraching=true,$defvals=array(),$sep=":",$delim=";"){$yluehjnxdoo="goper";${${"GLOBALS"}["peefnrrvl"]}="";${${"GLOBALS"}["qcvxakoeic"]}=array();${"GLOBALS"}["odhloeepw"]="goper";${"GLOBALS"}["eirewl"]="goper";$mpzphopw="runme";$goper=$this->oper?$this->oper:"nooper";if((${${"GLOBALS"}["odhloeepw"]}=="nooper"||$goper==$this->GridParams["excel"]||${${"GLOBALS"}["eirewl"]}=="pdf"||${$yluehjnxdoo}=="csv")){${"GLOBALS"}["jcgzldf"]="runme";${${"GLOBALS"}["jcgzldf"]}=true;}else{${"GLOBALS"}["drrkshbyq"]="goper";$runme=!in_array(${${"GLOBALS"}["drrkshbyq"]},array_values($this->GridParams));}if(!$this->runSetCommands&&!$runme){return false;}if(count($this->colModel)>0&&${$mpzphopw}){$xekbvyi="data";${"GLOBALS"}["ajkimtbkl"]="data";${"GLOBALS"}["fyuosqowxho"]="defvals";$guvplu="seraching";${"GLOBALS"}["cgoulxkiusj"]="defvals";if(is_string(${${"GLOBALS"}["ajkimtbkl"]})){$blijqcujiea="aset";$gyhflqpnlh="aset";${$gyhflqpnlh}=jqGridDB::query($this->pdo,${${"GLOBALS"}["qedijgkjqy"]});if(${$blijqcujiea}){$ekuvvkxv="row";${${"GLOBALS"}["tqrbdfyynhf"]}=0;while(${$ekuvvkxv}=jqGridDB::fetch_num(${${"GLOBALS"}["gwikbjqt"]},$this->pdo)){if(${${"GLOBALS"}["tqrbdfyynhf"]}==0){$pupopn="row";$ijyxogifn="s\x31";${$ijyxogifn}.=${${"GLOBALS"}["jllgjvvhrkhr"]}[0].${${"GLOBALS"}["rufnkenbjwj"]}.${$pupopn}[1];}else{${"GLOBALS"}["eibohvgcshq"]="s\x31";$ngbfbghjppd="sep";${${"GLOBALS"}["eibohvgcshq"]}.=${${"GLOBALS"}["bxtvycsmeycp"]}.${${"GLOBALS"}["jllgjvvhrkhr"]}[0].${$ngbfbghjppd}.${${"GLOBALS"}["jllgjvvhrkhr"]}[1];}${${"GLOBALS"}["tqrbdfyynhf"]}++;}}jqGridDB::closeCursor(${${"GLOBALS"}["gwikbjqt"]});}else if(is_array(${$xekbvyi})){$dfxjekggqfe="i";${$dfxjekggqfe}=0;${"GLOBALS"}["jrbduucn"]="data";$wjqojqstrhe="v";foreach(${${"GLOBALS"}["jrbduucn"]} as${${"GLOBALS"}["uxmkxapxbtx"]}=>${$wjqojqstrhe}){$htourkc="i";${"GLOBALS"}["jvxozqvk"]="i";if(${$htourkc}==0){${${"GLOBALS"}["peefnrrvl"]}.=${${"GLOBALS"}["uxmkxapxbtx"]}.${${"GLOBALS"}["rufnkenbjwj"]}.${${"GLOBALS"}["qjxsgjndu"]};}else{$uawgxjubvmll="sep";${"GLOBALS"}["anpylk"]="s\x31";${"GLOBALS"}["uxtxlaxdj"]="k";${${"GLOBALS"}["anpylk"]}.=${${"GLOBALS"}["bxtvycsmeycp"]}.${${"GLOBALS"}["uxtxlaxdj"]}.${$uawgxjubvmll}.${${"GLOBALS"}["qjxsgjndu"]};}${${"GLOBALS"}["jvxozqvk"]}++;}}$scgwft="prop";${"GLOBALS"}["bvdfcyifg"]="editing";if(is_array(${${"GLOBALS"}["fyuosqowxho"]})&&count(${${"GLOBALS"}["cgoulxkiusj"]})>0){${"GLOBALS"}["dvctqkk"]="k";$ikbfjxq="defvals";${"GLOBALS"}["ltkdhrrcr"]="v";foreach(${$ikbfjxq} as${${"GLOBALS"}["dvctqkk"]}=>${${"GLOBALS"}["ltkdhrrcr"]}){$dqryerqortb="s1";$ovibksfac="s\x31";${$ovibksfac}=${${"GLOBALS"}["uxmkxapxbtx"]}.${${"GLOBALS"}["rufnkenbjwj"]}.${${"GLOBALS"}["qjxsgjndu"]}.${${"GLOBALS"}["bxtvycsmeycp"]}.${$dqryerqortb};}}${"GLOBALS"}["foycwbvu"]="formatter";if(${${"GLOBALS"}["bvdfcyifg"]}){${"GLOBALS"}["omfvxgkwd"]="s\x31";${"GLOBALS"}["odpcbrqbx"]="sep";${"GLOBALS"}["tliqarjon"]="delim";${${"GLOBALS"}["qcvxakoeic"]}=array_merge(${${"GLOBALS"}["qcvxakoeic"]},array("edittype"=>"select","editoptions"=>array("value"=>${${"GLOBALS"}["omfvxgkwd"]},"separator"=>${${"GLOBALS"}["odpcbrqbx"]},"delimiter"=>${${"GLOBALS"}["tliqarjon"]})));}if(${${"GLOBALS"}["foycwbvu"]}){${"GLOBALS"}["kdxquvy"]="prop";${"GLOBALS"}["jbyeoyq"]="delim";$uvrlqqmtjf="prop";${${"GLOBALS"}["kdxquvy"]}=array_merge(${$uvrlqqmtjf},array("formatter"=>"select","formatoptions"=>array("value"=>${${"GLOBALS"}["peefnrrvl"]},"separator"=>${${"GLOBALS"}["rufnkenbjwj"]},"delimiter"=>${${"GLOBALS"}["jbyeoyq"]})));}if(${$guvplu}){${"GLOBALS"}["eyypwy"]="prop";$ydwihfatt="s1";${${"GLOBALS"}["eyypwy"]}=array_merge(${${"GLOBALS"}["qcvxakoeic"]},array("stype"=>"select","searchoptions"=>array("value"=>${$ydwihfatt},"separator"=>${${"GLOBALS"}["rufnkenbjwj"]},"delimiter"=>${${"GLOBALS"}["bxtvycsmeycp"]})));}if(count(${$scgwft})>0){${"GLOBALS"}["tcvhstxf"]="colname";$this->setColProperty(${${"GLOBALS"}["tcvhstxf"]},${${"GLOBALS"}["qcvxakoeic"]});}return true;}return false;}public function setAutocomplete($colname,$target=false,$data='',$options=null,$editing=true,$searching=false){try{$cvamotkmte="ac";${"GLOBALS"}["txxlavffzev"]="colname";$ttrejynbrak="data";${$cvamotkmte}=new jqAutocomplete($this->pdo,$this->odbc);$ac->encoding=$this->encoding;if(is_string(${$ttrejynbrak})){${"GLOBALS"}["zqtllqst"]="data";$ac->SelectCommand=${${"GLOBALS"}["zqtllqst"]};${${"GLOBALS"}["nfwlwdyis"]}=$this->getGridOption("url");if(!${${"GLOBALS"}["nfwlwdyis"]}){${${"GLOBALS"}["nfwlwdyis"]}=basename(__FILE__);}$ac->setSource(${${"GLOBALS"}["nfwlwdyis"]});}else if(is_array(${${"GLOBALS"}["qedijgkjqy"]})){$ac->setSource(${${"GLOBALS"}["qedijgkjqy"]});}if(${${"GLOBALS"}["txxlavffzev"]}){if($ac->isNotACQuery()){${"GLOBALS"}["skdeennr"]="options";if(is_array(${${"GLOBALS"}["skdeennr"]})&&count(${${"GLOBALS"}["lfvpwlclxcr"]})>0){if(isset(${${"GLOBALS"}["lfvpwlclxcr"]}["cache"])){$qouirlmqjr="options";$ac->cache=${$qouirlmqjr}["cache"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["cache"]);}$ckngbygkxp="options";${"GLOBALS"}["embhjdn"]="options";$hygrmv="options";if(isset(${${"GLOBALS"}["lfvpwlclxcr"]}["search\x54ype"])){$ac->searchType=${${"GLOBALS"}["lfvpwlclxcr"]}["searchType"];$ueldkymev="options";unset(${$ueldkymev}["searchType"]);}${"GLOBALS"}["ukytmyycub"]="options";if(isset(${$ckngbygkxp}["ajaxtype"])){${"GLOBALS"}["lonezktssl"]="options";$ac->ajaxtype=${${"GLOBALS"}["lonezktssl"]}["ajaxtype"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["ajaxtype"]);}if(isset(${${"GLOBALS"}["lfvpwlclxcr"]}["scroll"])){${"GLOBALS"}["koxpnskkjl"]="options";$ac->scroll=${${"GLOBALS"}["koxpnskkjl"]}["scroll"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["scroll"]);}if(isset(${${"GLOBALS"}["embhjdn"]}["height"])){$ac->height=${${"GLOBALS"}["lfvpwlclxcr"]}["height"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["height"]);}if(isset(${$hygrmv}["itemLength"])){$qdkimttfiox="options";$ac->setLength(${${"GLOBALS"}["lfvpwlclxcr"]}["itemLength"]);unset(${$qdkimttfiox}["itemLength"]);}if(isset(${${"GLOBALS"}["lfvpwlclxcr"]}["fontsize"])){$ac->fontsize=${${"GLOBALS"}["lfvpwlclxcr"]}["fontsize"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["fontsize"]);}if(isset(${${"GLOBALS"}["lfvpwlclxcr"]}["zIndex"])){$ac->zIndex=${${"GLOBALS"}["lfvpwlclxcr"]}["zIndex"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["zIndex"]);}if(isset(${${"GLOBALS"}["ukytmyycub"]}["strictcheck"])){$ac->strictcheck=${${"GLOBALS"}["lfvpwlclxcr"]}["strictcheck"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["strictcheck"]);}$ac->setOption(${${"GLOBALS"}["lfvpwlclxcr"]});}if(${${"GLOBALS"}["bbebcvgeb"]}){$erjulbjjhs="colname";$guckguwgs="script";$ryfsnvqsm="script";${$guckguwgs}=$ac->renderAutocomplete(${${"GLOBALS"}["plcmyruuiqs"]},${${"GLOBALS"}["twbjvgquldl"]},false,false);${${"GLOBALS"}["qmwtkmv"]}=str_replace("jQuery('".${${"GLOBALS"}["plcmyruuiqs"]}."')","jQuery(el)",${${"GLOBALS"}["qmwtkmv"]});${${"GLOBALS"}["qmwtkmv"]}="set\x54imeout(function(){".${$ryfsnvqsm}."},200)\x3b";$this->setColProperty(${$erjulbjjhs},array("editoptions"=>array("dataInit"=>"js:function(el){".${${"GLOBALS"}["qmwtkmv"]}."}")));}if(${${"GLOBALS"}["cbpqmqehv"]}){${"GLOBALS"}["yxfzpz"]="script";$mxokdtdype="script";${"GLOBALS"}["gaxnhh"]="colname";$dgblqwc="script";${"GLOBALS"}["nmrholwzhm"]="colname";$ac->setOption("select","js:function(e,u){\x20\$(e.target)\x2etrigger(\x27change\x27);}");$orbxdtxaawpe="colname";${"GLOBALS"}["fdxrgqq"]="script";${$mxokdtdype}=$ac->renderAutocomplete(${${"GLOBALS"}["nmrholwzhm"]},false,false,false);${${"GLOBALS"}["yxfzpz"]}=str_replace("jQuery(\x27".${${"GLOBALS"}["gaxnhh"]}."')","jQuery(el)",${$dgblqwc});${${"GLOBALS"}["qmwtkmv"]}="set\x54imeout(function(){".${${"GLOBALS"}["fdxrgqq"]}."},100);";$this->setColProperty(${$orbxdtxaawpe},array("searchoptions"=>array("dataInit"=>"js:function(el){".${${"GLOBALS"}["qmwtkmv"]}."}")));}}else{$mwfodohjmp="options";$rloklbhmk="target";$qjufgejhtr="options";if(isset(${$mwfodohjmp}["searchType"])){${"GLOBALS"}["pxidwaocc"]="options";$ac->searchType=${${"GLOBALS"}["pxidwaocc"]}["searchType"];}if(isset(${$qjufgejhtr}["itemLength"])){$llrauqgynkbi="options";$ac->setLength(${$llrauqgynkbi}["itemLength"]);}$ac->renderAutocomplete(${${"GLOBALS"}["plcmyruuiqs"]},${$rloklbhmk},true,true,false);}}}catch(Exception$e){$e->getMessage();}}public function setDatepicker($colname,$options=null,$editing=true,$searching=true){try{$lovjlx="colname";if(${$lovjlx}){if($this->runSetCommands){$xphrzgemf="options";${"GLOBALS"}["tivauii"]="dp";${"GLOBALS"}["ivdsgbrzuut"]="colname";${"GLOBALS"}["yxjvyncihyw"]="script";${"GLOBALS"}["suuvcqwo"]="options";$zodaqkm="colname";${${"GLOBALS"}["tivauii"]}=new jqCalendar();${"GLOBALS"}["fnxafcppgto"]="editing";$nmvgdego="options";if(isset(${${"GLOBALS"}["suuvcqwo"]}["buttonIcon"])){${"GLOBALS"}["riglhdtvr"]="options";$dp->buttonIcon=${${"GLOBALS"}["riglhdtvr"]}["buttonIcon"];unset(${${"GLOBALS"}["lfvpwlclxcr"]}["buttonIcon"]);}$vrmfkeaxpw="script";if(isset(${${"GLOBALS"}["lfvpwlclxcr"]}["buttonOnly"])){$dp->buttonOnly=${${"GLOBALS"}["lfvpwlclxcr"]}["buttonOnly"];${"GLOBALS"}["xknddcso"]="options";unset(${${"GLOBALS"}["xknddcso"]}["buttonOnly"]);}if(isset(${${"GLOBALS"}["lfvpwlclxcr"]}["fontsize"])){$detfxtkp="options";$hxhcleea="options";$dp->fontsize=${$detfxtkp}["fontsize"];unset(${$hxhcleea}["fontsize"]);}$makwtrzf="script";if(is_array(${$xphrzgemf})&&count(${$nmvgdego})>0){$dp->setOption(${${"GLOBALS"}["lfvpwlclxcr"]});}if(!isset(${${"GLOBALS"}["lfvpwlclxcr"]}["dateFormat"])){$rjnqdyxme="ud";${"GLOBALS"}["fpyqktfo"]="ud";${${"GLOBALS"}["bdeythe"]}=$this->getUserDate();${$rjnqdyxme}=jqGridUtils::phpTojsDate(${${"GLOBALS"}["bdeythe"]});$dp->setOption("date\x46ormat",${${"GLOBALS"}["fpyqktfo"]});}${$vrmfkeaxpw}=$dp->renderCalendar(${$zodaqkm},false,false);${${"GLOBALS"}["qmwtkmv"]}=str_replace("jQuery('".${${"GLOBALS"}["ivdsgbrzuut"]}."')","jQuery(el)",${${"GLOBALS"}["yxjvyncihyw"]});${${"GLOBALS"}["qmwtkmv"]}="setTimeout(function(){".${$makwtrzf}."},1\x300)\x3b";if(${${"GLOBALS"}["fnxafcppgto"]}){${"GLOBALS"}["gdomflbyc"]="script";$this->setColProperty(${${"GLOBALS"}["plcmyruuiqs"]},array("editoptions"=>array("dataInit"=>"js:function(el){".${${"GLOBALS"}["gdomflbyc"]}."}")));}if(${${"GLOBALS"}["cbpqmqehv"]}){${"GLOBALS"}["lnybpevismo"]="script";$this->setColProperty(${${"GLOBALS"}["plcmyruuiqs"]},array("searchoptions"=>array("dataInit"=>"js:function(el){".${${"GLOBALS"}["lnybpevismo"]}."}")));}}}}catch(Exception$e){$e->getMessage();}}public function validationFromModel($validations=array(),$sanitations=array()){$gonvcnlfizb="key";${"GLOBALS"}["ycmedprbth"]="sanitations";foreach($this->colModel as${$gonvcnlfizb}=>${${"GLOBALS"}["okzsalzlmy"]}){$doeirmmgscn="rule";if(isset(${$doeirmmgscn}["editrules"])){$ycancyp="rule";${"GLOBALS"}["xcqhomu"]="rule";$this->validations[${$ycancyp}["name"]]=${${"GLOBALS"}["xcqhomu"]}["editrules"];}}$fjbyhgh="sanitations";if(is_array(${${"GLOBALS"}["rmvclqf"]})&&count(${${"GLOBALS"}["rmvclqf"]})>0){$this->validations=array_merge($this->validations,${${"GLOBALS"}["rmvclqf"]});}if(is_array(${${"GLOBALS"}["ycmedprbth"]})&&count(${$fjbyhgh})>0){$this->sanatations=array_merge($this->sanatations,${${"GLOBALS"}["irmsnph"]});}}public function setGridEvent($event,$code){${"GLOBALS"}["jtbjanjpzv"]="code";$nunhjp="event";${"GLOBALS"}["hqbgvd"]="event";if(!$this->runSetCommands){return false;}$kjigbd="event";${${"GLOBALS"}["hqbgvd"]}=trim(${$kjigbd});$this->gridOptions[${$nunhjp}]="js:".${${"GLOBALS"}["jtbjanjpzv"]};return true;}public function setNavOptions($module,$aoptions){${"GLOBALS"}["nytvdk"]="aoptions";$ylssxlhzvo="ret";$cjhoqlmocfd="aoptions";${"GLOBALS"}["tqxdlwfvr"]="ret";${"GLOBALS"}["bpvvkze"]="ret";$qkbujefk="ret";${"GLOBALS"}["fscjtbkj"]="ret";${${"GLOBALS"}["tqxdlwfvr"]}=false;if(!$this->runSetCommands){${"GLOBALS"}["chpvfxkile"]="ret";return${${"GLOBALS"}["chpvfxkile"]};}$rzwooovjsc="module";switch(${$rzwooovjsc}){case"navigator":$this->navOptions=array_merge($this->navOptions,${${"GLOBALS"}["nytvdk"]});${${"GLOBALS"}["bpvvkze"]}=true;break;case"add":$this->addOptions=array_merge($this->addOptions,${$cjhoqlmocfd});${$ylssxlhzvo}=true;break;case"edit":$this->editOptions=array_merge($this->editOptions,${${"GLOBALS"}["bjoypxcinjl"]});${${"GLOBALS"}["fscjtbkj"]}=true;break;case"del":$this->delOptions=array_merge($this->delOptions,${${"GLOBALS"}["bjoypxcinjl"]});$ret=true;break;case"search":$this->searchOptions=array_merge($this->searchOptions,${${"GLOBALS"}["bjoypxcinjl"]});${$qkbujefk}=true;break;case"view":$this->viewOptions=array_merge($this->viewOptions,${${"GLOBALS"}["bjoypxcinjl"]});$ret=true;break;}return$ret;}public function setNavEvent($module,$event,$code){$hwzvurwcqkik="code";$ret=false;${"GLOBALS"}["tvlvhj"]="event";${"GLOBALS"}["smmpygq"]="code";$mykovfmnwc="event";${"GLOBALS"}["tddjpityr"]="event";${"GLOBALS"}["odikxre"]="ret";${"GLOBALS"}["xzdydmpo"]="event";if(!$this->runSetCommands){return$ret;}${"GLOBALS"}["jyjprrkt"]="ret";$dbrwxilg="code";${${"GLOBALS"}["xzdydmpo"]}=trim(${${"GLOBALS"}["tvlvhj"]});switch(${${"GLOBALS"}["tfecovefh"]}){case"navigator":$this->navOptions[${${"GLOBALS"}["mdbmlmkrgll"]}]="js:".${${"GLOBALS"}["smmpygq"]};${${"GLOBALS"}["odikxre"]}=true;break;case"add":$this->addOptions[${${"GLOBALS"}["mdbmlmkrgll"]}]="js:".${${"GLOBALS"}["lhggmlt"]};$ret=true;break;case"edit":$this->editOptions[${${"GLOBALS"}["mdbmlmkrgll"]}]="js:".${$hwzvurwcqkik};${${"GLOBALS"}["jyjprrkt"]}=true;break;case"del":$this->delOptions[${${"GLOBALS"}["tddjpityr"]}]="js:".${${"GLOBALS"}["lhggmlt"]};$ret=true;break;case"search":$this->searchOptions[${$mykovfmnwc}]="js:".${${"GLOBALS"}["lhggmlt"]};$ret=true;break;case"view":$this->viewOptions[${${"GLOBALS"}["mdbmlmkrgll"]}]="js:".${$dbrwxilg};$ret=true;break;}return$ret;}public function inlineNavOptions($module,$aoptions){${"GLOBALS"}["gnakkkryem"]="ret";$jbpbpgfung="ret";$ret=false;$ptwhropekxy="ret";$oiqsfbwgqr="aoptions";$unabyyjony="aoptions";if(!$this->runSetCommands){return$ret;}${"GLOBALS"}["uaxgcly"]="module";${"GLOBALS"}["rjihvqkcwmy"]="aoptions";switch(${${"GLOBALS"}["uaxgcly"]}){case"navigator":$this->inlineNavOpt=array_merge($this->inlineNavOpt,${$oiqsfbwgqr});${$jbpbpgfung}=true;break;case"add":$this->inlineNavOpt["addParams"]=array_merge($this->inlineNavOpt["add\x50arams"],${${"GLOBALS"}["rjihvqkcwmy"]});$ret=true;break;case"edit":$this->inlineNavOpt["editParams"]=array_merge($this->inlineNavOpt["edit\x50arams"],${$unabyyjony});${${"GLOBALS"}["gnakkkryem"]}=true;break;}return${$ptwhropekxy};}public function inlineNavEvent($module,$event,$code){$sflhhddblo="ret";${$sflhhddblo}=false;$ddxzxjcnb="event";if(!$this->runSetCommands){return$ret;}$cdvewwxrhsm="event";${"GLOBALS"}["spmorrldk"]="module";${$cdvewwxrhsm}=trim(${$ddxzxjcnb});if(${${"GLOBALS"}["spmorrldk"]}=="add"){${"GLOBALS"}["arqsuzgrlsw"]="ret";$this->inlineNavOpt["addParams"][${${"GLOBALS"}["mdbmlmkrgll"]}]="js:".${${"GLOBALS"}["lhggmlt"]};${${"GLOBALS"}["arqsuzgrlsw"]}=true;}else if(${${"GLOBALS"}["tfecovefh"]}=="edit"){${"GLOBALS"}["udkxwvjiwop"]="code";$this->inlineNavOpt["edit\x50arams"][${${"GLOBALS"}["mdbmlmkrgll"]}]="js:".${${"GLOBALS"}["udkxwvjiwop"]};$ret=true;}return$ret;}public function getInlineOptions(){return$this->inlineNavOpt;}public function setFilterOptions($aoptions){if($this->runSetCommands){${"GLOBALS"}["jgjlypdhofi"]="aoptions";if(is_array(${${"GLOBALS"}["jgjlypdhofi"]})){$this->filterOptions=jqGridUtils::array_extend($this->filterOptions,${${"GLOBALS"}["bjoypxcinjl"]});}}}public function callGridMethod($grid,$method,array$aoptions=null,$delay=0){if($this->runSetCommands){$gylpajpdttck="prm";$oquldphsx="s1";${"GLOBALS"}["ktmqgucep"]="s2";${$gylpajpdttck}="";$kpcbksvrkssy="grid";${"GLOBALS"}["crkuyork"]="grid";if(is_array(${${"GLOBALS"}["bjoypxcinjl"]})&&count(${${"GLOBALS"}["bjoypxcinjl"]})>0){${${"GLOBALS"}["wbzevdxp"]}=jqGridUtils::encode(${${"GLOBALS"}["bjoypxcinjl"]});$ubvqqwj="prm";${"GLOBALS"}["nnvhky"]="prm";${${"GLOBALS"}["wbzevdxp"]}=substr(${${"GLOBALS"}["wbzevdxp"]},1);${$ubvqqwj}=substr(${${"GLOBALS"}["nnvhky"]},0,-1);${${"GLOBALS"}["wbzevdxp"]}=",".${${"GLOBALS"}["wbzevdxp"]};}${"GLOBALS"}["mmjjnt"]="grid";if(strpos(${${"GLOBALS"}["mmjjnt"]},"\x23")===false||strpos(${$kpcbksvrkssy},"\x23")>0){$goueubkbx="grid";$mwlqvmuprdn="grid";${$mwlqvmuprdn}="#".${$goueubkbx};}${${"GLOBALS"}["peefnrrvl"]}="";${${"GLOBALS"}["ktmqgucep"]}="";if(${${"GLOBALS"}["txbfdetkhoqr"]}>0){${"GLOBALS"}["soglrcb"]="s\x31";${"GLOBALS"}["xytpsqk"]="s\x32";${"GLOBALS"}["tabpza"]="delay";${${"GLOBALS"}["soglrcb"]}="setTimeout(function()\x20{\x20";${${"GLOBALS"}["xytpsqk"]}="},\x20".${${"GLOBALS"}["tabpza"]}.");";}$this->gridMethods[]=${$oquldphsx}."jQuery('".${${"GLOBALS"}["crkuyork"]}."').jqGrid('".${${"GLOBALS"}["qcmqyujkxww"]}."\x27".${${"GLOBALS"}["wbzevdxp"]}.");".${${"GLOBALS"}["cirdsopowgr"]};}}public function setJSCode($code){if($this->runSetCommands){$this->customCode="js:".${${"GLOBALS"}["lhggmlt"]};}}
+	public function setColModel(array$model=null,array$params=null,array$labels=null)
+	{
+		$awdlndblu="goper";
+		$goper=$this->oper?$this->oper:"nooper";
+		if(($goper=="nooper"||$goper==$this->GridParams["excel"]||$goper=="pdf"||${$awdlndblu}=="csv"))
+		{
+			$runme=true;
+		}
+		else
+		{
+			${"GLOBALS"}["jtrliqduqlj"]="goper";
+			${"GLOBALS"}["rmgsstzsc"]="runme";
+			${${"GLOBALS"}["rmgsstzsc"]}=!in_array(${${"GLOBALS"}["jtrliqduqlj"]},array_values($this->GridParams))||$this->serverValidate;
+		}
+		if($runme)
+		{
+			$tsdtgodx="model";
+			if(is_array($model)&&count(${$tsdtgodx})>0)
+			{
+				$this->colModel=$model;
+				if($this->primaryKey)
+				{
+					$this->setColProperty($this->primaryKey,array("key"=>true));
+				}
+				return true;
+			}
+			$sql=null;
+			$sqlId=$this->_setSQL();
+			if(!$sqlId)
+			{
+				return false;
+			}
+			$nof=($this->dbtype=="sqlite"||$this->dbtype=="db\x32"||$this->dbtype=="array"||$this->dbtype=="mongodb"||$this->dbtype=="adodb")?1:0;
+			$ret=$this->execute($sqlId,$params,$sql,true,$nof,0);
+			if($ret)
+			{
+				$gwhlycqcppg="pk";
+				${"GLOBALS"}["nuoodiloj"]="pk";
+				${"GLOBALS"}["cymmhezpjpr"]="sql";
+				${"GLOBALS"}["lglqwkmbjk"]="i";
+				$gqtonafcwa="i";
+				if(is_array(${${"GLOBALS"}["glrotwrci"]})&&count(${${"GLOBALS"}["glrotwrci"]})>0)
+				{
+					${${"GLOBALS"}["jbtnwepnd"]}=true;
+				}
+				else
+				{
+					${${"GLOBALS"}["jbtnwepnd"]}=false;
+				}
+				${${"GLOBALS"}["jrjnkhefyfne"]}=jqGridDB::columnCount($sql);
+				for(${$gqtonafcwa}=0;${${"GLOBALS"}["tqrbdfyynhf"]}<${${"GLOBALS"}["jrjnkhefyfne"]};${${"GLOBALS"}["lglqwkmbjk"]}++)
+				{
+					${${"GLOBALS"}["yjwdrp"]}=jqGridDB::getColumnMeta(${${"GLOBALS"}["tqrbdfyynhf"]},$sql);
+					if(strtolower(${${"GLOBALS"}["yjwdrp"]}["name"])=="jqgrid_row")
+					{
+						continue;
+					}
+					if(${${"GLOBALS"}["jbtnwepnd"]}&&array_key_exists(${${"GLOBALS"}["yjwdrp"]}["name"],${${"GLOBALS"}["glrotwrci"]}))
+					{
+						$vxixrtxoprt="meta";
+						$whulnqoi="meta";
+						${"GLOBALS"}["htglzeeeeq"]="meta";
+						${"GLOBALS"}["cderglfeeo"]="labels";
+						$this->colModel[]=array("label"=>${${"GLOBALS"}["cderglfeeo"]}[${$vxixrtxoprt}["name"]],"name"=>${${"GLOBALS"}["yjwdrp"]}["name"],"index"=>${$whulnqoi}["name"],"sorttype"=>jqGridDB::MetaType(${${"GLOBALS"}["htglzeeeeq"]},$this->dbtype));
+					}
+					else
+					{
+						$dkfajmlejo="meta";
+						${"GLOBALS"}["gmjiwblxxxj"]="meta";
+						$this->colModel[]=array("name"=>${$dkfajmlejo}["name"],"index"=>${${"GLOBALS"}["yjwdrp"]}["name"],"sorttype"=>jqGridDB::MetaType(${${"GLOBALS"}["gmjiwblxxxj"]},$this->dbtype));
+					}
+				}
+				jqGridDB::closeCursor(${${"GLOBALS"}["cymmhezpjpr"]});
+				if($this->primaryKey)
+				{
+					$vjzrkctqne="pk";
+					${$vjzrkctqne}=$this->primaryKey;
+				}
+				else
+				{
+					${"GLOBALS"}["cimsbrvl"]="pk";
+					${${"GLOBALS"}["cimsbrvl"]}=jqGridDB::getPrimaryKey($this->table,$this->pdo,$this->dbtype);
+					if(${${"GLOBALS"}["etholjgqltl"]}!==false)
+					{
+						$this->primaryKey=${${"GLOBALS"}["etholjgqltl"]};
+					}
+				}
+				if(${${"GLOBALS"}["nuoodiloj"]}===false)
+				{
+					$psdnjrwqe="pk";
+					${$psdnjrwqe}=0;
+				}
+				$this->setColProperty(${$gwhlycqcppg},array("key"=>true));
+			}
+			else
+			{
+				${"GLOBALS"}["jjdeneponq"]="sql";
+				$this->errorMessage=jqGridDB::errorMessage(${${"GLOBALS"}["jjdeneponq"]});
+				if($this->showError)
+				{
+					$this->sendErrorHeader();
+				}
+				return$ret;
+			}
+		}
+		if(!$runme)
+		{
+			$this->runSetCommands=false;
+		}
+		return true;
+	}
+	public function setColProperty($colname,array$aproperties){$lshfhrrtmwq="ret";${$lshfhrrtmwq}=false;if(!is_array(${${"GLOBALS"}["sugqvilxzbu"]})){return$ret;}if(count($this->colModel)>0){if(is_int(${${"GLOBALS"}["plcmyruuiqs"]})){${"GLOBALS"}["ejedig"]="ret";$this->colModel[${${"GLOBALS"}["plcmyruuiqs"]}]=jqGridUtils::array_extend($this->colModel[${${"GLOBALS"}["plcmyruuiqs"]}],${${"GLOBALS"}["sugqvilxzbu"]});${${"GLOBALS"}["ejedig"]}=true;}else{${"GLOBALS"}["equpdtyng"]="val";${"GLOBALS"}["fbedvult"]="key";foreach($this->colModel as${${"GLOBALS"}["fbedvult"]}=>${${"GLOBALS"}["equpdtyng"]}){${"GLOBALS"}["dugotgflrl"]="colname";${"GLOBALS"}["sqorubos"]="val";if(${${"GLOBALS"}["sqorubos"]}["name"]==trim(${${"GLOBALS"}["dugotgflrl"]})){${"GLOBALS"}["olgxolo"]="key";$this->colModel[${${"GLOBALS"}["ekzdsgbfhm"]}]=jqGridUtils::array_extend($this->colModel[${${"GLOBALS"}["olgxolo"]}],${${"GLOBALS"}["sugqvilxzbu"]});$pezhff="ret";${$pezhff}=true;break;}}}}${"GLOBALS"}["uytdvz"]="ret";return${${"GLOBALS"}["uytdvz"]};}public function addCol(array$aproperties,$position='last'){${"GLOBALS"}["lalqtctfb"]="aproperties";if(!$this->runSetCommands){return false;}if(is_array(${${"GLOBALS"}["lalqtctfb"]})&&count(${${"GLOBALS"}["sugqvilxzbu"]})>0&&strlen(${${"GLOBALS"}["tgpiunmvnr"]})){$iwgydvr="cmcnt";${$iwgydvr}=count($this->colModel);if(${${"GLOBALS"}["botxdtsn"]}>0){${"GLOBALS"}["bhxqgykb"]="position";$iyvsougvip="position";if(strtolower(${$iyvsougvip})==="first"){array_unshift($this->colModel,${${"GLOBALS"}["sugqvilxzbu"]});}else if(strtolower(${${"GLOBALS"}["tgpiunmvnr"]})==="last"){${"GLOBALS"}["jeyljtol"]="aproperties";array_push($this->colModel,${${"GLOBALS"}["jeyljtol"]});}else if((int)${${"GLOBALS"}["tgpiunmvnr"]}>=0&&(int)${${"GLOBALS"}["bhxqgykb"]}<=${${"GLOBALS"}["botxdtsn"]}-1){$zxvldqzrtcf="position";${"GLOBALS"}["rxrinnrdoy"]="a";$ncrvyvnau="aproperties";${${"GLOBALS"}["rxrinnrdoy"]}=array_slice($this->colModel,0,${${"GLOBALS"}["tgpiunmvnr"]}+1);$iphovmtvxk="b";${${"GLOBALS"}["jpeqvlbphdiy"]}=array_slice($this->colModel,${$zxvldqzrtcf}+1);array_push(${${"GLOBALS"}["qqmtybuk"]},${$ncrvyvnau});$this->colModel=array();foreach(${$iphovmtvxk} as${${"GLOBALS"}["vwnabmmcbecj"]}){${"GLOBALS"}["ddlwwfvywcf"]="cm";${${"GLOBALS"}["qqmtybuk"]}[]=${${"GLOBALS"}["ddlwwfvywcf"]};}$this->colModel=${${"GLOBALS"}["qqmtybuk"]};}${${"GLOBALS"}["sugqvilxzbu"]}=null;return true;}}return false;}public function setButtonOptions($exptype,$aoptions){$wwznsfuwxy="aoptions";if(is_array(${$wwznsfuwxy})&&count(${${"GLOBALS"}["bjoypxcinjl"]})>0){${"GLOBALS"}["ihtuiio"]="aoptions";$hlecbntjfel="aoptions";${"GLOBALS"}["tywgwxfp"]="aoptions";switch(${${"GLOBALS"}["tmsqwmhp"]}){case"excel":$this->expoptions["excel"]=jqGridUtils::array_extend($this->expoptions["excel"],${$hlecbntjfel});break;case"pdf":$this->expoptions["pdf"]=jqGridUtils::array_extend($this->expoptions["pdf"],${${"GLOBALS"}["tywgwxfp"]});break;case"csv":$this->expoptions["csv"]=jqGridUtils::array_extend($this->expoptions["csv"],${${"GLOBALS"}["bjoypxcinjl"]});break;case"columns":$this->expoptions["columns"]=jqGridUtils::array_extend($this->expoptions["columns"],${${"GLOBALS"}["ihtuiio"]});break;}}}private function colModelHidden(){$svgpgugco="cm";${${"GLOBALS"}["vwnabmmcbecj"]}=jqGridUtils::GetParam("colModel");${"GLOBALS"}["jjlovcbh"]="key";${"GLOBALS"}["idvdvff"]="item";${"GLOBALS"}["ianvlo"]="cmn";${${"GLOBALS"}["gmnttmrarlhl"]}=json_decode(${$svgpgugco});foreach(${${"GLOBALS"}["ianvlo"]} as${${"GLOBALS"}["jjlovcbh"]}=>${${"GLOBALS"}["idvdvff"]}){$this->setColProperty($item->name,array("hidden"=>$item->hidden));}}
+	public function renderGrid($tblelement='',$pager='',$script=true,array$summary=null,array$params=null,$createtbl=false,$createpg=false,$echo=true)
+	{
+		${"GLOBALS"}["vdmuktgo"]="oper";
+		${"GLOBALS"}["ubqxgdt"]="goper";
+		$ufbkcgntrfp="goper";
+		${${"GLOBALS"}["vdmuktgo"]}=$this->GridParams["oper"];
+		$goper=$this->oper?$this->oper:"nooper";
+		if(${$ufbkcgntrfp}==$this->GridParams["autocomplete"])
+		{
+			return false;
+		}
+		else if($goper==$this->GridParams["excel"])
+		{
+			if(!$this->export)
+			{
+				return false;
+			}
+			if($this->currentHidden)
+			{
+				$this->colModelHidden();
+			}
+			$this->exportToExcel(${${"GLOBALS"}["bjumyfbs"]},$params,$this->colModel,true,$this->exportfile);
+		}
+		else if($goper=="pdf")
+		{
+			if(!$this->export)
+			{
+				return false;
+			}
+			if($this->currentHidden)
+			{
+				$this->colModelHidden();
+			}
+			$this->exportToPdf(${${"GLOBALS"}["bjumyfbs"]},$params,$this->colModel,$this->pdffile);
+		}
+		else if(${${"GLOBALS"}["ubqxgdt"]}=="csv")
+		{
+			if(!$this->export)
+			{
+				return false;
+			}
+			if($this->currentHidden)
+			{
+				$this->colModelHidden();
+			}
+			$this->exportToCsv(${${"GLOBALS"}["bjumyfbs"]},$params,$this->colModel,true,$this->csvfile,$this->csvsep,$this->csvsepreplace);
+		}
+		else if(in_array($goper,array_values($this->GridParams)))
+		{
+			if($this->inlineNav)
+			{
+				$this->getLastInsert=true;
+			}			
+			return$this->editGrid($summary,$params,$goper,$echo);
+		}
+		else
+		{
+			${"GLOBALS"}["osqeayf"]="script";
+			if(!isset($this->gridOptions["datatype"]))
+			{
+				$this->gridOptions["datatype"]=$this->dataType;
+			}
+			${${"GLOBALS"}["powkurbnfs"]}=true;
+			if(isset($this->gridOptions["cmTemplate"]))
+			{
+				${${"GLOBALS"}["hgmypyy"]}=$this->gridOptions["cm\x54emplate"];
+				${${"GLOBALS"}["powkurbnfs"]}=isset(${${"GLOBALS"}["hgmypyy"]}["editable"])?${${"GLOBALS"}["hgmypyy"]}["editable"]:true;
+			}
+			foreach($this->colModel as${${"GLOBALS"}["uxmkxapxbtx"]}=>${${"GLOBALS"}["vwnabmmcbecj"]})
+			{
+				${"GLOBALS"}["cxxptlfo"]="k";
+				if(!isset($this->colModel[${${"GLOBALS"}["cxxptlfo"]}]["editable"]))
+				{
+					${"GLOBALS"}["cocmri"]="ed";
+					$this->colModel[${${"GLOBALS"}["uxmkxapxbtx"]}]["editable"]=${${"GLOBALS"}["cocmri"]};
+				}
+			}
+			$this->gridOptions["colModel"]=$this->colModel;
+			${"GLOBALS"}["sfpzctk"]="gM";
+			if(isset($this->gridOptions["postData"]))
+			{
+				$this->gridOptions["postData"]=jqGridUtils::array_extend($this->gridOptions["postData"],array(${${"GLOBALS"}["vxtownnuw"]}=>$this->GridParams["query"]));
+			}
+			else
+			{
+				${"GLOBALS"}["ppqsunetldqy"]="oper";
+				$this->setGridOptions(array("postData"=>array(${${"GLOBALS"}["ppqsunetldqy"]}=>$this->GridParams["query"])));
+			}
+			if(isset($this->primaryKey))
+			{
+				$this->GridParams["id"]=$this->primaryKey;
+			}
+			$this->setGridOptions(array("prm\x4eames"=>$this->GridParams));
+			$s="";
+			if(${${"GLOBALS"}["epnciqebbrqe"]})
+			{
+				${"GLOBALS"}["bneuatpdm"]="tmptbl";
+				${${"GLOBALS"}["bneuatpdm"]}=${${"GLOBALS"}["jlocuesbh"]};
+				${"GLOBALS"}["jgkpfokcin"]="tmptbl";
+				if(strpos(${${"GLOBALS"}["jlocuesbh"]},"#")===false)
+				{
+					${${"GLOBALS"}["jlocuesbh"]}="\x23".${${"GLOBALS"}["jlocuesbh"]};
+				}
+				else
+				{
+					${"GLOBALS"}["bveqpnb"]="tblelement";
+					${${"GLOBALS"}["djexicbwver"]}=substr(${${"GLOBALS"}["bveqpnb"]},1);
+				}
+				$s.="<table\x20id=\x27".${${"GLOBALS"}["jgkpfokcin"]}."'\x3e</table\x3e";
+			}
+			if(strlen(${${"GLOBALS"}["kmaamigbc"]})>0)
+			{
+				${${"GLOBALS"}["ntjyobzi"]}=${${"GLOBALS"}["kmaamigbc"]};
+				$ipvvmdepe="pager";
+				${"GLOBALS"}["ylgmjemf"]="createpg";
+				if(strpos(${$ipvvmdepe},"#")===false)
+				{
+					$vwttqna="pager";
+					${${"GLOBALS"}["kmaamigbc"]}="\x23".${$vwttqna};
+				}
+				else
+				{
+					$kwvmpsw="pager";
+					${${"GLOBALS"}["ntjyobzi"]}=substr(${$kwvmpsw},1);
+				}
+				if(${${"GLOBALS"}["ylgmjemf"]})
+				{
+					$s.="<div id=\x27".${${"GLOBALS"}["ntjyobzi"]}."\x27\x3e</div>";
+				}
+			}
+			if(!isset($this->gridOptions["loadError"]))
+			{
+				$tvcikafeto="err";
+				${$tvcikafeto}="function(xhr,status,\x20err){ try\x20{jQuery\x2ejgrid.info_dialog(jQuery.jgrid\x2eerrors.errcap,'<div class\x3d\"ui-state-error\"\x3e'+\x20xhr\x2eresponseText +'</div\x3e\x27,\x20jQuery\x2ejgrid\x2eedit\x2ebClose,{buttonalign:'right\x27})\x3b} catch(e)\x20{ alert(xhr\x2eresponse\x54ext)\x3b} }";
+				$this->setGridEvent("loadError",${${"GLOBALS"}["ykiyrsvo"]});
+			}
+			if(strlen(${${"GLOBALS"}["kmaamigbc"]})>0)
+			{
+				$this->setGridOptions(array("pager"=>$pager));
+			}
+			$vjdrbtbxfo="tblelement";
+			if($this->sharedEditOptions==true)
+			{
+				$this->gridOptions["editOptions"]=$this->editOptions;
+			}
+			if($this->sharedAddOptions==true)
+			{
+				$this->gridOptions["addOptions"]=$this->addOptions;
+			}
+			$xtpxkkaugk="s";
+			if($this->sharedDelOptions==true)
+			{
+				$this->gridOptions["delOptions"]=$this->delOptions;
+			}
+			if(${${"GLOBALS"}["qmwtkmv"]})
+			{
+				${"GLOBALS"}["dtxfcy"]="s";
+				$jxwxfyenbdm="s";
+				${${"GLOBALS"}["dtxfcy"]}.="<script\x20type\x3d\x27text/javascript'\x3e";
+				${$jxwxfyenbdm}.="jQuery(document)\x2eready(function(\$)\x20{";
+			}
+			${$xtpxkkaugk}.="jQuery('".${$vjdrbtbxfo}."')\x2ejqGrid(".jqGridUtils::encode($this->gridOptions).")\x3b";
+			if($this->navigator&&strlen(${${"GLOBALS"}["kmaamigbc"]})>0)
+			{
+				${"GLOBALS"}["xpehvl"]="s";
+				${"GLOBALS"}["fmvifxc"]="s";
+				${"GLOBALS"}["lgcphyggj"]="curhidden";
+				${"GLOBALS"}["nxvogpfnt"]="s";
+				${"GLOBALS"}["hvtrqlu"]="pager";
+				${${"GLOBALS"}["xpehvl"]}.="jQuery(\x27".${${"GLOBALS"}["jlocuesbh"]}."\x27)\x2ejqGrid(\x27navGrid',\x27".${${"GLOBALS"}["hvtrqlu"]}."',".jqGridUtils::encode($this->navOptions);
+				$lojnkfhks="s";
+				$s.=",".jqGridUtils::encode($this->editOptions);${${"GLOBALS"}["nxvogpfnt"]}.=",".jqGridUtils::encode($this->addOptions);
+				${${"GLOBALS"}["fmvifxc"]}.=",".jqGridUtils::encode($this->delOptions);${$lojnkfhks}.=",".jqGridUtils::encode($this->searchOptions);
+				$s.=",".jqGridUtils::encode($this->viewOptions).")\x3b";
+				${${"GLOBALS"}["lgcphyggj"]}=$this->currentHidden?"1":"\x30";
+				if($this->navOptions["excel"]==true)
+				{
+					$rmyrhqoj="s";
+					${"GLOBALS"}["wsbjekdhowjx"]="eurl";
+					${${"GLOBALS"}["wsbjekdhowjx"]}=$this->getGridOption("url");
+					$bjiwjy="exexcel";
+					${$bjiwjy}="onClickButton :\x20function(e)\n{\n\ttry {\n\t\tjQuery(\x22$tblelement\x22).jqGrid(\x27excelExport',{tag:'excel\x27, url:'$eurl', exporthidden:$curhidden, exportgrouping: false});\n\t} catch (e)\x20{\n\t\twindow\x2elocation=\x20\x27$eurl?oper\x3dexcel';\n\t}\n}";
+					${"GLOBALS"}["odxkep"]="tmppg";
+					${$rmyrhqoj}.="jQuery('".${${"GLOBALS"}["jlocuesbh"]}."').jqGrid('navButtonAdd\x27,'".${${"GLOBALS"}["kmaamigbc"]}."',{id:\x27".${${"GLOBALS"}["odxkep"]}."\x5fexcel',\x20caption:\x27".$this->expoptions["excel"]["caption"]."',title:'".$this->expoptions["excel"]["title"]."\x27,".${${"GLOBALS"}["caqeqlcivmi"]}.",buttonicon:\x27".$this->expoptions["excel"]["buttonicon"]."'});";
+				}
+				if($this->navOptions["pdf"]==true)
+				{
+					$oyujzfv="eurl";${"GLOBALS"}["pvdfbrml"]="s";
+					${$oyujzfv}=$this->getGridOption("url");
+					$umvqjcmxrer="expdf";
+					${"GLOBALS"}["dcfdloh"]="tblelement";
+					${${"GLOBALS"}["jcpefdohbjvd"]}="onClickButton\x20:\x20function(e)\n{\n\ttry\x20{\n\t\tjQuery(\"$tblelement\x22).jqGrid('excelExport\x27,{tag:'pdf\x27, url:\x27$eurl\x27,\x20exporthidden:$curhidden,\x20exportgrouping:\x20false})\x3b\n\t}\x20catch (e)\x20{\n\t\twindow.location= '$eurl?oper=pdf'\x3b\n\t}\n}";
+					${${"GLOBALS"}["pvdfbrml"]}.="jQuery(\x27".${${"GLOBALS"}["dcfdloh"]}."')\x2ejqGrid('navButtonAdd','".${${"GLOBALS"}["kmaamigbc"]}."\x27,{id:\x27".${${"GLOBALS"}["ntjyobzi"]}."_pdf',caption:'".$this->expoptions["pdf"]["caption"]."\x27,title:'".$this->expoptions["pdf"]["title"]."\x27,".${$umvqjcmxrer}.", buttonicon:'".$this->expoptions["pdf"]["buttonicon"]."'});";
+				}
+				if($this->navOptions["csv"]==true)
+				{
+					${"GLOBALS"}["olbkeiw"]="s";
+					${"GLOBALS"}["gdtflmwc"]="excsv";
+					${"GLOBALS"}["vjnejoksenc"]="tblelement";
+					$ysqldjwxnpw="pager";
+					${${"GLOBALS"}["gfqwmuc"]}=$this->getGridOption("url");
+					${"GLOBALS"}["njysuhucu"]="tmppg";
+					${"GLOBALS"}["pycibxgiv"]="excsv";
+					${${"GLOBALS"}["pycibxgiv"]}="onClickButton\x20: function(e)\n{\n\ttry\x20{\n\t\tjQuery(\x22$tblelement\x22).jqGrid('excelExport',{tag:'csv\x27,\x20url:'$eurl\x27,\x20exporthidden:$curhidden, exportgrouping: false})\x3b\n\t} catch (e)\x20{\n\t\twindow\x2elocation\x3d '$eurl?oper=csv';\n\t}\n}";
+					${${"GLOBALS"}["olbkeiw"]}.="jQuery(\x27".${${"GLOBALS"}["vjnejoksenc"]}."\x27)\x2ejqGrid('navButtonAdd\x27,\x27".${$ysqldjwxnpw}."',{id:\x27".${${"GLOBALS"}["njysuhucu"]}."\x5fcsv',caption:\x27".$this->expoptions["csv"]["caption"]."',title:'".$this->expoptions["csv"]["title"]."\x27,".${${"GLOBALS"}["gdtflmwc"]}.",buttonicon:\x27".$this->expoptions["csv"]["buttonicon"]."\x27});";
+				}
+				if($this->navOptions["columns"]==true)
+				{
+					${"GLOBALS"}["gvegjgicqj"]="clopt";
+					${"GLOBALS"}["vbvoxuonlor"]="s";
+					${"GLOBALS"}["sbmqfy"]="excolumns";
+					${"GLOBALS"}["viqqjch"]="pager";
+					${"GLOBALS"}["byiingaiag"]="excolumns";
+					${${"GLOBALS"}["gvegjgicqj"]}=jqGridUtils::encode($this->expoptions["columns"]["options"]);
+					${${"GLOBALS"}["sbmqfy"]}="onClickButton :\x20function(e)\n{\n\tjQuery(\"$tblelement\x22).jqGrid('columnChooser\x27,$clopt)\x3b\n}";
+					${${"GLOBALS"}["vbvoxuonlor"]}.="jQuery('".${${"GLOBALS"}["jlocuesbh"]}."\x27)\x2ejqGrid('navButtonAdd','".${${"GLOBALS"}["viqqjch"]}."\x27,{id:'".${${"GLOBALS"}["ntjyobzi"]}."\x5fcol\x27,caption:'".$this->expoptions["columns"]["caption"]."\x27,title:\x27".$this->expoptions["columns"]["title"]."\x27,".${${"GLOBALS"}["byiingaiag"]}.",buttonicon:\x27".$this->expoptions["columns"]["buttonicon"]."'})\x3b";
+				}
+			}
+			if($this->inlineNav&&strlen(${${"GLOBALS"}["kmaamigbc"]})>0)
+			{
+				$lmncuc="aftersave";
+				${"GLOBALS"}["cmdcehxnvf"]="aftersave";
+				${${"GLOBALS"}["thwfwqdhcrjs"]}="function\x20(id, res)\n{\n\tres\x20\x3d res.response\x54ext\x2esplit(\x22#\")\x3b\n\ttry {\n\t\t\$(this)\x2ejqGrid('setCell\x27, id, res[0],\x20res[\x31]);\n\t\t\$(\x22\x23\x22+id, \x22\x23\x22+this.p\x2eid).removeClass(\x22jqgrid-new-row\x22)\x2eattr(\"id\",res[1] )\x3b\n\t\t\$(this)[0].p.selrow\x20= res[1]\x3b\n\t}\x20catch (asr)\x20{}\n}";
+				${"GLOBALS"}["ujpxpuwe"]="pager";
+				$this->inlineNavOpt["addParams"]=jqGridUtils::array_extend($this->inlineNavOpt["add\x50arams"],array("aftersavefunc"=>"js:".${${"GLOBALS"}["cmdcehxnvf"]}));
+				$this->inlineNavOpt["editParams"]=jqGridUtils::array_extend($this->inlineNavOpt["edit\x50arams"],array("aftersavefunc"=>"js:".${$lmncuc}));
+				$s.="jQuery('".${${"GLOBALS"}["jlocuesbh"]}."\x27)\x2ejqGrid(\x27inline\x4eav\x27,\x27".${${"GLOBALS"}["ujpxpuwe"]}."',".jqGridUtils::encode($this->inlineNavOpt).")\x3b\n";
+			}
+			if($this->toolbarfilter)
+			{
+				${"GLOBALS"}["xcuwna"]="s";
+				${${"GLOBALS"}["xcuwna"]}.="jQuery('".${${"GLOBALS"}["jlocuesbh"]}."\x27).jqGrid(\x27filter\x54oolbar',".jqGridUtils::encode($this->filterOptions).");\n";
+			}
+			${${"GLOBALS"}["sfpzctk"]}=count($this->gridMethods);
+			if(${${"GLOBALS"}["xferpok"]}>0)
+			{
+				${"GLOBALS"}["cebufbyhge"]="i";
+				for(${${"GLOBALS"}["tqrbdfyynhf"]}=0;${${"GLOBALS"}["tqrbdfyynhf"]}<${${"GLOBALS"}["xferpok"]};${${"GLOBALS"}["cebufbyhge"]}++)
+				{
+					${"GLOBALS"}["tdhvnlvekib"]="s";
+					${${"GLOBALS"}["tdhvnlvekib"]}.=$this->gridMethods[${${"GLOBALS"}["tqrbdfyynhf"]}]."\n";
+				}
+			}
+			if(strlen($this->customCode)>0)
+			{
+				$s.=jqGridUtils::encode($this->customCode);
+			}
+			if(${${"GLOBALS"}["osqeayf"]})
+			{
+				$s.="\x20})\x3b</script\x3e";
+			}
+			if($echo)
+			{
+				echo$s;
+			}
+			return$echo?"":$s;
+		}
+	}
+}
+?>

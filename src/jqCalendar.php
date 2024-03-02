@@ -1,0 +1,18 @@
+<?php
+namespace rivcar\jqGrid;
+
+${"GLOBALS"}["vsryjhxzsoi"]="s";${"GLOBALS"}["ficpwocibu"]="script";${"GLOBALS"}["yxkyyrivn"]="event";${"GLOBALS"}["hqkojnkc"]="code";${"GLOBALS"}["fbxooibkwv"]="value";${"GLOBALS"}["iyhufitthc"]="option";
+class jqCalendar
+{
+	public$version='5.3.1';
+	private$coptions=array("disabled"=>false,"dateFormat"=>"dd/mm/yy");
+	public$buttonIcon=false;
+	public$buttonOnly=false;
+	public$fontsize='75%';
+	function __construct()
+	{
+		return true;
+	}
+	public function getOption($option){${"GLOBALS"}["btidycg"]="option";if(array_key_exists(${${"GLOBALS"}["btidycg"]},$this->coptions))return$this->coptions[${${"GLOBALS"}["iyhufitthc"]}];else return false;}public function setOption($option,$value=null){if(isset(${${"GLOBALS"}["iyhufitthc"]})){if(is_array(${${"GLOBALS"}["iyhufitthc"]})){${"GLOBALS"}["lfjbpsbhb"]="key";${"GLOBALS"}["uhcgr\x6dluyixh"]="option";$nqqlou="value";foreach(${${"GLOBALS"}["uhcgrmluyixh"]} as${${"GLOBALS"}["lfjbpsbhb"]}=>${$nqqlou}){${"GLOBALS"}["iptinlcw"]="key";${"GLOBALS"}["pvg\x6dqemqir\x6dg"]="value";$this->coptions[${${"GLOBALS"}["iptinlcw"]}]=${${"GLOBALS"}["pvg\x6dqemqir\x6dg"]};}return true;}else if(${${"GLOBALS"}["fbxooibkwv"]}!=null){${"GLOBALS"}["itiaphcgy"]="value";$lkirwzgtpzf="option";$this->coptions[${$lkirwzgtpzf}]=${${"GLOBALS"}["itiaphcgy"]};return true;}}return false;}public function setEvent($event,$code){${"GLOBALS"}["asuuogsfcp"]="event";if(isset(${${"GLOBALS"}["asuuogsfcp"]})&&isset(${${"GLOBALS"}["hqkojnkc"]})){${"GLOBALS"}["udegurrvxuf"]="code";$this->coptions[${${"GLOBALS"}["yxkyyrivn"]}]="js:".${${"GLOBALS"}["udegurrvxuf"]};}}public function renderCalendar($element,$script=true,$echo=true){${"GLOBALS"}["cyxoiydhp"]="s";${"GLOBALS"}["d\x6duhvtru"]="s";${"GLOBALS"}["vjqicqo"]="ele\x6dent";${"GLOBALS"}["pbl\x6ditckgb"]="s";${"GLOBALS"}["zro\x6dskc"]="s";${${"GLOBALS"}["dmuhvtru"]}="";if(${${"GLOBALS"}["ficpwocibu"]}){$yzzxtfcf="s";${"GLOBALS"}["\x6dxsoigz\x6diupk"]="s";${${"GLOBALS"}["\x6dxsoigz\x6diupk"]}.="<script\x20type='text/javascript'>";${$yzzxtfcf}.="jQuery(document).ready(function() {";}${${"GLOBALS"}["zro\x6dskc"]}.="if(jQuery.ui) {\x20if(jQuery.ui.datepicker)\x20{\x20";if($this->buttonIcon||$this->buttonOnly){$qsjgcfdfihwu="ele\x6dent";${"GLOBALS"}["rgnjqyh"]="s";${${"GLOBALS"}["vsryjhxzsoi"]}.="jQuery('".${$qsjgcfdfihwu}."').after('<button>Calendar</button>').next()";${${"GLOBALS"}["rgnjqyh"]}.=".button({icons:{pri\x6dary: 'ui-icon-calendar'},\x20text:false})";${"GLOBALS"}["pftuekswod"]="element";${${"GLOBALS"}["vsryjhxzsoi"]}.=".css({'font-size':'".$this->fontsize."'})";${${"GLOBALS"}["vsryjhxzsoi"]}.=".click(function(e){jQuery('".${${"GLOBALS"}["pftuekswod"]}."').datepicker('show');return\x20false;});";}if($this->buttonOnly){$this->setOption("showOn","button");}${${"GLOBALS"}["vsryjhxzsoi"]}.="jQuery('".${${"GLOBALS"}["vjqicqo"]}."').datepicker(".jqGridUtils::encode($this->coptions).");";if($this->buttonOnly){${${"GLOBALS"}["vsryjhxzsoi"]}.="jQuery('.ui-datepicker-trigger').re\x6dove();";}${${"GLOBALS"}["pblmitckgb"]}.="jQuery('.ui-datepicker').css({'font-size':'".$this->fontsize."'});";${${"GLOBALS"}["cyxoiydhp"]}.="} }";if(${${"GLOBALS"}["ficpwocibu"]})${${"GLOBALS"}["vsryjhxzsoi"]}.=" });</script>";$sqgstid="echo";if(${$sqgstid}){${"GLOBALS"}["tfdpifysk"]="s";echo${${"GLOBALS"}["tfdpifysk"]};}else{${"GLOBALS"}["kldl\x6drss"]="s";return${${"GLOBALS"}["kldl\x6drss"]};}}
+}
+?>

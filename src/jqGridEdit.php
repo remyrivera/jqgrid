@@ -1,0 +1,442 @@
+<?php
+namespace rivcar\jqGrid;
+use rivcar\jqgrid\jqGridExport;
+use rivcar\jqgrid\jqGridDB;
+
+${"GLOBALS"}["qwbpeiwguu"]="errmsg";${"GLOBALS"}["gxekduy"]="odbc";${"GLOBALS"}["zciteytspqvc"]="delids";${"GLOBALS"}["aicbmcsdqvw"]="custom";${"GLOBALS"}["cyliutb"]="id";${"GLOBALS"}["zpqoiqolyvj"]="where";${"GLOBALS"}["uijpyufhbz"]="ide";${"GLOBALS"}["nucadrcey"]="t2";${"GLOBALS"}["bpkjnydw"]="v2";${"GLOBALS"}["ydeatyzhb"]="updateFields";${"GLOBALS"}["yousvcyfpak"]="field";${"GLOBALS"}["xybdkfxy"]="pk";${"GLOBALS"}["lkjcyviv"]="binds";${"GLOBALS"}["puldomm"]="saver";
+${"GLOBALS"}["cgynrwf"]="prop";
+${"GLOBALS"}["fogqbrprigi"]="params";${"GLOBALS"}["uamfmft"]="event";
+${"GLOBALS"}["ffqxvkhvnla"]="stmt";${"GLOBALS"}["gjvxay"]="acnt";${"GLOBALS"}["wiihcueeept"]="ar";
+${"GLOBALS"}["ksgifxi"]="i";
+${"GLOBALS"}["riqnpjsvbj"]="colcount";
+${"GLOBALS"}["jtioxldtqlw"]="\x5fnewtable";${"GLOBALS"}["stikxsrvlkqv"]="keyid";${"GLOBALS"}["fpmxhdrk"]="arule";${"GLOBALS"}["umkjmjs"]="msg";
+//if(!defined("\x50H\x50SUITO\x5fROOT")){define("PH\x50SUITO\x5fROOT",dirname(__FILE__)."/");require(PHPSUITO_ROOT."Autoloader.php");}
+class jqGridEdit extends jqGridExport
+{
+	protected$fields=array();
+	protected$successmsg="";
+	public function setSuccessMsg($msg)
+	{
+		if(${${"GLOBALS"}["umkjmjs"]})
+		{
+			$this->successmsg=${${"GLOBALS"}["umkjmjs"]};
+		}
+	}
+	public$serialKey=true;
+	public$getLastInsert=false;
+	protected$lastId=null;
+	public$trans=true;
+	public$add=true;
+	public$edit=true;
+	public$del=true;
+	public$mtype="POST";
+	public$decodeinput=false;
+	public$serverValidate=false;
+	public$serverSanitize=false;
+	protected$validations=array();
+	public function setValidationRules($arule)
+	{
+		if(is_array(${${"GLOBALS"}["fpmxhdrk"]}))
+		{
+			$this->validations=${${"GLOBALS"}["fpmxhdrk"]};
+		}
+	}
+	protected$sanatations=array();
+	public function setSanitatationRules($arule)
+	{
+		if(is_array(${${"GLOBALS"}["fpmxhdrk"]}))
+		{
+			$iutnngdfo="arule";
+			$this->sanatations=${$iutnngdfo};
+		}
+	}
+	public function getPrimaryKeyId()
+	{
+		return$this->primaryKey;
+	}
+	public function setPrimaryKeyId($keyid)
+	{
+		$this->primaryKey=${${"GLOBALS"}["stikxsrvlkqv"]};
+	}
+	public function setTable($_newtable){$this->table=${${"GLOBALS"}["jtioxldtqlw"]};}
+	protected function _buildFields()
+	{
+		$result=false;
+		if(strlen(trim($this->table))>0)
+		{
+			${"GLOBALS"}["jkrdbhosr"]="wh";
+			$wh=($this->dbtype=="sqlite")?"":" WHERE 1=2";
+			$sql="SELECT * FROM ".$this->table.${${"GLOBALS"}["jkrdbhosr"]};
+			if($this->debug)
+			{
+				$this->logQuery($sql);
+				$this->debugout();
+			}
+			try
+			{
+				$nnwdxmcha="select";
+				$yyuarclcs="select";
+				${$nnwdxmcha}=jqGridDB::query($this->pdo,$sql);
+				if(${$yyuarclcs})
+				{
+					${"GLOBALS"}["vtqyduvof"]="i";
+					${"GLOBALS"}["ksodiniawc"]="select";
+					${${"GLOBALS"}["riqnpjsvbj"]}=jqGridDB::columnCount($select);
+					$this->fields=array();
+					for(${${"GLOBALS"}["ksgifxi"]}=0;${${"GLOBALS"}["ksgifxi"]}<${${"GLOBALS"}["riqnpjsvbj"]};${${"GLOBALS"}["vtqyduvof"]}++)
+					{
+						$meta=jqGridDB::getColumnMeta($i,$select);
+						$type=jqGridDB::MetaType($meta,$this->dbtype);
+						$this->fields[$meta["name"]]=array("type"=>$type);
+					}
+					jqGridDB::closeCursor(${${"GLOBALS"}["ksodiniawc"]});
+					$result=true;
+				}
+				else
+				{
+					$this->errorMessage=jqGridDB::errorMessage($this->pdo);
+					throw new Exception($this->errorMessage);
+				}
+			}
+			catch(Exception$e)
+			{
+				${"GLOBALS"}["yxblsxe"]="result";
+				${${"GLOBALS"}["yxblsxe"]}=false;
+				if(!$this->errorMessage)
+				{
+					$this->errorMessage=$e->getMessage();
+				}
+			}
+		}
+		else
+		{
+			$this->errorMessage="No database table is set to operate\x21";
+		}
+		if($this->showError&&!$result)
+		{
+			$this->sendErrorHeader();
+		}
+		return$result;
+	}
+	protected$_addarray=array();protected$_addarrayb=array();protected$_editarray=array();protected$_editarrayb=array();protected$_delarray=array();protected$_delarrayb=array();protected function _actionsCRUDGrid($oper,$event){${"GLOBALS"}["lgejrkikr"]="ret";$wiibsooxs="oper";${"GLOBALS"}["hhklmbnloijd"]="event";${"GLOBALS"}["tugtddnhqq"]="ar";${"GLOBALS"}["ugndrrrs"]="event";${"GLOBALS"}["mmhvwnrlzld"]="acnt";$ujdbqwvjsf="acnt";${${"GLOBALS"}["lgejrkikr"]}=true;$jlcvoueeg="ret";switch(${$wiibsooxs}){case"add":if(${${"GLOBALS"}["hhklmbnloijd"]}=="before"){${${"GLOBALS"}["wiihcueeept"]}=$this->_addarrayb;}else{${"GLOBALS"}["zqhntq"]="ar";${${"GLOBALS"}["zqhntq"]}=$this->_addarray;}${${"GLOBALS"}["gjvxay"]}=count(${${"GLOBALS"}["wiihcueeept"]});if(${${"GLOBALS"}["mmhvwnrlzld"]}>0){$tqkigdgywmf="acnt";for(${${"GLOBALS"}["ksgifxi"]}=0;${${"GLOBALS"}["ksgifxi"]}<${$tqkigdgywmf};${${"GLOBALS"}["ksgifxi"]}++){$ohwowhlil="i";$pwqgfxzqyh="stmt";$ebycjpyvu="result";$rlcxuss="ar";$wqfvuouufhj="result";${"GLOBALS"}["kgyikn"]="i";if($this->debug){${"GLOBALS"}["uyfkiy"]="ar";$this->logQuery(${${"GLOBALS"}["wiihcueeept"]}[${${"GLOBALS"}["ksgifxi"]}]["sql"],${${"GLOBALS"}["uyfkiy"]}[${${"GLOBALS"}["ksgifxi"]}]["params"]);}${"GLOBALS"}["givqddsguv"]="ar";${$pwqgfxzqyh}=jqGridDB::prepare($this->pdo,${$rlcxuss}[${$ohwowhlil}]["sql"],${${"GLOBALS"}["wiihcueeept"]}[${${"GLOBALS"}["ksgifxi"]}]["params"]);$result=jqGridDB::execute(${${"GLOBALS"}["ffqxvkhvnla"]},${${"GLOBALS"}["givqddsguv"]}[${${"GLOBALS"}["kgyikn"]}]["params"],$this->pdo);if(!${$ebycjpyvu}){$ret=false;break;}jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?${$wqfvuouufhj}:${${"GLOBALS"}["ffqxvkhvnla"]});}}break;case"edit":if(${${"GLOBALS"}["uamfmft"]}=="before"){${${"GLOBALS"}["wiihcueeept"]}=$this->_editarrayb;}else{$lmrhzbewr="ar";${$lmrhzbewr}=$this->_editarray;}${$ujdbqwvjsf}=count(${${"GLOBALS"}["wiihcueeept"]});if(${${"GLOBALS"}["gjvxay"]}>0){${"GLOBALS"}["sekmpe"]="acnt";${"GLOBALS"}["gkhjjfn"]="i";${"GLOBALS"}["rvjjploaexfq"]="i";for(${${"GLOBALS"}["ksgifxi"]}=0;${${"GLOBALS"}["gkhjjfn"]}<${${"GLOBALS"}["sekmpe"]};${${"GLOBALS"}["rvjjploaexfq"]}++){$hgzswbkhjjc="ar";$pvnmehsxbnvt="stmt";${"GLOBALS"}["lmezgufyhjx"]="stmt";$bidtej="ar";if($this->debug){$wxrrxytbs="i";${"GLOBALS"}["nhtbnyerin"]="i";${"GLOBALS"}["vhrfrqrsui"]="ar";$this->logQuery(${${"GLOBALS"}["wiihcueeept"]}[${${"GLOBALS"}["nhtbnyerin"]}]["sql"],${${"GLOBALS"}["vhrfrqrsui"]}[${$wxrrxytbs}]["params"]);}${"GLOBALS"}["tvqorbivaji"]="i";${"GLOBALS"}["paqoxkakfe"]="result";${${"GLOBALS"}["ffqxvkhvnla"]}=jqGridDB::prepare($this->pdo,${$bidtej}[${${"GLOBALS"}["ksgifxi"]}]["sql"],${$hgzswbkhjjc}[${${"GLOBALS"}["tvqorbivaji"]}]["params"]);$bfkdqhdmx="result";${${"GLOBALS"}["paqoxkakfe"]}=jqGridDB::execute(${$pvnmehsxbnvt},${${"GLOBALS"}["wiihcueeept"]}[${${"GLOBALS"}["ksgifxi"]}]["params"],$this->pdo);if(!${$bfkdqhdmx}){$ret=false;break;}jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?$result:${${"GLOBALS"}["lmezgufyhjx"]});}}break;case"del":if(${${"GLOBALS"}["ugndrrrs"]}=="before"){${${"GLOBALS"}["wiihcueeept"]}=$this->_delarrayb;}else{${${"GLOBALS"}["wiihcueeept"]}=$this->_delarray;}${${"GLOBALS"}["gjvxay"]}=count(${${"GLOBALS"}["tugtddnhqq"]});if(${${"GLOBALS"}["gjvxay"]}>0){$dhunyqbdk="i";for(${$dhunyqbdk}=0;${${"GLOBALS"}["ksgifxi"]}<${${"GLOBALS"}["gjvxay"]};${${"GLOBALS"}["ksgifxi"]}++){${"GLOBALS"}["szlokdxli"]="stmt";$cpvxpcro="stmt";${"GLOBALS"}["fglkrddbqm"]="i";$ptkxoxy="ar";$pwrgefmhi="ar";${"GLOBALS"}["ghpxxj"]="result";${"GLOBALS"}["yejgkalld"]="ar";${"GLOBALS"}["bwqqgob"]="i";if($this->debug){$alfqxafjn="i";$nnjnmdkwhc="ar";$mloqkxetb="i";$this->logQuery(${${"GLOBALS"}["wiihcueeept"]}[${$alfqxafjn}]["sql"],${$nnjnmdkwhc}[${$mloqkxetb}]["params"]);}${$cpvxpcro}=jqGridDB::prepare($this->pdo,${$pwrgefmhi}[${${"GLOBALS"}["bwqqgob"]}]["sql"],${$ptkxoxy}[${${"GLOBALS"}["ksgifxi"]}]["params"]);${${"GLOBALS"}["ghpxxj"]}=${${"GLOBALS"}["ffqxvkhvnla"]}?jqGridDB::execute(${${"GLOBALS"}["ffqxvkhvnla"]},${${"GLOBALS"}["yejgkalld"]}[${${"GLOBALS"}["fglkrddbqm"]}]["params"],$this->pdo):false;if(!$result){$badeydp="ret";${$badeydp}=false;break;}jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?$result:${${"GLOBALS"}["szlokdxli"]});}}break;}return${$jlcvoueeg};}public function setBeforeCrudAction($oper,$sql,$params=null){${"GLOBALS"}["byaxtw"]="params";${"GLOBALS"}["rhygtqjmcfng"]="sql";${"GLOBALS"}["fcktpx"]="params";$makjebtxf="oper";switch(${$makjebtxf}){case"add":$this->_addarrayb[]=array("sql"=>${${"GLOBALS"}["rhygtqjmcfng"]},"params"=>${${"GLOBALS"}["fcktpx"]});break;case"edit":$this->_editarrayb[]=array("sql"=>$sql,"params"=>${${"GLOBALS"}["fogqbrprigi"]});break;case"del":$this->_delarrayb[]=array("sql"=>$sql,"params"=>${${"GLOBALS"}["byaxtw"]});break;}}public function setAfterCrudAction($oper,$sql,$params=null){${"GLOBALS"}["bezqceqfik"]="sql";${"GLOBALS"}["hllsuv"]="sql";${"GLOBALS"}["xhgrled"]="sql";switch($oper){case"add":$this->_addarray[]=array("sql"=>${${"GLOBALS"}["xhgrled"]},"params"=>${${"GLOBALS"}["fogqbrprigi"]});break;case"edit":$this->_editarray[]=array("sql"=>${${"GLOBALS"}["bezqceqfik"]},"params"=>${${"GLOBALS"}["fogqbrprigi"]});break;case"del":$this->_delarray[]=array("sql"=>${${"GLOBALS"}["hllsuv"]},"params"=>${${"GLOBALS"}["fogqbrprigi"]});break;}}public function getFields(){return$this->fields;}
+	public function insert($data)
+	{
+		if(!$this->add)
+		{
+			return false;
+		}
+		if(!$this->_buildFields())
+		{
+			return false;
+		}
+		if(!$this->checkPrimary())
+		{
+			return false;
+		}
+		if($this->serverSanitize)
+		{
+			if(is_array($this->sanatations)&&count($this->sanatations)==0)
+			{
+				foreach($this->validations as$key=>$values)
+				{
+					foreach($values as${${"GLOBALS"}["cgynrwf"]}=>$val)
+					{
+						${"GLOBALS"}["cilprtokhft"]="prop";
+						if(${${"GLOBALS"}["cgynrwf"]}=="sanitize"&&$values[${${"GLOBALS"}["cilprtokhft"]}]==true)
+						{
+							$kckubfqjbv="key";
+							$this->sanatations[]=${$kckubfqjbv};
+							break;
+						}
+					}
+				}
+			}
+		}
+		if($this->serverValidate)
+		{
+			$validator=new jqValidator($this->validations,$this->sanatations);
+			$validator->linebreak="<br/>";
+			if(!$validator->validate($data))
+			{
+				$this->errorMessage=$validator->getJSON();
+				$this->sendErrorHeader();
+				return false;
+			}
+		}
+		if($this->serverSanitize)
+		{
+			if(!$this->serverValidate)
+			{
+				$validator=new jqValidator($this->validations,$this->sanatations);
+			}
+			$data=$validator->sanatize($data);
+		}
+		$datefmt=$this->userdateformat;
+		$timefmt=$this->usertimeformat;
+		if($this->serialKey)
+		{
+			unset($data[$this->getPrimaryKeyId()]);
+		}
+		$tableFields=array_keys($this->fields);
+		$rowFields=array_intersect($tableFields,array_keys($data));
+		$insertFields=array();
+		$binds=array();
+		$types=array();
+		$v="";
+		foreach($rowFields as $key=>$val)
+		{
+			$insertFields[]="?";
+			$t=$this->fields[$val]["type"];
+			$value=$data[$val];
+			if(strtolower($this->encoding)!="utf-8")
+			{
+				$value=iconv("utf-8",$this->encoding."//TRANSLIT",$value);
+			}
+			if(strtolower($value)=="null")
+			{
+				$v=NULL;
+			}
+			else if(trim($value)=="")
+			{
+				$v=$value;
+			}
+			else
+			{
+				switch($t)
+				{
+					case"date":
+						$v=$datefmt!=$this->dbdateformat?jqGridUtils::parseDate($datefmt,$value,$this->dbdateformat):$value;
+						break;
+					case"datetime":
+						$v=$timefmt!=$this->dbtimeformat?jqGridUtils::parseDate($timefmt,$value,$this->dbtimeformat):$value;
+						break;
+					case"time":
+						$v=jqGridUtils::parseDate($timefmt,$value,"H:i:s");
+						break;
+					default:
+						$v=$value;
+				}
+				if($this->decodeinput)
+				{
+					$v=htmlspecialchars_decode($v);
+				}
+			}
+			$types[]=$t;
+			$binds[]=$v;
+			unset($v);
+		}
+		$result=false;
+		if(count($insertFields)>0)
+		{
+			${"GLOBALS"}["odrvmtdkfwrh"]="sql";
+			${"GLOBALS"}["yppktwdw"]="binds";
+			${"GLOBALS"}["ljnigii"]="stmt";
+			$sql="INSERT INTO ".$this->table." (".implode(", ",$rowFields).")"." VALUES( ".implode(", ",$insertFields).")";${${"GLOBALS"}["ljnigii"]}=$this->parseSql(${${"GLOBALS"}["odrvmtdkfwrh"]},${${"GLOBALS"}["yppktwdw"]},false);
+			if($stmt)
+			{
+				${"GLOBALS"}["ibdocap"]="binds";
+				$cgcgdujf="stmt";
+				jqGridDB::bindValues(${$cgcgdujf},${${"GLOBALS"}["ibdocap"]},$types);
+				if($this->trans)
+				{
+					try
+					{
+						jqGridDB::beginTransaction($this->pdo);
+						$result=$this->_actionsCRUDGrid("add","before");
+						${"GLOBALS"}["sikvvfztw"]="result";
+						if($this->debug)
+						{
+							$ksphnahcyq="binds";
+							${"GLOBALS"}["qildqpqqcdjm"]="types";
+							${"GLOBALS"}["jpncthrm"]="sql";
+							$this->logQuery(${${"GLOBALS"}["jpncthrm"]},${$ksphnahcyq},${${"GLOBALS"}["qildqpqqcdjm"]},$data,$this->fields,$this->primaryKey);
+						}
+						${"GLOBALS"}["bulfcotdyd"]="ret";
+						$slogmybwq="result";
+						${${"GLOBALS"}["bulfcotdyd"]}=false;
+						${"GLOBALS"}["msmkvwjc"]="ret";
+						if($result)
+						{
+							${"GLOBALS"}["ciydiwmd"]="binds";
+							$udonjjxdqba="ret";
+							${$udonjjxdqba}=jqGridDB::execute(${${"GLOBALS"}["ffqxvkhvnla"]},${${"GLOBALS"}["ciydiwmd"]},$this->pdo);
+						}
+						$wlgwdrhfr="result";
+						${$slogmybwq}=${${"GLOBALS"}["msmkvwjc"]}?true:false;
+						if($result)
+						{
+							if($this->serialKey&&$this->getLastInsert)
+							{
+								$this->lastId=jqGridDB::lastInsertId($this->pdo,$this->table,$this->primaryKey,$this->dbtype);
+								if(!is_numeric($this->lastId))
+								{
+									$orbnhabrtyr="result";
+									${$orbnhabrtyr}=false;
+								}
+							}
+						}
+						if(${${"GLOBALS"}["sikvvfztw"]})
+						{
+							$qrhljy="saver";
+							${$qrhljy}=$this->showError;
+							$this->showError=false;
+							$result=$this->_actionsCRUDGrid("add","after");
+							$this->showError=${${"GLOBALS"}["puldomm"]};
+						}
+						if(${$wlgwdrhfr})
+						{
+							$result=jqGridDB::commit($this->pdo);
+						}
+						if(!$result)
+						{
+							$this->errorMessage=jqGridDB::errorMessage($this->pdo);
+							throw new Exception($this->errorMessage);
+						}
+					}
+					catch(Exception$e)
+					{
+						jqGridDB::rollBack($this->pdo);
+						$result=false;
+						if(!$this->errorMessage)
+						{
+							$this->errorMessage=$e->getMessage();
+						}
+					}
+					try
+					{
+						$tqwehsv="ret";
+						jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?${$tqwehsv}:${${"GLOBALS"}["ffqxvkhvnla"]});
+					}
+					catch(Exception$e){};
+				}
+				else
+				{
+					try
+					{
+						${"GLOBALS"}["kshnsgeysof"]="result";
+						$njnwfulitlr="ret";
+						${"GLOBALS"}["ddpyqbwszbqg"]="result";
+						$result=$this->_actionsCRUDGrid("add","before");
+						${"GLOBALS"}["yibpjeoehe"]="result";
+						if($this->debug)
+						{
+							${"GLOBALS"}["iesjfu"]="sql";
+							$gcwfue="binds";
+							${"GLOBALS"}["xqvuadoexn"]="types";
+							$this->logQuery(${${"GLOBALS"}["iesjfu"]},${$gcwfue},${${"GLOBALS"}["xqvuadoexn"]},$data,$this->fields,$this->primaryKey);
+						}
+						${$njnwfulitlr}=false;
+						if(${${"GLOBALS"}["yibpjeoehe"]})
+						{
+							$ret=jqGridDB::execute($stmt,${${"GLOBALS"}["lkjcyviv"]},$this->pdo);
+						}
+						${${"GLOBALS"}["kshnsgeysof"]}=$ret?true:false;
+						if(!$result)
+						{
+							$this->errorMessage=jqGridDB::errorMessage($this->pdo);
+							throw new Exception($this->errorMessage);
+						}
+						jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?$ret:${${"GLOBALS"}["ffqxvkhvnla"]});
+						if($this->serialKey&&$this->getLastInsert&&${${"GLOBALS"}["ddpyqbwszbqg"]})
+						{
+							$this->lastId=jqGridDB::lastInsertId($this->pdo,$this->table,$this->primaryKey,$this->dbtype);
+							if(!is_numeric($this->lastId))
+							{
+								$result=false;
+							}
+						}
+						if($result)
+						{
+							${"GLOBALS"}["fbhotazpi"]="result";
+							${${"GLOBALS"}["fbhotazpi"]}=$this->_actionsCRUDGrid("add","after");
+						}
+						if(!$result)
+						{
+							$this->errorMessage=jqGridDB::errorMessage($this->pdo);
+							throw new Exception($this->errorMessage);
+						}
+					}
+					catch(Exception$e)
+					{
+						$result=false;
+						if(!$this->errorMessage)
+						{
+							$this->errorMessage=$e->getMessage();
+						}
+					}
+				}
+			}
+			else
+			{
+				$this->errorMessage="Error when preparing a INSERT statement!";
+				$result=false;
+			}
+		}
+		else
+		{
+			$this->errorMessage="Data posted does not match insert fields\x21";
+			$result=false;
+		}
+		if($this->debug)
+		{
+			$this->debugout();
+		}
+		if($this->showError&&!$result)
+		{
+			$this->sendErrorHeader();
+		}
+		return$result;
+	}
+	public function update($data){if(!$this->edit){return false;}$yuxjltlgprsh="updateFields";if(!$this->_buildFields()){return false;}if(!$this->checkPrimary()){return false;}$datefmt=$this->userdateformat;${"GLOBALS"}["cghktsohxe"]="rowFields";${"GLOBALS"}["rrggrtstws"]="updateFields";$ukfnugaspjya="tableFields";$timefmt=$this->usertimeformat;if($this->serverSanitize){if(is_array($this->sanatations)&&count($this->sanatations)==0){${"GLOBALS"}["kviscwmw"]="values";foreach($this->validations as$key=>${${"GLOBALS"}["kviscwmw"]}){foreach($values as${${"GLOBALS"}["cgynrwf"]}=>$val){$dbiwilfg="values";if(${${"GLOBALS"}["cgynrwf"]}=="sanitize"&&${$dbiwilfg}[${${"GLOBALS"}["cgynrwf"]}]==true){${"GLOBALS"}["tuxrrcl"]="key";$this->sanatations[]=${${"GLOBALS"}["tuxrrcl"]};break;}}}}}${"GLOBALS"}["tvijuwcvons"]="v2";if($this->serverValidate){$validator=new jqValidator($this->validations,$this->sanatations);${"GLOBALS"}["epxhsdfpwym"]="data";$validator->linebreak="<br/>";if(!$validator->validate(${${"GLOBALS"}["epxhsdfpwym"]})){$this->errorMessage=$validator->getJSON();$this->sendErrorHeader();return false;}}if($this->serverSanitize){$rodkpueimoof="data";${"GLOBALS"}["jvtwbeodj"]="data";if(!$this->serverValidate){${"GLOBALS"}["irknouywjyn"]="validator";${${"GLOBALS"}["irknouywjyn"]}=new jqValidator($this->validations,$this->sanatations);}${$rodkpueimoof}=$validator->sanatize(${${"GLOBALS"}["jvtwbeodj"]});}${$ukfnugaspjya}=array_keys($this->fields);${${"GLOBALS"}["cghktsohxe"]}=array_intersect($tableFields,array_keys($data));${$yuxjltlgprsh}=array();$vhgsuke="binds";${$vhgsuke}=array();$types=array();${${"GLOBALS"}["xybdkfxy"]}=$this->getPrimaryKeyId();foreach($rowFields as$key=>${${"GLOBALS"}["yousvcyfpak"]}){$phgveitqcw="field";${"GLOBALS"}["qzxcictfulr"]="t";${"GLOBALS"}["fgdjptstr"]="data";$aqfwsqcbmw="v";$cilzeid="field";$uevnqodwi="pk";$lfsdtvupssb="field";${${"GLOBALS"}["qzxcictfulr"]}=$this->fields[${$lfsdtvupssb}]["type"];$ihamxfhuq="value";$value=${${"GLOBALS"}["fgdjptstr"]}[${$phgveitqcw}];if(strtolower($this->encoding)!="utf-\x38"){${"GLOBALS"}["zeaypuug"]="value";${${"GLOBALS"}["zeaypuug"]}=iconv("utf-\x38",$this->encoding."//TRANSLIT",$value);}if(strtolower($value)=="null"){$v=NULL;}else if(trim(${$ihamxfhuq})==""){$v=$value;}else{$urtqwnyxx="value";$ccyqqhudsek="datefmt";$qyijnminl="timefmt";$eypgdnmfgw="datefmt";${"GLOBALS"}["rgbiwphs"]="v";$tihcflwl="timefmt";$cmjalvqqfe="value";switch($t){case"date":$v=${$eypgdnmfgw}!=$this->dbdateformat?jqGridUtils::parseDate(${$ccyqqhudsek},$value,$this->dbdateformat):$value;break;case"datetime":$v=$timefmt!=$this->dbtimeformat?jqGridUtils::parseDate(${$tihcflwl},${$cmjalvqqfe},$this->dbtimeformat):$value;break;case"time":$v=jqGridUtils::parseDate(${$qyijnminl},${$urtqwnyxx},"H:i:s");break;default:${${"GLOBALS"}["rgbiwphs"]}=$value;}if($this->decodeinput){$v=htmlspecialchars_decode($v);}}if(${$cilzeid}!=${$uevnqodwi}){$cfxyibrhht="binds";$cclfedolkb="v";$qwfqmfkwtti="types";${${"GLOBALS"}["ydeatyzhb"]}[]=${${"GLOBALS"}["yousvcyfpak"]}." = ?";${$cfxyibrhht}[]=${$cclfedolkb};${$qwfqmfkwtti}[]=$t;}else if(${${"GLOBALS"}["yousvcyfpak"]}==${${"GLOBALS"}["xybdkfxy"]}){${${"GLOBALS"}["bpkjnydw"]}=$v;${${"GLOBALS"}["nucadrcey"]}=$t;}unset(${$aqfwsqcbmw});}$result=false;if(!isset(${${"GLOBALS"}["tvijuwcvons"]})){$this->errorMessage="Primary key/value is missing or is not correctly set\x21";if($this->showError){$this->sendErrorHeader();}return$result;}${${"GLOBALS"}["lkjcyviv"]}[]=${${"GLOBALS"}["bpkjnydw"]};$types[]=${${"GLOBALS"}["nucadrcey"]};if(count(${${"GLOBALS"}["rrggrtstws"]})>0){$egreick="updateFields";$hxodrxdrg="pk";$qirzmoxx="binds";${"GLOBALS"}["benmemxa"]="stmt";${"GLOBALS"}["ttsgywfjm"]="stmt";$sql="U\x50DATE ".$this->table." SET ".implode(", ",${$egreick})." WHERE ".${$hxodrxdrg}." = ?";$xzucmjn="sql";${${"GLOBALS"}["ttsgywfjm"]}=$this->parseSql(${$xzucmjn},${$qirzmoxx},false);if(${${"GLOBALS"}["benmemxa"]}){$pgchdgyk="stmt";${"GLOBALS"}["qvewsutnn"]="types";${"GLOBALS"}["kbuiewnotv"]="binds";jqGridDB::bindValues(${$pgchdgyk},${${"GLOBALS"}["kbuiewnotv"]},${${"GLOBALS"}["qvewsutnn"]});if($this->trans){try{jqGridDB::beginTransaction($this->pdo);$ikpqajve="stmt";$result=$this->_actionsCRUDGrid("edit","before");if($this->debug){$sgokxxpndtj="binds";$vvubvgeuq="data";${"GLOBALS"}["tpyczqvvc"]="sql";$this->logQuery(${${"GLOBALS"}["tpyczqvvc"]},${$sgokxxpndtj},$types,${$vvubvgeuq},$this->fields,$this->primaryKey);}${"GLOBALS"}["gesjeqn"]="result";$ret=false;if($result){$qbzthogrfrs="binds";$ret=jqGridDB::execute(${${"GLOBALS"}["ffqxvkhvnla"]},${$qbzthogrfrs},$this->pdo);}${${"GLOBALS"}["gesjeqn"]}=$ret?true:false;if(!$result){$this->errorMessage=jqGridDB::errorMessage($this->pdo);throw new Exception($this->errorMessage);}jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?$ret:${$ikpqajve});if($result){$result=$this->_actionsCRUDGrid("edit","after");}if($result){$dxffqyvlwbr="result";${$dxffqyvlwbr}=jqGridDB::commit($this->pdo);}else{$this->errorMessage=jqGridDB::errorMessage($this->pdo);throw new Exception($this->errorMessage);}}catch(Exception$e){${"GLOBALS"}["nwhgsbnhgkh"]="result";jqGridDB::rollBack($this->pdo);${${"GLOBALS"}["nwhgsbnhgkh"]}=false;if(!$this->errorMessage){$this->errorMessage=$e->getMessage();}}}else{try{$ovjumar="result";$kobmdoldc="result";${"GLOBALS"}["uxjauioq"]="result";$ypqssix="ret";${${"GLOBALS"}["uxjauioq"]}=$this->_actionsCRUDGrid("edit","before");if($this->debug){$iaifxn="types";$this->logQuery($sql,${${"GLOBALS"}["lkjcyviv"]},${$iaifxn},$data,$this->fields,$this->primaryKey);}${$ypqssix}=false;if(${$kobmdoldc}){$khddxx="stmt";$ret=jqGridDB::execute(${$khddxx},${${"GLOBALS"}["lkjcyviv"]},$this->pdo);}$result=$ret?true:false;if(!$result){$this->errorMessage=jqGridDB::errorMessage($this->pdo);throw new Exception($this->errorMessage);}jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?$ret:${${"GLOBALS"}["ffqxvkhvnla"]});if($result){$biorvigcvqn="result";${$biorvigcvqn}=$this->_actionsCRUDGrid("edit","after");}if(!${$ovjumar}){$this->errorMessage=jqGridDB::errorMessage($this->pdo);throw new Exception($this->errorMessage);}}catch(Exception$e){$result=false;if(!$this->errorMessage)$this->errorMessage=$e->getMessage();}}}else{$this->errorMessage="Error when preparing a UPDATE statement\x21";}}else{$this->errorMessage="Data posted does not match update fields!";}if($this->debug){$this->debugout();}if($this->showError&&!$result){$this->sendErrorHeader();}return$result;}public function getLastInsertId(){return$this->lastId;}public function delete(array$data,$where='',array$params=null){${"GLOBALS"}["rgxtemhyur"]="result";$tngtxjikmk="result";${${"GLOBALS"}["rgxtemhyur"]}=false;$lkyvzaq="data";if(!$this->del){return$result;}${"GLOBALS"}["czjsgvqlp"]="ide";if(!$this->checkPrimary()){${"GLOBALS"}["brfxwohsvcfl"]="result";return${${"GLOBALS"}["brfxwohsvcfl"]};}$mltwojspng="odbc";${"GLOBALS"}["jxmdhqkbu"]="types";${${"GLOBALS"}["czjsgvqlp"]}=null;${${"GLOBALS"}["lkjcyviv"]}=array(&${${"GLOBALS"}["uijpyufhbz"]});${${"GLOBALS"}["jxmdhqkbu"]}=array();${$mltwojspng}=strpos($this->dbtype,"odbc");if(count(${$lkyvzaq})>0){${"GLOBALS"}["yfqgiptiqrl"]="where";$kgifpglkbql="types";if(${${"GLOBALS"}["zpqoiqolyvj"]}&&strlen(${${"GLOBALS"}["yfqgiptiqrl"]})>0){${"GLOBALS"}["srqfkveph"]="stmt";$gnplqrzf="sql";${"GLOBALS"}["povbiqufvhm"]="where";${"GLOBALS"}["vsjvufgurqg"]="delids";${${"GLOBALS"}["cyliutb"]}="";${$gnplqrzf}="DELETE FROM ".$this->table." WHERE ".${${"GLOBALS"}["povbiqufvhm"]};${${"GLOBALS"}["srqfkveph"]}=$this->parseSql($sql,${${"GLOBALS"}["fogqbrprigi"]});${${"GLOBALS"}["vsjvufgurqg"]}="";${${"GLOBALS"}["aicbmcsdqvw"]}=true;}else{$cpisxnkoptxa="data";$irztfkwhmf="odbc";$tcmsvmv="data";${${"GLOBALS"}["cyliutb"]}=$this->getPrimaryKeyId();${"GLOBALS"}["vtitog"]="stmt";${"GLOBALS"}["wulysctaktr"]="binds";if(!isset(${$cpisxnkoptxa}[${${"GLOBALS"}["cyliutb"]}])){$txaxkjefjty="result";$this->errorMessage="Missed data id value to perform delete!";if($this->showError){$this->sendErrorHeader();}return${$txaxkjefjty};}$sql="DELETE FROM ".$this->table." WHERE ".${${"GLOBALS"}["cyliutb"]}."=?";${${"GLOBALS"}["vtitog"]}=${$irztfkwhmf}===false?$this->parseSql($sql,${${"GLOBALS"}["wulysctaktr"]},false):true;${"GLOBALS"}["vhqcpjyiedy"]="delids";${${"GLOBALS"}["vhqcpjyiedy"]}=explode(",",${$tcmsvmv}[${${"GLOBALS"}["cyliutb"]}]);${${"GLOBALS"}["aicbmcsdqvw"]}=false;}${$kgifpglkbql}[0]="custom";if(${${"GLOBALS"}["ffqxvkhvnla"]}){if($this->trans){try{jqGridDB::beginTransaction($this->pdo);$result=$this->_actionsCRUDGrid("del","before");$nnptwwke="result";if(${${"GLOBALS"}["aicbmcsdqvw"]}){$olkfkszfbkwx="params";${"GLOBALS"}["bxqgifk"]="result";${"GLOBALS"}["jyojhrmh"]="stmt";${"GLOBALS"}["kccejaqlomw"]="result";if($this->debug){$xrpvbogsmm="params";${"GLOBALS"}["ntjgqkq"]="data";$this->logQuery($sql,${$xrpvbogsmm},false,${${"GLOBALS"}["ntjgqkq"]},null,$this->primaryKey);}${${"GLOBALS"}["bxqgifk"]}=jqGridDB::execute(${${"GLOBALS"}["jyojhrmh"]},${$olkfkszfbkwx},$this->pdo);if(${${"GLOBALS"}["kccejaqlomw"]}){${"GLOBALS"}["zsxpfcc"]="stmt";jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?$result:${${"GLOBALS"}["zsxpfcc"]});}}else{${"GLOBALS"}["inenxj"]="odbc";$dotdtnt="delids";foreach(${$dotdtnt} as${${"GLOBALS"}["ksgifxi"]}=>${${"GLOBALS"}["uijpyufhbz"]}){${"GLOBALS"}["edmapstof"]="odbc";$vnnxedwy="i";$hobqyoem="delids";${"GLOBALS"}["hmkbneovkkb"]="result";${"GLOBALS"}["kzumvuhx"]="delids";${${"GLOBALS"}["kzumvuhx"]}[${$vnnxedwy}]=trim(${${"GLOBALS"}["zciteytspqvc"]}[${${"GLOBALS"}["ksgifxi"]}]);${${"GLOBALS"}["lkjcyviv"]}[0]=&${$hobqyoem}[${${"GLOBALS"}["ksgifxi"]}];if($this->debug){$dbjirenmyfc="data";$this->logQuery($sql,${${"GLOBALS"}["lkjcyviv"]},$types,${$dbjirenmyfc},$this->fields,$this->primaryKey);}if(${${"GLOBALS"}["edmapstof"]}===false){$wskmiqind="binds";${"GLOBALS"}["iwbcyshqdomw"]="stmt";jqGridDB::bindValues(${${"GLOBALS"}["ffqxvkhvnla"]},${${"GLOBALS"}["lkjcyviv"]},$types);${"GLOBALS"}["qzkftehaor"]="result";${${"GLOBALS"}["qzkftehaor"]}=jqGridDB::execute(${${"GLOBALS"}["iwbcyshqdomw"]},${$wskmiqind},$this->pdo);}else{$aeefwivnok="binds";${"GLOBALS"}["fynmchbbqpf"]="stmt";${"GLOBALS"}["ernxjuk"]="sql";${${"GLOBALS"}["ffqxvkhvnla"]}=jqGridDB::prepare($this->pdo,${${"GLOBALS"}["ernxjuk"]},${${"GLOBALS"}["lkjcyviv"]},false,false);$result=jqGridDB::execute(${${"GLOBALS"}["fynmchbbqpf"]},${$aeefwivnok},$this->pdo);if(!$result){break;}jqGridDB::closeCursor(${${"GLOBALS"}["ffqxvkhvnla"]});}if(!${${"GLOBALS"}["hmkbneovkkb"]}){break;}unset(${${"GLOBALS"}["lkjcyviv"]}[0]);}if(${${"GLOBALS"}["inenxj"]}===false&&$result){jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?$result:${${"GLOBALS"}["ffqxvkhvnla"]});}}${"GLOBALS"}["hopcrdmuej"]="ret";$ret=${$nnptwwke}?true:false;if(${${"GLOBALS"}["hopcrdmuej"]}){$result=$this->_actionsCRUDGrid("del","after");}else{$xnqmufipv="result";${$xnqmufipv}=false;}if($result){jqGridDB::commit($this->pdo);}else{$this->errorMessage=jqGridDB::errorMessage($this->pdo);throw new Exception($this->errorMessage);}}catch(Exception$e){jqGridDB::rollBack($this->pdo);$result=false;if(!$this->errorMessage)$this->errorMessage=$e->getMessage();}}else{try{${"GLOBALS"}["eonwiuvkkcno"]="result";${"GLOBALS"}["kftrpivvjgqg"]="result";${"GLOBALS"}["uxjeflmyl"]="result";${${"GLOBALS"}["kftrpivvjgqg"]}=$this->_actionsCRUDGrid("del","before");if(${${"GLOBALS"}["eonwiuvkkcno"]}){${"GLOBALS"}["jtuedhtu"]="custom";if(${${"GLOBALS"}["jtuedhtu"]}){$bxywmoplcd="stmt";${"GLOBALS"}["spnsdyl"]="result";$mxyrshvc="result";${"GLOBALS"}["gquvddb"]="params";${$mxyrshvc}=jqGridDB::execute(${$bxywmoplcd},${${"GLOBALS"}["gquvddb"]},$this->pdo);if(${${"GLOBALS"}["spnsdyl"]}){${"GLOBALS"}["brepneg"]="stmt";$jrqioroyb="result";jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?${$jrqioroyb}:${${"GLOBALS"}["brepneg"]});}}else{${"GLOBALS"}["btfflonbu"]="ide";${"GLOBALS"}["nhgflj"]="odbc";$pbaebfwjxyv="result";foreach(${${"GLOBALS"}["zciteytspqvc"]} as${${"GLOBALS"}["ksgifxi"]}=>${${"GLOBALS"}["btfflonbu"]}){$ynvipreiofio="i";${"GLOBALS"}["sccnzwby"]="i";$nmrneug="i";${${"GLOBALS"}["zciteytspqvc"]}[${${"GLOBALS"}["sccnzwby"]}]=trim(${${"GLOBALS"}["zciteytspqvc"]}[${$ynvipreiofio}]);${${"GLOBALS"}["lkjcyviv"]}[0]=&${${"GLOBALS"}["zciteytspqvc"]}[${$nmrneug}];if($this->debug){${"GLOBALS"}["xpdmmjf"]="types";$this->logQuery($sql,${${"GLOBALS"}["lkjcyviv"]},${${"GLOBALS"}["xpdmmjf"]},$data,$this->fields,$this->primaryKey);}if(${${"GLOBALS"}["gxekduy"]}===false){${"GLOBALS"}["kvwtfs"]="types";${"GLOBALS"}["neydskiqa"]="binds";$iokwhnxc="result";${"GLOBALS"}["oziduqc"]="binds";jqGridDB::bindValues(${${"GLOBALS"}["ffqxvkhvnla"]},${${"GLOBALS"}["oziduqc"]},${${"GLOBALS"}["kvwtfs"]});${$iokwhnxc}=jqGridDB::execute(${${"GLOBALS"}["ffqxvkhvnla"]},${${"GLOBALS"}["neydskiqa"]},$this->pdo);}else{$mmfurnksf="binds";$uwhelm="binds";$ubwyenn="result";${"GLOBALS"}["puhygquyhg"]="stmt";${"GLOBALS"}["uthvmcivwopv"]="stmt";${${"GLOBALS"}["uthvmcivwopv"]}=jqGridDB::prepare($this->pdo,$sql,${$uwhelm},false,false);${$ubwyenn}=jqGridDB::execute(${${"GLOBALS"}["puhygquyhg"]},${$mmfurnksf},$this->pdo);$srtxccztt="result";if(${$srtxccztt}){$uvijzgpuhxo="stmt";jqGridDB::closeCursor(${$uvijzgpuhxo});}}$ybbdqcna="result";if(!${$ybbdqcna}){break;}unset(${${"GLOBALS"}["lkjcyviv"]}[0]);}if(${${"GLOBALS"}["nhgflj"]}==false&&${$pbaebfwjxyv}){${"GLOBALS"}["dqrxydbymah"]="result";jqGridDB::closeCursor(($this->dbtype=="adodb"||$this->dbtype=="ibase")?${${"GLOBALS"}["dqrxydbymah"]}:${${"GLOBALS"}["ffqxvkhvnla"]});}}}$hggyqxlwhx="ret";${$hggyqxlwhx}=${${"GLOBALS"}["uxjeflmyl"]}?true:false;if($ret){$npjlkicewqyg="result";${$npjlkicewqyg}=$this->_actionsCRUDGrid("del","after");}else{$result=false;}if(!$result){$this->errorMessage=jqGridDB::errorMessage($this->pdo);throw new Exception($this->errorMessage);}}catch(Exception$e){${"GLOBALS"}["otpwcwik"]="result";${${"GLOBALS"}["otpwcwik"]}=false;if(!$this->errorMessage){$this->errorMessage=$e->getMessage();}}}}}if($this->debug){$this->debugout();}if($this->showError&&!${$tngtxjikmk}){$this->sendErrorHeader();}return$result;}protected function checkPrimary(){$result=true;${${"GLOBALS"}["qwbpeiwguu"]}="Primary key can not be found\x21";${"GLOBALS"}["bkbvcwv"]="result";if(strlen(trim($this->table))>0&&!$this->primaryKey){$this->primaryKey=jqGridDB::getPrimaryKey($this->table,$this->pdo,$this->dbtype);if(!$this->primaryKey){$this->errorMessage=${${"GLOBALS"}["qwbpeiwguu"]}." ".jqGridDB::errorMessage($this->pdo);$bmypqfypldx="result";${$bmypqfypldx}=false;}}if($this->showError&&!${${"GLOBALS"}["bkbvcwv"]}){$this->sendErrorHeader();}return$result;}
+	public function editGrid(array$summary=null,array$params=null,$oper=false,$echo=true)
+	{
+		$mvsogmgkxvf="oper";
+		if(!${$mvsogmgkxvf})
+		{
+			$oper=$this->oper?$this->oper:"grid";
+		}
+		switch($oper)
+		{
+			case$this->GridParams["editoper"]:
+				$data=strtolower($this->mtype)=="post"?jqGridUtils::Strip($_POST):jqGridUtils::Strip($_GET);
+				if($this->update($data))
+				{
+					if($this->successmsg)
+					{
+						echo$this->successmsg;
+					}
+				}
+				break;
+			case$this->GridParams["addoper"]:
+				$data=strtolower($this->mtype)=="post"?jqGridUtils::Strip($_POST):jqGridUtils::Strip($_GET);
+				if($this->insert($data))
+				{
+					if($this->getLastInsert)
+					{
+						echo$this->getPrimaryKeyId()."#".$this->lastId;
+					}
+					else
+					{
+						if($this->successmsg)
+						{
+							echo$this->successmsg;
+						}
+					}
+				}
+				break;
+			case$this->GridParams["deloper"]:
+				$data=strtolower($this->mtype)=="post"?jqGridUtils::Strip($_POST):jqGridUtils::Strip($_GET);
+				if($this->delete($data))
+				{
+					if($this->successmsg)
+					{
+						echo$this->successmsg;
+					}
+				}
+				break;
+			default:
+				return$this->queryGrid($summary,$params,$echo);
+		}
+	}
+}
+?>

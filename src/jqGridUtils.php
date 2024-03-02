@@ -1,0 +1,246 @@
+<?php
+namespace rivcar\jqGrid;
+use SimpleXMLElement;
+
+${"GLOBALS"}["ubjpgjxsgqjg"]="cdata_text";${"GLOBALS"}["erdejinmxfo"]="no";${"GLOBALS"}["fktjktbflwm"]="content";${"GLOBALS"}["puiygregunh"]="template";${"GLOBALS"}["nhouocrn"]="templates";${"GLOBALS"}["htwsokmgw"]="tagToReplace";${"GLOBALS"}["hmovhcsl"]="output";${"GLOBALS"}["munnrisqhl"]="name";${"GLOBALS"}["idwpultm"]="instance";${"GLOBALS"}["vhgrivcap"]="arg_pos";${"GLOBALS"}["bcjocckqs"]="arg_key";${"GLOBALS"}["vdgpwol"]="replace";${"GLOBALS"}["mhmcrsg"]="pos";${"GLOBALS"}["snsxjslqw"]="match";${"GLOBALS"}["latcsbnekfxw"]="format";${"GLOBALS"}["vhywdln"]="arg_nums";${"GLOBALS"}["qnsflmc"]="PH\x50FormatOptions";${"GLOBALS"}["efikfoxvll"]="ExcelOptions";${"GLOBALS"}["lhkajre"]="count";${"GLOBALS"}["rhhimlloman"]="phpdate";${"GLOBALS"}["wkmbiclzs"]="a";
+${"GLOBALS"}["hevdqi"]="days\x33";
+${"GLOBALS"}["iunonskoelp"]="j";${"GLOBALS"}["yokdheufluw"]="tmp_val";${"GLOBALS"}["fdyysugr"]="part";${"GLOBALS"}["kxjvdekhbbc"]="index";${"GLOBALS"}["ncbbwmvp"]="parts";${"GLOBALS"}["cotevtq"]="json";${"GLOBALS"}["pxnshrgk"]="v";
+${"GLOBALS"}["kooweusfvo"]="n";${"GLOBALS"}["xutqonh"]="es";${"GLOBALS"}["haxgqsf"]="js";${"GLOBALS"}["hbvrwaujuk"]="cdata";${"GLOBALS"}["hlqlykfqymm"]="node";${"GLOBALS"}["dqwpqcube"]="key";${"GLOBALS"}["withcroi"]="value";${"GLOBALS"}["vekoedkykps"]="data";${"GLOBALS"}["dcjkll"]="encoding";${"GLOBALS"}["xulcyfpjp"]="xml";${"GLOBALS"}["cdluecmxu"]="str";
+date_default_timezone_set("America/Lima");
+class jqGridUtils{public static$days3=array("Mon","Tue","Wed","Thu","Fri","Sat","Sun");public static$days=array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");public static$month3=array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");public static$month=array("January","February","March","April","May","June","July","August","September","October","November","December");
+public static $types=array("d"=>"([0-9]{2})","D"=>"([a-zA-z]{3})","j"=>"([0-9]{1,2})","l"=>"([A-Z][a-z]{4,7})","N"=>"([1-7])","S"=>"(st|nd|rd|th)","w"=>"([0-6])","z"=>"([0-9]{3})","W"=>"([0-9]{2})","F"=>"([A-Z][a-z]{2,8})","m"=>"([0-9]{2})","M"=>"([A-Za-z]{3})","n"=>"([0-9]{1,2})","t"=>"(28|29|30|31)","L"=>"(1|0)","o"=>"([0-9]{4})","Y"=>"([0-9]{4})","y"=>"([0-9]{2})","a"=>"(am|pm)","A"=>"(AM|PM)","B"=>"([0-9]{3})","g"=>"([1-12])","G"=>"([0-23])","h"=>"([0-9]{2})","H"=>"([0-9]{2})","i"=>"([0-9]{2})","s"=>"([0-9]{2})","u"=>"([0-9]{1,5})","e"=>"([A-Za-z0-9_]{3,})","I"=>"(1|0)","O"=>"(+[0-9]{4})","P"=>"(+[0-9]{2}:[0-9]{2})","T"=>"([A-Z]{1,4})","Z"=>"(-?[0-9]{1,5})","c"=>"(\d\d\d\d)(?:-?(\d\d)(?:-?(\d\d)(?:[T](\d\d)(?::?(\d\d)(?::?(\d\d)(?:\.(\d+))?)?)?(?:Z|(?:([-+])(\d\d)(?::?(\d\d))?)?)?)?)?)?","r"=>"([a-zA-Z]{2,}),\040(\d{1,})\040([a-zA-Z]{2,})\040([0-9]{4})\040([0-9]{2}):([0-9]{2}):([0-9]{2})\040([+-][0-9]{4})","U"=>"(\d+)");
+public static $patrVal=array();
+public static function toXml($data,$rootNodeName='root',$xml=null,$encoding='utf-8',$cdata=false){${"GLOBALS"}["qgzirs"]="xml";${"GLOBALS"}["gqsunpj"]="key";if(ini_get("zend\x2eze1_compatibility_mode")==1){ini_set("zend\x2eze\x31_compatibility_mode",0);}if(${${"GLOBALS"}["qgzirs"]}==null){${${"GLOBALS"}["xulcyfpjp"]}=new SimpleXMLExtended("<?xml version=\x27\x31.\x30' encoding=\x27".${${"GLOBALS"}["dcjkll"]}."\x27?><$rootNodeName\x20/\x3e");}foreach(${${"GLOBALS"}["vekoedkykps"]} as${${"GLOBALS"}["gqsunpj"]}=>${${"GLOBALS"}["withcroi"]}){${"GLOBALS"}["lfvypuuc"]="value";${"GLOBALS"}["lecnphjp"]="key";if(is_numeric(${${"GLOBALS"}["lecnphjp"]})){${${"GLOBALS"}["dqwpqcube"]}="row";}if(is_array(${${"GLOBALS"}["withcroi"]})||is_object(${${"GLOBALS"}["lfvypuuc"]})){${"GLOBALS"}["pqxcbmqs"]="rootNodeName";${"GLOBALS"}["isgetkclwlm"]="key";${"GLOBALS"}["gntvomlb"]="encoding";$cpwxgsb="value";${${"GLOBALS"}["hlqlykfqymm"]}=$xml->addChild(${${"GLOBALS"}["isgetkclwlm"]});self::toXml(${$cpwxgsb},${${"GLOBALS"}["pqxcbmqs"]},${${"GLOBALS"}["hlqlykfqymm"]},${${"GLOBALS"}["gntvomlb"]},${${"GLOBALS"}["hbvrwaujuk"]});}else{$wnmtpikpq="value";${"GLOBALS"}["eoedkqrlszj"]="value";$vhcqjwkxrsvt="value";${${"GLOBALS"}["withcroi"]}=is_bool(${${"GLOBALS"}["withcroi"]})?(${${"GLOBALS"}["eoedkqrlszj"]}?"true":"false"):${$wnmtpikpq};$mhpazcndm="cdata";${${"GLOBALS"}["withcroi"]}=htmlspecialchars(${$vhcqjwkxrsvt});if(${$mhpazcndm}===true){${${"GLOBALS"}["hlqlykfqymm"]}=$xml->addChild(${${"GLOBALS"}["dqwpqcube"]});$node->addCData(${${"GLOBALS"}["withcroi"]});}else{${"GLOBALS"}["npfvaldicq"]="key";$mpukof="value";$xml->addChild(${${"GLOBALS"}["npfvaldicq"]},${$mpukof});}}}return$xml->asXML();}public static function quote($js,$forUrl=false){${"GLOBALS"}["jjiuvfxdr"]="for\x55rl";if(${${"GLOBALS"}["jjiuvfxdr"]}){return strtr(${${"GLOBALS"}["haxgqsf"]},array("%"=>"%\x325","\t"=>"\x5ct","\n"=>"\\n","\r"=>"\\r","\x22"=>"\x5c\"","'"=>"\x5c\x27","\x5c"=>"\\\\"));}else{return strtr(${${"GLOBALS"}["haxgqsf"]},array("\t"=>"\\t","\n"=>"\\n","\r"=>"\\r","\x22"=>"\x5c\"","\x27"=>"\x5c'","\\"=>"\x5c\x5c","'"=>"'","/"=>"\\/"));}}public static function encode($value){$hhfbyoumdf="value";${"GLOBALS"}["nngczfe"]="value";$mbmico="value";${"GLOBALS"}["naoyomimjl"]="value";$iohokowzw="value";${"GLOBALS"}["pfmfcbksifj"]="value";if(is_string(${${"GLOBALS"}["nngczfe"]})){if(strpos(${${"GLOBALS"}["withcroi"]},"js:")===0){${"GLOBALS"}["chdxyih"]="value";return substr(${${"GLOBALS"}["chdxyih"]},3);}else{return"\"".self::quote(${${"GLOBALS"}["withcroi"]})."\"";}}else if(${${"GLOBALS"}["naoyomimjl"]}===null){return"null";}else if(is_bool(${$hhfbyoumdf})){${"GLOBALS"}["hignymlssd"]="value";return${${"GLOBALS"}["hignymlssd"]}?"true":"false";}else if(is_integer(${$mbmico})){return"$value";}else if(is_float(${$iohokowzw})){$grwyrc="value";${"GLOBALS"}["xmepwgfvhlz"]="value";if(${${"GLOBALS"}["xmepwgfvhlz"]}===-INF){return"Number.NEGA\x54IVE_INFINITY";}else if(${$grwyrc}===INF){return"\x4eumber.\x50OSI\x54IVE_I\x4eFI\x4eITY";}else{return"$value";}}else if(is_object(${${"GLOBALS"}["withcroi"]})){$uxtdmusb="value";return self::encode(get_object_vars(${$uxtdmusb}));}else if(is_array(${${"GLOBALS"}["pfmfcbksifj"]})){$dxhmdwmnopz="n";${${"GLOBALS"}["xutqonh"]}=array();if((${$dxhmdwmnopz}=count(${${"GLOBALS"}["withcroi"]}))>0&&array_keys(${${"GLOBALS"}["withcroi"]})!==range(0,${${"GLOBALS"}["kooweusfvo"]}-1)){$idywmgabpeu="v";foreach(${${"GLOBALS"}["withcroi"]} as$k=>${$idywmgabpeu}){${"GLOBALS"}["xbxipjvifb"]="v";$xsjodczvbzkl="es";${$xsjodczvbzkl}[]="\x22".self::quote($k)."\":".self::encode(${${"GLOBALS"}["xbxipjvifb"]});}return"{".implode(",",${${"GLOBALS"}["xutqonh"]})."}";}else{foreach(${${"GLOBALS"}["withcroi"]} as${${"GLOBALS"}["pxnshrgk"]}){${${"GLOBALS"}["xutqonh"]}[]=self::encode(${${"GLOBALS"}["pxnshrgk"]});}return"[".implode(",",${${"GLOBALS"}["xutqonh"]})."]";}}else{return"";}}public static function decode($json){${${"GLOBALS"}["cotevtq"]}=str_replace(array("\\\\","\\\x22"),array("&#\x39\x32;","&#\x33\x34;"),${${"GLOBALS"}["cotevtq"]});$alfgidcdmv="json";${${"GLOBALS"}["ncbbwmvp"]}=preg_split("@(\x22[^\"]*\")|([\\[\x5c]\{\\},:])|\x5cs@is",${$alfgidcdmv},-1,PREG_SPLIT_NO_EMPTY|PREG_SPLIT_DELIM_CAPTURE);$bgsiwpxx="parts";foreach(${${"GLOBALS"}["ncbbwmvp"]} as${${"GLOBALS"}["kxjvdekhbbc"]}=>${${"GLOBALS"}["fdyysugr"]}){if(strlen(${${"GLOBALS"}["fdyysugr"]})==1){$dgmifsin="index";${"GLOBALS"}["xbaowng"]="parts";$funxvsvfwx="part";switch(${$funxvsvfwx}){case"[":case"{":${${"GLOBALS"}["ncbbwmvp"]}[${${"GLOBALS"}["kxjvdekhbbc"]}]="array(";break;case"]":case"}":${${"GLOBALS"}["ncbbwmvp"]}[${${"GLOBALS"}["kxjvdekhbbc"]}]=")";break;case":":${${"GLOBALS"}["xbaowng"]}[${$dgmifsin}]="\x3d>";break;case",":break;default:return null;}}else{${"GLOBALS"}["dzqphle"]="part";if((substr(${${"GLOBALS"}["fdyysugr"]},0,1)!="\"")||(substr(${${"GLOBALS"}["dzqphle"]},-1,1)!="\"")){return null;}}}${${"GLOBALS"}["cotevtq"]}=str_replace(array("\x26\x239\x32;","&\x233\x34;","\$"),array("\\\\","\\\"","\x5c\$"),implode("",${$bgsiwpxx}));return eval("return\x20$json;");}
+public static function Strip($value)
+{
+	return$value;
+}
+public static function generatePattern($dateformat)
+{
+	$k=0;
+	$datearray=preg_split("//",$dateformat);
+	$patternkey=array();
+	self::$patrVal=array();
+	for($i=0;$i<count($datearray);$i++)
+	{
+		if(isset($datearray[$i-1])&&$datearray[$i-1]=="@")
+		{
+			$patternkey[$i]=$datearray[$i];
+		}
+		elseif($datearray[$i]=="@")
+		{
+			$patternkey[$i]="";
+		}
+		elseif($datearray[$i]==" ")
+		{
+			$patternkey[$i]="\040";
+		}
+		elseif(in_array($datearray[$i],array_keys(self::$types)))
+		{
+			$patternkey[$i]=self::$types[$datearray[$i]];
+			self::$patrVal[$k]=array_search($datearray[$i],array_keys(self::$types));
+			$k++;
+		}
+		else
+		{
+			$patternkey[$i]=$datearray[$i];
+		}
+	}
+	$patternkey=implode("",$patternkey);
+	return "/".$patternkey."/";
+}
+public static function date_parse($dateformat,$date)
+{
+	$newdate="";
+	$dateformat=str_replace(array("\\","\t","/"),array("\x40","@t","\x7e"),$dateformat);
+	$date=str_replace("/","\x7e",$date);
+	$pattern=self::generatePattern($dateformat);
+	preg_match_all($pattern,$date,$newdate);
+	$newdate=array_slice($newdate,1);
+	if(self::$patrVal[0]==34)
+	{
+		${"GLOBALS"}["pvsbco"]="newdate";
+		$ltddsysql="newdate";
+		$bnehtdbr="newdate";
+		${"GLOBALS"}["rorjojow"]="newdate";
+		$resultvar=array("Year"=>$newdate[0],"Year"=>$newdate[0][0],"Month"=>${$ltddsysql}[1][0],"Day"=>$newdate[2][0],"Hour"=>$newdate[3][0],"Minute"=>$newdate[4][0],"Second"=>${$bnehtdbr}[5][0],"Timezone"=>${${"GLOBALS"}["pvsbco"]}[6][0].$newdate[7][0].${${"GLOBALS"}["rorjojow"]}[8][0]);
+	}
+	elseif(self::$patrVal[0]==35)
+	{
+		${"GLOBALS"}["vtzjot"]="newdate";
+		${"GLOBALS"}["ryvnivkmi"]="newdate";
+		${"GLOBALS"}["xtgjfxkusr"]="newdate";
+		$cnyqkav="newdate";
+		${"GLOBALS"}["phrufpe"]="resultvar";
+		$jtxhnxav="newdate";
+		$ycckwvghnbv="month3";
+		${"GLOBALS"}["ycmeygik"]="newdate";
+		${${"GLOBALS"}["phrufpe"]}=array("Year"=>${${"GLOBALS"}["xtgjfxkusr"]}[0],"Year"=>${$jtxhnxav}[3][0],"Month"=>(array_search(${$cnyqkav}[2][0],self::${$ycckwvghnbv})+1),"Day"=>$newdate[1][0],"Hour"=>${${"GLOBALS"}["ycmeygik"]}[4][0],"Minute"=>$newdate[5][0],"Second"=>${${"GLOBALS"}["vtzjot"]}[6][0],"\x54imezone"=>${${"GLOBALS"}["ryvnivkmi"]}[7][0]);
+	}
+	elseif(self::$patrVal[0]==36)
+	{
+		$dlybfpicpp="resultvar";
+		$sjwobzkjl="result";
+		$fsyzszfwo="result";
+		${"GLOBALS"}["ybxcuyo"]="result";
+		${"GLOBALS"}["websevkxpmg"]="newdate";
+		$result=getdate(mktime(${${"GLOBALS"}["websevkxpmg"]}));
+		${$dlybfpicpp}=array("Year"=>$result["year"],"Month"=>array_search($result["month"],self::$month)+1,"Day"=>${$sjwobzkjl}["mday"],"Hour"=>$result["hours"],"Minute"=>${${"GLOBALS"}["ybxcuyo"]}["minutes"],"Second"=>${$fsyzszfwo}["seconds"],"Timezone"=>date("O"));
+	}
+	else
+	{
+		$labels=array_keys(self::$types);
+		for($i=0;$i<count($newdate);$i++)
+		{
+			if(isset($newdate[$i][0]))
+			{
+				$result[$labels[self::$patrVal[$i]]]=$newdate[$i][0];
+			}
+		}
+		if(isset($result["F"]))
+		{
+			$month=array_search($result["F"],self::$month)+1;
+		}
+		elseif(isset($result["M"]))
+		{
+			$month=array_search($result["M"],self::$month3)+1;
+		}
+		elseif(isset($result["m"]))
+		{
+			$month=$result["m"];
+		}
+		elseif(isset($result["n"]))
+		{
+			$month=$result["n"];
+		}
+		else
+		{
+			$month=1;
+		}
+		if(isset($result["d"]))
+		{
+			$day=$result["d"];
+		}
+		elseif(isset($result["j"]))
+		{
+			$day=$result["j"];
+		}
+		else
+		{
+			$day=1;
+		}
+		$wmglprzrvar="result";
+		if(isset($result["Y"]))
+		{
+			$year=$result["Y"];
+		}
+		elseif(isset($result["o"]))
+		{
+			$year=$result["o"];
+		}
+		elseif(isset($result["y"]))
+		{
+			$year=($result["y"]>substr(date("Y",time()),2,2))?(substr(date("Y",time()),0,2)-1).$result["y"]:substr(date("Y",time()),0,2).$result["y"];
+		}
+		else
+		{
+			$year=1970;
+		}
+		if(isset($result["l"]))
+		{
+			$weekday=array_search($result["l"],self::$days)+1;
+		}
+		elseif(isset($result["D"]))
+		{
+			$weekday=array_search($result["D"],self::${${"GLOBALS"}["hevdqi"]})+1;
+		}
+		elseif(isset($result["\x4e"]))
+		{
+			$weekday=$result["\x4e"];
+		}
+		elseif(isset(${$wmglprzrvar}["w"]))
+		{
+			$jiydgkjbyun="result";
+			${"GLOBALS"}["dmpxqvbvjjue"]="weekday";
+			${${"GLOBALS"}["dmpxqvbvjjue"]}=${$jiydgkjbyun}["w"];
+		}
+		else
+		{
+			$vqpwcwmnh="day";
+			${"GLOBALS"}["kwhofj"]="month";
+			$weekday=date("w",mktime(0,0,0,${${"GLOBALS"}["kwhofj"]},${$vqpwcwmnh},$year));
+		}
+		if(isset($result["H"]))
+		{
+			${"GLOBALS"}["kdjprzj"]="hour";
+			${${"GLOBALS"}["kdjprzj"]}=$result["H"];
+		}
+		elseif(isset($result["G"]))
+		{
+			$zejfeqy="hour";
+			${$zejfeqy}=$result["G"];
+		}
+		elseif(isset($result["h"]))
+		{
+			${"GLOBALS"}["nxgkmvktyo"]="result";
+			${"GLOBALS"}["snerupunsmv"]="result";
+			$hour=(${${"GLOBALS"}["snerupunsmv"]}["A"]=="\x50M"|${${"GLOBALS"}["nxgkmvktyo"]}["a"]=="pm")?($result["h"]+12):($result["h"]);
+		}
+		elseif(isset($result["g"]))
+		{
+			$hour=($result["A"]=="\x50M"|$result["a"]=="pm")?($result["g"]+12):($result["g"]);
+		}
+		else
+		{
+			$pryieldcw="hour";
+			${$pryieldcw}=0;
+		}
+		if(isset($result["O"]))
+		{
+			$timezone=$result["O"];
+		}
+		elseif(isset($result["Z"]))
+		{
+			$timezone=($result["Z"]/3600);
+		}
+		else
+		{
+			$timezone=date("O");
+		}
+		$minutes=isset($result["i"])?$result["i"]:0;
+		$seconds=isset($result["s"])?$result["s"]:0;
+		$resultvar=array("Year"=>$year,"Month"=>$month,"Day"=>$day,"WeekDay"=>$weekday,"Hour"=>$hour,"Minute"=>$minutes,"Second"=>$seconds,"\x54imezone"=>$timezone);
+	}
+	return $resultvar;
+}
+public static function parseDate($patternFrom,$date,$patternTo='')
+{
+	$temp=self::date_parse($patternFrom,$date);
+	if($patternTo)
+	{
+		return date($patternTo,mktime($temp["Hour"],$temp["Minute"],$temp["Second"],$temp["Month"],$temp["Day"],$temp["Year"]));
+	}
+	else
+	{
+		return mktime($temp["Hour"],$temp["Minute"],$temp["Second"],$temp["Month"],$temp["Day"],$temp["Year"]);
+	}
+}
+public static function GetParam($parameter_name,$default_value="")
+{
+	$parameter_value="";
+	if(isset($_POST[$parameter_name]))
+	{
+		$parameter_value=self::Strip($_POST[$parameter_name]);
+	}
+	else if(isset($_GET[$parameter_name]))
+	{
+		$parameter_value=self::Strip($_GET[$parameter_name]);
+	}
+	else
+	{
+		$parameter_value=$default_value;
+	}
+	return$parameter_value;
+}
+public static function array_extend($a,$b){${"GLOBALS"}["puqqrgof"]="b";${"GLOBALS"}["gepdomipo"]="k";foreach(${${"GLOBALS"}["puqqrgof"]} as${${"GLOBALS"}["gepdomipo"]}=>${${"GLOBALS"}["pxnshrgk"]}){if(is_array(${${"GLOBALS"}["pxnshrgk"]})){$ttrdawua="a";$qvxevzl="k";if(!isset(${$ttrdawua}[${$qvxevzl}])){${${"GLOBALS"}["wkmbiclzs"]}[$k]=${${"GLOBALS"}["pxnshrgk"]};}else{$wbgfbvmoie="k";${"GLOBALS"}["xgsuzbsepz"]="a";$ywpfisi="a";${"GLOBALS"}["mdipicy"]="v";${$ywpfisi}[${$wbgfbvmoie}]=self::array_extend(${${"GLOBALS"}["xgsuzbsepz"]}[$k],${${"GLOBALS"}["mdipicy"]});}}else{$fdukhhtv="a";${"GLOBALS"}["cembitmsmbs"]="v";${$fdukhhtv}[$k]=${${"GLOBALS"}["cembitmsmbs"]};}}return${${"GLOBALS"}["wkmbiclzs"]};}public static function phpTojsDate($phpdate){$eejudwkhnrw="phpdate";$tfnoxld="phpdate";$tvautda="phpdate";$fuudcnbujy="phpdate";$fduiffxsynuf="phpdate";$ppwhxsmrhuw="count";${$ppwhxsmrhuw}=0;${${"GLOBALS"}["rhhimlloman"]}=str_replace("j","d",${$eejudwkhnrw},${${"GLOBALS"}["lhkajre"]});$anplngdbtoy="count";${"GLOBALS"}["oslqqio"]="phpdate";$rkhipbqutye="phpdate";${${"GLOBALS"}["rhhimlloman"]}=${${"GLOBALS"}["lhkajre"]}==0?str_replace("d","dd",${$rkhipbqutye}):${${"GLOBALS"}["rhhimlloman"]};${$tvautda}=str_replace("z","o",${${"GLOBALS"}["rhhimlloman"]});${"GLOBALS"}["jrwfugf"]="phpdate";$mcbdlxzpty="phpdate";${"GLOBALS"}["huvfnw"]="phpdate";${${"GLOBALS"}["rhhimlloman"]}=str_replace("l","DD",${$fuudcnbujy});${${"GLOBALS"}["lhkajre"]}=0;${${"GLOBALS"}["huvfnw"]}=str_replace("n","m",${$tfnoxld},${$anplngdbtoy});${${"GLOBALS"}["rhhimlloman"]}=${${"GLOBALS"}["lhkajre"]}==0?str_replace("m","mm",${${"GLOBALS"}["rhhimlloman"]}):${${"GLOBALS"}["oslqqio"]};${$fduiffxsynuf}=str_replace("F","MM",${${"GLOBALS"}["rhhimlloman"]});${${"GLOBALS"}["rhhimlloman"]}=str_replace("Y","yy",${${"GLOBALS"}["jrwfugf"]});return${$mcbdlxzpty};}public static function phpToExcelDate($phpdate){${"GLOBALS"}["ndohbg"]="\x50HPFormatOptions";$ffxbupuxho="phpdate";${${"GLOBALS"}["ndohbg"]}=array("A","y","Y","M","F","i","m","n","l","D","d","j","s");${${"GLOBALS"}["efikfoxvll"]}=array("am/pm","yy","yyyy","mmm","mmmm","MM","mm","m","dddd","ddd","dd","d","ss");return str_replace(${${"GLOBALS"}["qnsflmc"]},${${"GLOBALS"}["efikfoxvll"]},${$ffxbupuxho});}public static function sprintfn($format,array$args=array()){${"GLOBALS"}["sdfcwxjt"]="args";${"GLOBALS"}["bubykn"]="pos";${${"GLOBALS"}["vhywdln"]}=array_slice(array_flip(array_keys(array(0=>0)+${${"GLOBALS"}["sdfcwxjt"]})),1);${"GLOBALS"}["rtpjymxsrv"]="args";for(${${"GLOBALS"}["bubykn"]}=0;preg_match("/(?\x3c=%)([a-zA-Z_]\x5cw*)(?\x3d\\\$)/",${${"GLOBALS"}["latcsbnekfxw"]},${${"GLOBALS"}["snsxjslqw"]},PREG_OFFSET_CAPTURE,${${"GLOBALS"}["mhmcrsg"]});){$tckjlhw="arg_len";${"GLOBALS"}["syqlhpyf"]="arg_key";${"GLOBALS"}["squhdmyqvz"]="format";${"GLOBALS"}["bgrpzrtyncw"]="replace";$fyhfrzx="arg_key";$pobhnq="arg_nums";$nromnby="arg_pos";${$nromnby}=${${"GLOBALS"}["snsxjslqw"]}[0][1];${"GLOBALS"}["qsjnbvkspbd"]="arg_len";${"GLOBALS"}["swryegltbwk"]="arg_pos";${"GLOBALS"}["xerfwzs"]="pos";${$tckjlhw}=strlen(${${"GLOBALS"}["snsxjslqw"]}[0][0]);${$fyhfrzx}=${${"GLOBALS"}["snsxjslqw"]}[1][0];if(!array_key_exists(${${"GLOBALS"}["syqlhpyf"]},${$pobhnq})){user_error("sprintfn():\x20Missing\x20argument \x27${arg_key}\x27",E_USER_WARNING);return false;}${${"GLOBALS"}["squhdmyqvz"]}=substr_replace(${${"GLOBALS"}["latcsbnekfxw"]},${${"GLOBALS"}["vdgpwol"]}=${${"GLOBALS"}["vhywdln"]}[${${"GLOBALS"}["bcjocckqs"]}],${${"GLOBALS"}["vhgrivcap"]},${${"GLOBALS"}["qsjnbvkspbd"]});${${"GLOBALS"}["xerfwzs"]}=${${"GLOBALS"}["swryegltbwk"]}+strlen(${${"GLOBALS"}["bgrpzrtyncw"]});}return vsprintf(${${"GLOBALS"}["latcsbnekfxw"]},array_values(${${"GLOBALS"}["rtpjymxsrv"]}));}}class jqSession{const SESSION_STARTED=TRUE;const SESSION_NOT_STARTED=FALSE;private$sessionState=self::SESSION_NOT_STARTED;private static$instance;private function __construct(){}public static function getInstance(){${"GLOBALS"}["vldzega"]="instance";if(!isset(self::${${"GLOBALS"}["vldzega"]})){$vysfkd="instance";self::${$vysfkd}=new self;}self::$instance->startSession();return self::${${"GLOBALS"}["idwpultm"]};}public function startSession(){if($this->sessionState==self::SESSION_NOT_STARTED&&session_id()==""){$this->sessionState=session_start();}return$this->sessionState;}public function __set($name,$value){${"GLOBALS"}["ydzeplchqb"]="name";$_SESSION[${${"GLOBALS"}["ydzeplchqb"]}]=${${"GLOBALS"}["withcroi"]};}public function __get($name){$mbpuyedscuu="name";if(isset($_SESSION[${$mbpuyedscuu}])){return$_SESSION[${${"GLOBALS"}["munnrisqhl"]}];}}public function __isset($name){return isset($_SESSION[${${"GLOBALS"}["munnrisqhl"]}]);}public function __unset($name){$vmehlok="name";unset($_SESSION[${$vmehlok}]);}public function destroy(){if($this->sessionState==self::SESSION_STARTED){$this->sessionState=!session_destroy();unset($_SESSION);return!$this->sessionState;}return FALSE;}}class jqTemplate{protected$file;protected$values=array();public$sanitize=true;public function __construct($file){${"GLOBALS"}["skjnfpshkf"]="file";$this->file=${${"GLOBALS"}["skjnfpshkf"]};}public function set($key,$value){$ynvjrzrdjbk="value";$this->values[${${"GLOBALS"}["dqwpqcube"]}]=${$ynvjrzrdjbk};}public function output($str_template=''){${"GLOBALS"}["tgqodqjyd"]="key";${"GLOBALS"}["pcokyguxgs"]="value";$kofsmi="str_template";$gxvtpnx="output";$jsjxmjrz="str_template";if(${$kofsmi}&&strlen(${$jsjxmjrz})>0){$kfbpxqai="str_template";${${"GLOBALS"}["hmovhcsl"]}=${$kfbpxqai};}else{${"GLOBALS"}["wsxwdm"]="output";if(!file_exists($this->file)){return"Error\x20loading\x20template\x20file\x20($this->file)\x2e\x3cbr /\x3e";}${${"GLOBALS"}["wsxwdm"]}=file_get_contents($this->file);}foreach($this->values as${${"GLOBALS"}["tgqodqjyd"]}=>${${"GLOBALS"}["pcokyguxgs"]}){$creflrikxf="tag\x54oReplace";${${"GLOBALS"}["htwsokmgw"]}="[\x40$key]";${${"GLOBALS"}["hmovhcsl"]}=str_replace(${$creflrikxf},${${"GLOBALS"}["withcroi"]},${${"GLOBALS"}["hmovhcsl"]});}if($this->sanitize){${"GLOBALS"}["vydbkn"]="output";${${"GLOBALS"}["vydbkn"]}=preg_replace("/\x5c[\x40(.+?)\x5c]/","",${${"GLOBALS"}["hmovhcsl"]});}return${$gxvtpnx};}static public function merge($templates,$str_template='',$separator="\n"){${"GLOBALS"}["ofxrbfkve"]="output";${"GLOBALS"}["cfobysqjcm"]="output";${${"GLOBALS"}["cfobysqjcm"]}="";foreach(${${"GLOBALS"}["nhouocrn"]} as${${"GLOBALS"}["puiygregunh"]}){$ergdxexjuvr="content";${"GLOBALS"}["gfyovkfsdc"]="separator";$ioeaywdnnt="str_template";${$ergdxexjuvr}=(get_class(${${"GLOBALS"}["puiygregunh"]})!=="jq\x54emplate")?"Error,\x20incorrect type - expected\x20\x54emplate\x2e":$template->output(${$ioeaywdnnt});${${"GLOBALS"}["hmovhcsl"]}.=${${"GLOBALS"}["fktjktbflwm"]}.${${"GLOBALS"}["gfyovkfsdc"]};}return${${"GLOBALS"}["ofxrbfkve"]};}}class SimpleXMLExtended extends SimpleXMLElement{public function addCData($cdata_text){$owgvgfmufuxe="node";${$owgvgfmufuxe}=dom_import_simplexml($this);${${"GLOBALS"}["erdejinmxfo"]}=$node->ownerDocument;$node->appendChild($no->createCDATASection(${${"GLOBALS"}["ubjpgjxsgqjg"]}));}}
+?>

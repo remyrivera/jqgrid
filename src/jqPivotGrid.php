@@ -1,0 +1,171 @@
+<?php
+namespace rivcar\jqGrid;
+use rivcar\jqgrid\jqGridRender;
+use stdClass;
+
+${"GLOBALS"}["bnyfkchpbx"]="script";
+${"GLOBALS"}["ppgsvihwys"]="i";
+${"GLOBALS"}["cbmbfcrutmum"]="gM";
+${"GLOBALS"}["mywglyvv"]="createpg";
+${"GLOBALS"}["qrfwvqywy"]="pager";
+${"GLOBALS"}["vxqllqouvqq"]="tmppg";
+${"GLOBALS"}["deviaylpxgm"]="tblelement";
+${"GLOBALS"}["xiardss"]="tmptbl";
+${"GLOBALS"}["esgjdomsutw"]="s";
+${"GLOBALS"}["ppmef\x7almhsq"]="echo";
+${"GLOBALS"}["ssrtooq"]="result";
+${"GLOBALS"}["\x7asdjfwlrwo"]="sql";
+${"GLOBALS"}["efvkixlcwr"]="goper";
+${"GLOBALS"}["xwxlfi"]="param";
+${"GLOBALS"}["vhxaywsyyue"]="aoptions";
+class jqPivotGrid extends jqGridRender
+{
+	private$pivotoptions=array('xDimension'=>array(),'yDimension'=>array(),'aggregates'=>array());private$ajaxoptions=array("data"=>array());private$data;
+	public function setPivotOptions($aoptions)
+	{
+		if(is_array(${${"GLOBALS"}["vhxaywsyyue"]}))
+		{
+			$this->pivotoptions=jqGridUtils::array_extend($this->pivotoptions,${${"GLOBALS"}["vhxaywsyyue"]});
+		}
+	}
+	public function setxDimension($param){if(is_array(${${"GLOBALS"}["xwxlfi"]})){$this->pivotoptions["xDimension"]=jqGridUtils::array_extend($this->pivotoptions["xDimension"],${${"GLOBALS"}["xwxlfi"]});}}public function setyDimension($param){${"GLOBALS"}["ivcpegli"]="param";if(is_array(${${"GLOBALS"}["ivcpegli"]})){$mvgbwhiirg="param";$this->pivotoptions["yDimension"]=jqGridUtils::array_extend($this->pivotoptions["yDimension"],${$mvgbwhiirg});}}public function setaggregates($param){$xebjeescb="param";if(is_array(${$xebjeescb})){$nbcsicvanu="param";$this->pivotoptions["aggregates"]=jqGridUtils::array_extend($this->pivotoptions["aggregates"],${$nbcsicvanu});}}
+	public function setAjaxOptions($param)
+	{
+		if(is_array(${${"GLOBALS"}["xwxlfi"]}))
+		{
+			$this->ajaxoptions=jqGridUtils::array_extend($this->ajaxoptions,${${"GLOBALS"}["xwxlfi"]});
+		}
+	}
+	public function setData($mixdata){${"GLOBALS"}["qjbcswoly"]="mixdata";$this->data=${${"GLOBALS"}["qjbcswoly"]};}
+	public function renderPivot($tblelement='',$pager='',$script=true,array$params=null,$createtbl=false,$createpg=false,$echo=true)
+	{
+		${"GLOBALS"}["cdhsayam"]="goper";
+		${${"GLOBALS"}["cdhsayam"]}=$this->oper?$this->oper:"nooper";
+		if(${${"GLOBALS"}["efvkixlcwr"]}=="pivot")
+		{
+			$oixrielyc="sqlId";
+			${"GLOBALS"}["iqqyxcelp"]="params";
+			$adyfsd="sql";
+			$oztfjpsvtf="ret";
+			$sniktsuzlcv="ret";
+			${"GLOBALS"}["itqabxxvac"]="sqlId";
+			${${"GLOBALS"}["\x7asdjfwlrwo"]}=null;
+			${${"GLOBALS"}["itqabxxvac"]}=$this->_setSQL();
+			$this->dataType="json";
+			${$oztfjpsvtf}=$this->execute(${$oixrielyc},${${"GLOBALS"}["iqqyxcelp"]},${$adyfsd},false,0,0,"","");
+			if(${$sniktsuzlcv})
+			{
+				${"GLOBALS"}["qrgnndf"]="sql";
+				${${"GLOBALS"}["ssrtooq"]}=new stdClass();
+				${"GLOBALS"}["vmxrjdkfi"]="sql";
+				$result->rows=jqGridDB::fetch_object(${${"GLOBALS"}["qrgnndf"]},true,$this->pdo);
+				jqGridDB::closeCursor(${${"GLOBALS"}["vmxrjdkfi"]});
+				if(${${"GLOBALS"}["ppmef\x7almhsq"]})
+				{
+					$glwmtdap="result";
+					$this->_gridResponse(${$glwmtdap});
+				}
+				else
+				{
+					$kiyfmejd="result";
+					return${$kiyfmejd};
+				}
+			}
+			else
+			{
+				echo"\x43ould\x20not execute\x20query!\x21\x21";
+			}
+		}
+		else
+		{
+			${"GLOBALS"}["nnygr\x7axqmfi"]="gM";
+			$this->setAjaxOptions(array("data"=>array("oper"=>"pivot")));
+			${"GLOBALS"}["hpwolsi"]="script";
+			$umweuqqxte="createtbl";
+			$snufgqvchwa="echo";
+			${${"GLOBALS"}["esgjdomsutw"]}="";
+			$ubxqnh="tblelement";
+			${"GLOBALS"}["pjskulk"]="pager";
+			if(${$umweuqqxte})
+			{
+				$lgvtbcocccfy="tblelement";
+				${${"GLOBALS"}["xiardss"]}=${$lgvtbcocccfy};
+				if(strpos(${${"GLOBALS"}["deviaylpxgm"]},"\x23")===false)
+				{
+					${"GLOBALS"}["oiqmdxtrf"]="tblelement";
+					$fhshqldcqmt="tblelement";
+					${${"GLOBALS"}["oiqmdxtrf"]}="#".${$fhshqldcqmt};
+				}
+				else
+				{
+					${"GLOBALS"}["wwdrbfunydp"]="tmptbl";
+					${${"GLOBALS"}["wwdrbfunydp"]}=substr(${${"GLOBALS"}["deviaylpxgm"]},1);
+				}
+				${${"GLOBALS"}["esgjdomsutw"]}.="\x3ctable\x20id='".${${"GLOBALS"}["xiardss"]}."\x27>\x3c/table>";
+			}
+			${"GLOBALS"}["uliktixuf"]="pager";
+			if(strlen(${${"GLOBALS"}["pjskulk"]})>0)
+			{
+				${"GLOBALS"}["gnmtliw"]="pager";
+				${${"GLOBALS"}["vxqllqouvqq"]}=${${"GLOBALS"}["qrfwvqywy"]};
+				if(strpos(${${"GLOBALS"}["gnmtliw"]},"#")===false)
+				{
+					${"GLOBALS"}["jmnydtmxe"]="pager";
+					${${"GLOBALS"}["jmnydtmxe"]}="\x23".${${"GLOBALS"}["qrfwvqywy"]};
+				}
+				else
+				{
+					$jshdflmbb="tmppg";
+					${$jshdflmbb}=substr(${${"GLOBALS"}["qrfwvqywy"]},1);
+				}
+				if(${${"GLOBALS"}["mywglyvv"]})
+				{
+					$pkjpbleq="tmppg";
+					${${"GLOBALS"}["esgjdomsutw"]}.="\x3cdiv\x20id=\x27".${$pkjpbleq}."\x27></div>";
+				}
+			}
+			if(strlen(${${"GLOBALS"}["uliktixuf"]})>0)
+			{
+				$plyjnvyqum="pager";
+				$this->setGridOptions(array("pager"=>${$plyjnvyqum}));
+			}
+			if(${${"GLOBALS"}["hpwolsi"]})
+			{
+				${"GLOBALS"}["xowqbhxafnq"]="s";
+				${"GLOBALS"}["odwluodpyob"]="s";
+				${${"GLOBALS"}["xowqbhxafnq"]}.="<script\x20type='text/javascript\x27>";
+				${${"GLOBALS"}["odwluodpyob"]}.="jQuery(document).ready(function(\$)\x20{";
+			}
+			${${"GLOBALS"}["esgjdomsutw"]}.="jQuery('".${$ubxqnh}."\x27)\x2ejqGrid(\x27jqPivot',".jqGridUtils::encode($this->data).",".jqGridUtils::encode($this->pivotoptions).",".jqGridUtils::encode($this->gridOptions).",".jqGridUtils::encode($this->ajaxoptions).")\x3b";
+			if($this->navigator&&strlen(${${"GLOBALS"}["qrfwvqywy"]})>0)
+			{
+				${"GLOBALS"}["rinfldv"]="pager";
+				$this->setNavOptions("navigator",array("add"=>false,"edit"=>false,"del"=>false));
+				${"GLOBALS"}["sbeseqcmv"]="tblelement";
+				${"GLOBALS"}["bmlrmmttcj"]="s";
+				${${"GLOBALS"}["bmlrmmttcj"]}.="j\x51uery('".${${"GLOBALS"}["sbeseqcmv"]}."\x27).bind('jqGridInitGrid\x2epivotGrid',(function(){jQuery('".${${"GLOBALS"}["deviaylpxgm"]}."').jqGrid('navGrid\x27,'".${${"GLOBALS"}["rinfldv"]}."\x27,".jqGridUtils::encode($this->navOptions);
+				$nssnfwncnxlh="s";
+				${$nssnfwncnxlh}.=",{},{},{},".jqGridUtils::encode($this->searchOptions);
+				${${"GLOBALS"}["esgjdomsutw"]}.=",".jqGridUtils::encode($this->viewOptions).")\x3b}))\x3b";
+			}
+			${"GLOBALS"}["rjmghimsyol"]="echo";
+			${${"GLOBALS"}["nnygrzxqmfi"]}=count($this->gridMethods);
+			if(${${"GLOBALS"}["cbmbfcrutmum"]}>0)
+			{
+				$sltdkvlgs="gM";
+				for(${${"GLOBALS"}["ppgsvihwys"]}=0;${${"GLOBALS"}["ppgsvihwys"]}<${$sltdkvlgs};${${"GLOBALS"}["ppgsvihwys"]}++)
+				{
+					$dtmrbjx="s";
+					${$dtmrbjx}.=$this->gridMethods[${${"GLOBALS"}["ppgsvihwys"]}]."\n";
+				}
+			}
+			if(strlen($this->customCode)>0)
+			{
+				${"GLOBALS"}["fdstccsteb"]="s";
+				${${"GLOBALS"}["fdstccsteb"]}.=jqGridUtils::encode($this->customCode);
+			}
+			if(${${"GLOBALS"}["bnyfkchpbx"]}){${${"GLOBALS"}["esgjdomsutw"]}.=" });</script\x3e";}if(${$snufgqvchwa}){$wmpcvh="s";echo${$wmpcvh};}return${${"GLOBALS"}["rjmghimsyol"]}?"":${${"GLOBALS"}["esgjdomsutw"]};
+		}
+	}
+}
+?>
