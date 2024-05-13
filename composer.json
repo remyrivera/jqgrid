@@ -2,7 +2,8 @@
     "name": "rivcar/jqgrid",
     "description": "Grilla para Laravel",
     "type": "library",
-	"version": "1.0.0",
+	"version": "6.6.5",
+    "license": "LGPL-3.0-or-later",
     "authors": [
         {
             "name": "Remy Rivera Rivera",
