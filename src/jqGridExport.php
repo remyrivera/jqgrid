@@ -6,14 +6,14 @@ use rivcar\tcpdf\TCPDF_COLORS;
 
 ${"GLOBALS"}["xwprfqtb"] = "end";
 ${"GLOBALS"}["fyfcebgrkl"] = "maxColumn";
-${"GLOBALS"}["bomjgd"] = "obj\x50HPExcel";
+${"GLOBALS"}["bomjgd"] = "objPHPExcel";
 ${"GLOBALS"}["uyogpwvgccb"] = "startColumn";
 ${"GLOBALS"}["exklqjjhkx"] = "currentColumn";
 ${"GLOBALS"}["kudqvk"] = "cmfo";
 ${"GLOBALS"}["xduuflkkn"] = "ht";
 ${"GLOBALS"}["cluxprmjjib"] = "startRow";
 ${"GLOBALS"}["rkrfujn"] = "fmtstr";
-${"GLOBALS"}["vxmhqjpf"] = "obj\x57orksheet";
+${"GLOBALS"}["vxmhqjpf"] = "objWorksheet";
 ${"GLOBALS"}["lsjaox"] = "e_opt";
 ${"GLOBALS"}["odjbaccq"] = "ext";
 ${"GLOBALS"}["blmhysxivb"] = "fn";
@@ -34,9 +34,6 @@ ${"GLOBALS"}["ckuocwht"] = "column";
 ${"GLOBALS"}["xejqpx"] = "hdr\x31";
 ${"GLOBALS"}["qtfnftgyjqe"] = "hdr";
 ${"GLOBALS"}["pqrcnmpmg"] = "file_t";
-${"GLOBALS"}["jswgskgsnw"] = "groupinfo";
-${"GLOBALS"}["elqjri"] = "l";
-${"GLOBALS"}["lqmjwykg"] = "params";
 ${"GLOBALS"}["xqjdxyyvxk"] = "grouping";
 ${"GLOBALS"}["xymebptnm"] = "tplfld";
 ${"GLOBALS"}["nsuqwew"] = "sv";
@@ -64,39 +61,29 @@ ${"GLOBALS"}["rydvgfnrjprj"] = "maxh";
 ${"GLOBALS"}["zrdlmlnkim"] = "maxheigh";
 ${"GLOBALS"}["yrghuenpe"] = "aname";
 ${"GLOBALS"}["qwloaihb"] = "awidth";
-${"GLOBALS"}["ggpvnste"] = "pdf";
 ${"GLOBALS"}["jprujgcsncg"] = "asp";
 ${"GLOBALS"}["jteoipyqor"] = "str";
 ${"GLOBALS"}["nnqsybqotgeb"] = "pdfl";
 ${"GLOBALS"}["zeyxwxhvn"] = "fnmkeys";
-${"GLOBALS"}["dqtpplxvk"] = "pd";
-${"GLOBALS"}["psqfbbogow"] = "colwidth";
-${"GLOBALS"}["hjgiew"] = "pw";
-${"GLOBALS"}["rtfntggn"] = "margins";
-${"GLOBALS"}["cjhiiotmv"] = "totw";
-${"GLOBALS"}["emgjeeqllvct"] = "gSQLMaxRows";
 ${"GLOBALS"}["curlztfmp"] = "rows";
 ${"GLOBALS"}["jhjzifvydu"] = "echo";
-${"GLOBALS"}["lvjvvrdym"] = "sql";
 ${"GLOBALS"}["pjiliebi"] = "sepreplace";
 ${"GLOBALS"}["bryhzxmk"] = "es";
 ${"GLOBALS"}["dglvfwquwyy"] = "key";
 ${"GLOBALS"}["boxgmd"] = "type";
 ${"GLOBALS"}["wuzexrtfjn"] = "v\x31";
-${"GLOBALS"}["hrvgcwqhfp"] = "aselect";
 ${"GLOBALS"}["pdwnukluj"] = "line";
 ${"GLOBALS"}["ntkgmldy"] = "res_arr";
 ${"GLOBALS"}["dtdoqofnexa"] = "fld";
 ${"GLOBALS"}["siskwhlub"] = "timefmt";
 ${"GLOBALS"}["gkfjvbd"] = "datefmt";
-${"GLOBALS"}["vntcfvfsimcl"] = "NE\x57LI\x4eE";
+${"GLOBALS"}["vntcfvfsimcl"] = "NEWLINE";
 ${"GLOBALS"}["gckdpyw"] = "s";
 ${"GLOBALS"}["swurhplk"] = "sep\x32";
 ${"GLOBALS"}["coxxnkmlsht"] = "list";
 ${"GLOBALS"}["xwandwlrh"] = "delim";
 ${"GLOBALS"}["npmqzdfcglsi"] = "elements";
-${"GLOBALS"}["ehmjvfrj"] = "ahidden";
-${"GLOBALS"}["eyhuikufrov"] = "replace\x4eewLine";
+${"GLOBALS"}["eyhuikufrov"] = "replaceNewLine";
 ${"GLOBALS"}["qvpfljrbeum"] = "quote";
 ${"GLOBALS"}["menmaix"] = "escquote";
 ${"GLOBALS"}["xlmyieky"] = "typearr";
@@ -116,25 +103,18 @@ ${"GLOBALS"}["scllsntlhu"] = "ind";
 ${"GLOBALS"}["usmemtsrbhr"] = "sumval";
 ${"GLOBALS"}["gwvcvcydgs"] = "sumkey";
 ${"GLOBALS"}["vdhrnvpio"] = "fieldInd";
-${"GLOBALS"}["tmumlwo"] = "field\x4eame";
+${"GLOBALS"}["tmumlwo"] = "fieldName";
 ${"GLOBALS"}["pyiyriq"] = "changed";
 ${"GLOBALS"}["pfsyyx"] = "r";
 ${"GLOBALS"}["yvezufu"] = "fieldnames";
 ${"GLOBALS"}["giplinunxff"] = "irow";
 ${"GLOBALS"}["dlqafubuedv"] = "j";
-${"GLOBALS"}["elqhspslpod"] = "field";
 ${"GLOBALS"}["hlimukpf"] = "items";
 ${"GLOBALS"}["qwgqpbnkmug"] = "val";
 ${"GLOBALS"}["wyqwkwhq"] = "asl";
 ${"GLOBALS"}["zbaphywqpxk"] = "sep";
 ${"GLOBALS"}["mjsqvx"] = "atmp";
 ${"GLOBALS"}["xukgqmdv"] = "grp";
-${"GLOBALS"}["szsdbu"] = "model";
-${"GLOBALS"}["gjpurobd"] = "i";
-${"GLOBALS"}["hjvyemwroyky"] = "colmodel";
-${"GLOBALS"}["fevhaevsc"] = "nmodel";
-${"GLOBALS"}["ukkbuv"] = "rs";
-${"GLOBALS"}["dfctfggbjtf"] = "ncols";
 ${"GLOBALS"}["nseuemktt"] = "grpopt";
 ${"GLOBALS"}["pijmpkn"] = "sr";
 ${"GLOBALS"}["benxbud"] = "ret";
@@ -362,12 +342,11 @@ class jqGridExport extends jqGrid
     private function groupingSetup($rs, $colmodel)
     {
         $vmcnkr = "nmodel";
-        ${"GLOBALS"}["jiswyjrp"] = "maxrows";
         if (isset($this->gridOptions["grouping\x56iew"])) {
             ${${"GLOBALS"}["nseuemktt"]} =
                 $this->gridOptions["groupingView"];
         } else {
-            printf("\x4eo grouping is set\x21");
+            printf("No grouping is set\x21");
             return false;
         }
         $kwhvjedpus = "ncols";
@@ -380,15 +359,15 @@ class jqGridExport extends jqGrid
         }
         $this->groupdata = new ArrayIterator();
         ${"GLOBALS"}["lfexgrwrbw"] = "fieldnames";
-        ${${"GLOBALS"}["jiswyjrp"]} = $this->gSQLMaxRows;
-        ${${"GLOBALS"}["dfctfggbjtf"]} = jqGridDB::columnCount(
-            ${${"GLOBALS"}["ukkbuv"]}
+        $maxrows = $this->gSQLMaxRows;
+        $ncols = jqGridDB::columnCount(
+            $rs
         );
         ${"GLOBALS"}["jxbikrw"] = "j";
-        ${${"GLOBALS"}["fevhaevsc"]} = is_array(
-            ${${"GLOBALS"}["hjvyemwroyky"]}
+        $nmodel = is_array(
+            $colmodel
         )
-            ? count(${${"GLOBALS"}["hjvyemwroyky"]})
+            ? count($colmodel)
             : -1;
         ${"GLOBALS"}["fyrifpavhx"] = "colmodel";
         if (${$vmcnkr} > 0) {
@@ -398,16 +377,16 @@ class jqGridExport extends jqGrid
             for (
                 ${$kxhjptxixdd} = 0;
                 ${$kishovfbvj} < ${$smtrcgu};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i++
             ) {
                 if (
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    $colmodel[
+                        $i
                     ]["name"] == "actions"
                 ) {
                     array_splice(
-                        ${${"GLOBALS"}["hjvyemwroyky"]},
-                        ${${"GLOBALS"}["gjpurobd"]},
+                        $colmodel,
+                        $i,
                         1
                     );
                     ${"GLOBALS"}["yypltxwq"] = "nmodel";
@@ -422,7 +401,7 @@ class jqGridExport extends jqGrid
             is_array(${${"GLOBALS"}["fyrifpavhx"]}) &&
             ${$ympqddivvi} == ${$kwhvjedpus}
         ) {
-            ${${"GLOBALS"}["szsdbu"]} = true;
+            $model = true;
         }
         ${${"GLOBALS"}["xukgqmdv"]} = new stdClass();
         $grp->summary = [];
@@ -433,7 +412,7 @@ class jqGridExport extends jqGrid
         ${${"GLOBALS"}["nseuemktt"]}["groupIndex"] = [];
         for (
             ${${"GLOBALS"}["yttxunpztdjq"]} = 0;
-            ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["dfctfggbjtf"]};
+            $i < $ncols;
             ${${"GLOBALS"}["sogifogfjb"]}++
         ) {
             $gbrubwihj = "atmp";
@@ -455,8 +434,8 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["ybnypeelgzl"] = "j";
             ${"GLOBALS"}["jrftcduot"] = "colmodel";
             ${$gbrubwihj}["hidden"] =
-                ${${"GLOBALS"}["szsdbu"]} &&
-                isset(${$ukmbuyopyr}[${${"GLOBALS"}["gjpurobd"]}]["hidden"])
+                $model &&
+                isset(${$ukmbuyopyr}[$i]["hidden"])
                     ? ${$vhvwultk}[${$smjftckohl}]["hidden"]
                     : false;
             ${${"GLOBALS"}["mjsqvx"]}["select"] = false;
@@ -465,8 +444,8 @@ class jqGridExport extends jqGrid
             if (
                 ${$xldfqsqg} &&
                 isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    $colmodel[
+                        $i
                     ]["formatter"]
                 )
             ) {
@@ -483,19 +462,19 @@ class jqGridExport extends jqGrid
                     ${$lpswwuvhibw}[${$ccqmixtmhg}]["formatter"];
                 $uffxyscdq = "i";
                 ${$uknoxysydl} = isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
+                    $colmodel[
                         ${${"GLOBALS"}["tkvrpeexbi"]}
                     ]["formatoptions"]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    ? $colmodel[
+                        $i
                     ]["formatoptions"]
                     : (isset(
                         ${${"GLOBALS"}["kufezcgn"]}[
                             ${${"GLOBALS"}["sfkfswtzl"]}
                         ]["editoptions"]
                     )
-                        ? ${${"GLOBALS"}["hjvyemwroyky"]}[${$uffxyscdq}][
+                        ? $colmodel[${$uffxyscdq}][
                             "editoptions"
                         ]
                         : false);
@@ -504,7 +483,7 @@ class jqGridExport extends jqGrid
                 ] = ${$cjyqrbiit};
                 ${"GLOBALS"}["hhtvvxnrbu"] = "i";
                 if (
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
+                    $colmodel[
                         ${${"GLOBALS"}["hhtvvxnrbu"]}
                     ]["formatter"] == "select"
                 ) {
@@ -553,26 +532,26 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["bwpixtef"] = "i";
             if (
                 !isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${$qcnhjm}][
+                    $colmodel[${$qcnhjm}][
                         "summaryRound"
                     ]
                 )
             ) {
                 $oimftyqxusd = "i";
-                ${${"GLOBALS"}["hjvyemwroyky"]}[${$oimftyqxusd}][
+                $colmodel[${$oimftyqxusd}][
                     "summaryRound"
                 ] = null;
             }
             $ympbmws = "colmodel";
             ${${"GLOBALS"}["mjsqvx"]}["width"] =
                 ${${"GLOBALS"}["efieutz"]} &&
-                isset(${${"GLOBALS"}["hjvyemwroyky"]}[${$vtpkujjtoyc}]["width"])
+                isset($colmodel[${$vtpkujjtoyc}]["width"])
                     ? (int) ${${"GLOBALS"}["ydowvnqr"]}[
                         ${${"GLOBALS"}["bwpixtef"]}
                     ]["width"]
                     : 150;
             ${"GLOBALS"}["roxlgbtn"] = "i";
-            if (${${"GLOBALS"}["szsdbu"]}) {
+            if ($model) {
                 $mhksjnnk = "i";
                 $whwiefhvk = "colmodel";
                 ${"GLOBALS"}["cfdoxotth"] = "atmp";
@@ -582,16 +561,16 @@ class jqGridExport extends jqGrid
                 $giajucgp = "colmodel";
                 $ohcvokl = "i";
                 ${${"GLOBALS"}["mjsqvx"]}["label"] = isset(
-                    ${$whwiefhvk}[${${"GLOBALS"}["gjpurobd"]}]["label"]
+                    ${$whwiefhvk}[$i]["label"]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[${$mhksjnnk}]["label"]
+                    ? $colmodel[${$mhksjnnk}]["label"]
                     : ${$giajucgp}[${$btfyufyei}]["name"];
                 ${${"GLOBALS"}["cfdoxotth"]}["name"] =
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${$tptufxeg}]["name"];
+                    $colmodel[${$tptufxeg}]["name"];
                 ${${"GLOBALS"}["mjsqvx"]}["type"] = isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${$ohcvokl}]["sorttype"]
+                    $colmodel[${$ohcvokl}]["sorttype"]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
+                    ? $colmodel[
                         ${${"GLOBALS"}["ztmfnif"]}
                     ]["sorttype"]
                     : "";
@@ -612,7 +591,7 @@ class jqGridExport extends jqGrid
                     ${${"GLOBALS"}["djlsslwxkca"]}["name"];
                 ${"GLOBALS"}["awducrtfupr"] = "atmp";
                 ${${"GLOBALS"}["awducrtfupr"]}["type"] = jqGridDB::MetaType(
-                    ${${"GLOBALS"}["elqhspslpod"]},
+                    $field,
                     $this->dbtype
                 );
             }
@@ -644,12 +623,12 @@ class jqGridExport extends jqGrid
                 ) {
                     ${${"GLOBALS"}["nseuemktt"]}["groupIndex"][
                         ${${"GLOBALS"}["dlqafubuedv"]}
-                    ] = ${${"GLOBALS"}["gjpurobd"]};
+                    ] = $i;
                 }
             }
             if (
                 isset(
-                    ${$ympbmws}[${${"GLOBALS"}["gjpurobd"]}][
+                    ${$ympbmws}[$i][
                         "summary\x54ype"
                     ]
                 )
@@ -657,7 +636,7 @@ class jqGridExport extends jqGrid
                 $obuthhbg = "i";
                 if (
                     isset(
-                        ${${"GLOBALS"}["hjvyemwroyky"]}[${$obuthhbg}][
+                        $colmodel[${$obuthhbg}][
                             "summaryDivider"
                         ]
                     )
@@ -673,12 +652,12 @@ class jqGridExport extends jqGrid
                             ],
                         "v" => 0,
                         "sd" =>
-                            ${${"GLOBALS"}["hjvyemwroyky"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                            $colmodel[
+                                $i
                             ]["summaryDivider"],
                         "vd" => 0,
                         "sr" =>
-                            ${${"GLOBALS"}["hjvyemwroyky"]}[${$mviiexwvov}][
+                            $colmodel[${$mviiexwvov}][
                                 "summaryRound"
                             ],
                     ];
@@ -687,13 +666,13 @@ class jqGridExport extends jqGrid
                     $grp->summary[] = [
                         "nm" => ${${"GLOBALS"}["mjsqvx"]}["name"],
                         "st" =>
-                            ${${"GLOBALS"}["hjvyemwroyky"]}[
+                            $colmodel[
                                 ${${"GLOBALS"}["mnjnylhdl"]}
                             ]["summary\x54ype"],
                         "v" => 0,
                         "sr" =>
-                            ${${"GLOBALS"}["hjvyemwroyky"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                            $colmodel[
+                                $i
                             ]["summaryRound"],
                     ];
                 }
@@ -739,13 +718,13 @@ class jqGridExport extends jqGrid
             $ebmjkzkog = "i";
             ${$ipynjmypx} = [];
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
+                $i = 0;
                 ${$ebmjkzkog} < ${$osbcfxeudby};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i++
             ) {
                 $mmtbzldx = "res_arr";
                 $wlmyxbrdmrk = "i";
-                ${${"GLOBALS"}["yvezufu"]}[${${"GLOBALS"}["gjpurobd"]} + 1] =
+                ${${"GLOBALS"}["yvezufu"]}[$i + 1] =
                     &${$mmtbzldx}[$grp->columns[${$wlmyxbrdmrk}]["name"]];
             }
             call_user_func_array(
@@ -755,7 +734,7 @@ class jqGridExport extends jqGrid
         }
         while (
             ${${"GLOBALS"}["pfsyyx"]} = jqGridDB::fetch_assoc(
-                ${${"GLOBALS"}["ukkbuv"]},
+                $rs,
                 $this->pdo
             )
         ) {
@@ -775,20 +754,20 @@ class jqGridExport extends jqGrid
             for (
                 ${$otfzfsz} = 0;
                 ${${"GLOBALS"}["kkglxxb"]} < ${${"GLOBALS"}["tpsgqrjdxp"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i++
             ) {
                 $ygiujbn = "fieldInd";
-                ${"GLOBALS"}["udaiduv"] = "field\x4eame";
+                ${"GLOBALS"}["udaiduv"] = "fieldName";
                 ${"GLOBALS"}["lxwxuxocg"] = "grpopt";
                 ${"GLOBALS"}["wthcmdfj"] = "r";
                 ${$ygiujbn} =
                     ${${"GLOBALS"}["nseuemktt"]}["groupIndex"][
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ];
-                $gttwdqpopcb = "field\x4eame";
+                $gttwdqpopcb = "fieldName";
                 ${${"GLOBALS"}["udaiduv"]} =
                     ${${"GLOBALS"}["lxwxuxocg"]}["group\x46ield"][
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ];
                 if (
                     array_key_exists(
@@ -834,15 +813,15 @@ class jqGridExport extends jqGrid
                             "summary" => [],
                         ];
                         $grp->lastvalues[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ] = ${${"GLOBALS"}["qbroefmekyoe"]};
-                        $grp->counters[${${"GLOBALS"}["gjpurobd"]}] = [
+                        $grp->counters[$i] = [
                             "cnt" => 1,
                             "pos" => count($grp->groups) - 1,
                             "summary" => $grp->summary,
                         ];
                         foreach (
-                            $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                            $grp->counters[$i][
                                 "summary"
                             ]
                             as ${${"GLOBALS"}["gwvcvcydgs"]} => ${$whnxlqn}
@@ -857,7 +836,7 @@ class jqGridExport extends jqGrid
                                 $kuxesrhwlz = "sumval";
                                 ${"GLOBALS"}["hrsrzxfiwmtk"] = "sumkey";
                                 ${"GLOBALS"}["jlwtsak"] = "sumval";
-                                $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                $grp->counters[$i][
                                     "summary"
                                 ][${${"GLOBALS"}["hrsrzxfiwmtk"]}][
                                     "vd"
@@ -894,11 +873,11 @@ class jqGridExport extends jqGrid
                             ${${"GLOBALS"}["qbroefmekyoe"]} !=
                             $grp->lastvalues[${${"GLOBALS"}["zhbdmdvnoa"]}]
                         ) {
-                            ${"GLOBALS"}["xogpsxj"] = "field\x4eame";
+                            ${"GLOBALS"}["xogpsxj"] = "fieldName";
                             ${"GLOBALS"}["kbkvtihll"] = "i";
                             $gazumjpmv = "irow";
                             $grp->groups[] = [
-                                "idx" => ${${"GLOBALS"}["gjpurobd"]},
+                                "idx" => $i,
                                 "dataIndex" => ${${"GLOBALS"}["xogpsxj"]},
                                 "value" => ${${"GLOBALS"}["qbroefmekyoe"]},
                                 "startRow" => ${$gazumjpmv},
@@ -958,18 +937,18 @@ class jqGridExport extends jqGrid
                                 );
                             }
                             $grp->groups[
-                                $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                $grp->counters[$i][
                                     "pos"
                                 ]
                             ]["summary"] =
-                                $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                $grp->counters[$i][
                                     "summary"
                                 ];
                         } else {
                             $znikmpgxdpn = "changed";
                             if (${$znikmpgxdpn} == 1) {
                                 ${"GLOBALS"}["mfokwvrf"] = "i";
-                                ${"GLOBALS"}["kvmrwnt"] = "field\x4eame";
+                                ${"GLOBALS"}["kvmrwnt"] = "fieldName";
                                 $ekmadedss = "i";
                                 ${"GLOBALS"}["hxiyrmx"] = "i";
                                 ${"GLOBALS"}["fgbfeiqsqtf"] = "i";
@@ -994,7 +973,7 @@ class jqGridExport extends jqGrid
                                     "summary" => $grp->summary,
                                 ];
                                 foreach (
-                                    $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                    $grp->counters[$i][
                                         "summary"
                                     ]
                                     as ${${"GLOBALS"}["gwvcvcydgs"]} =>
@@ -1032,7 +1011,7 @@ class jqGridExport extends jqGrid
                                             ]
                                         );
                                     }
-                                    $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                    $grp->counters[$i][
                                         "summary"
                                     ][${${"GLOBALS"}["gwvcvcydgs"]}][
                                         "v"
@@ -1049,7 +1028,7 @@ class jqGridExport extends jqGrid
                                         ${${"GLOBALS"}["fgbfeiqsqtf"]}
                                     ]["pos"]
                                 ]["summary"] =
-                                    $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                    $grp->counters[$i][
                                         "summary"
                                     ];
                             } else {
@@ -1063,11 +1042,11 @@ class jqGridExport extends jqGrid
                                 $grp->groups[
                                     $grp->counters[${$wyppytgqjvu}]["pos"]
                                 ]["cnt"] =
-                                    $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                    $grp->counters[$i][
                                         "cnt"
                                     ];
                                 foreach (
-                                    $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                    $grp->counters[$i][
                                         "summary"
                                     ]
                                     as ${${"GLOBALS"}["chintf"]} =>
@@ -1102,7 +1081,7 @@ class jqGridExport extends jqGrid
                                             ]
                                         );
                                     }
-                                    $grp->counters[${${"GLOBALS"}["gjpurobd"]}][
+                                    $grp->counters[$i][
                                         "summary"
                                     ][${${"GLOBALS"}["gwvcvcydgs"]}][
                                         "v"
@@ -1160,20 +1139,20 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["cjhkrxrpl"] = "ind";
             for (
                 ${${"GLOBALS"}["ogpmedzox"]} = ${${"GLOBALS"}["cjhkrxrpl"]};
-                ${${"GLOBALS"}["gjpurobd"]} >= 0;
-                ${${"GLOBALS"}["gjpurobd"]}--
+                $i >= 0;
+                $i--
             ) {
                 $kevvrdxhwmro = "offset";
                 $pyydrvrufpb = "id";
                 if (
-                    ${${"GLOBALS"}["xukgqmdv"]}[${${"GLOBALS"}["gjpurobd"]}][
+                    ${${"GLOBALS"}["xukgqmdv"]}[$i][
                         "idx"
                     ] ===
                     ${$pyydrvrufpb} - ${$kevvrdxhwmro}
                 ) {
                     ${"GLOBALS"}["kuetltk"] = "grp";
                     ${${"GLOBALS"}["benxbud"]} =
-                        ${${"GLOBALS"}["kuetltk"]}[${${"GLOBALS"}["gjpurobd"]}];
+                        ${${"GLOBALS"}["kuetltk"]}[$i];
                     break;
                 }
             }
@@ -1190,7 +1169,7 @@ class jqGridExport extends jqGrid
         ${"GLOBALS"}["kekrpp"] = "args";
         for (
             ${${"GLOBALS"}["prxsjm"]} = 1;
-            ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["bwrorcf"]};
+            $i < ${${"GLOBALS"}["bwrorcf"]};
             ${$thvokqd}++
         ) {
             ${"GLOBALS"}["ebddwfdz"] = "i";
@@ -1217,7 +1196,7 @@ class jqGridExport extends jqGrid
                 $ujwbnorlgyl = "args";
                 $jnwsdtddyqcq = "i";
                 ${${"GLOBALS"}["xdrntkkcz"]}[0] = str_replace(
-                    "{" . (${${"GLOBALS"}["gjpurobd"]} - 1) . "}",
+                    "{" . ($i - 1) . "}",
                     ${$ujwbnorlgyl}[${$jnwsdtddyqcq}],
                     ${${"GLOBALS"}["xdrntkkcz"]}[0]
                 );
@@ -1243,11 +1222,11 @@ class jqGridExport extends jqGrid
     {
         ${"GLOBALS"}["cxmzdak"] = "filename";
         $tyguclqkjw = "fw";
-        $sekolcfdfx = "FILE\x48_";
+        $sekolcfdfx = "FILEH_";
         ${"GLOBALS"}["zunrhkksnxtt"] = "opw";
         ${"GLOBALS"}["eifcpinxyh"] = "opw";
         ${"GLOBALS"}["yjjbxbtbxbf"] = "filename";
-        ${"GLOBALS"}["xvwxvcg"] = "FILE\x48_";
+        ${"GLOBALS"}["xvwxvcg"] = "FILEH_";
         ${${"GLOBALS"}["zunrhkksnxtt"]} = "wb";
         ${${"GLOBALS"}["cxmzdak"]} = $this->tmp_file_name(
             ${${"GLOBALS"}["yjjbxbtbxbf"]}
@@ -1287,7 +1266,7 @@ class jqGridExport extends jqGrid
         $gcnxntb = "ncols";
         $fvktvf = "addtitles";
         $sxhjgq = "gS\x51LMaxRows";
-        ${"GLOBALS"}["mxwurqfvhkv"] = "\x4eE\x57LI\x4eE";
+        ${"GLOBALS"}["mxwurqfvhkv"] = "NEWLINE";
         ${"GLOBALS"}["diibmyirc"] = "rs";
         if (!${$ubqmnlfxb}) {
             return "";
@@ -1305,13 +1284,13 @@ class jqGridExport extends jqGrid
         ${${"GLOBALS"}["kynnxbgh"]} = "";
         $qstnlmheik = "ncols";
         ${$gcnxntb} = jqGridDB::columnCount(${${"GLOBALS"}["iwbtxnvvnjo"]});
-        ${${"GLOBALS"}["szsdbu"]} = false;
-        ${${"GLOBALS"}["fevhaevsc"]} = is_array(
-            ${${"GLOBALS"}["hjvyemwroyky"]}
+        $model = false;
+        $nmodel = is_array(
+            $colmodel
         )
-            ? count(${${"GLOBALS"}["hjvyemwroyky"]})
+            ? count($colmodel)
             : -1;
-        if (${${"GLOBALS"}["fevhaevsc"]} > 0) {
+        if ($nmodel > 0) {
             ${"GLOBALS"}["slwrnx"] = "nmodel";
             ${"GLOBALS"}["ddlshoi"] = "i";
             $qhjdutcl = "i";
@@ -1322,24 +1301,24 @@ class jqGridExport extends jqGrid
                 ${$qhjdutcl}++
             ) {
                 if (
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    $colmodel[
+                        $i
                     ]["name"] == "actions"
                 ) {
                     ${"GLOBALS"}["sgwfivu"] = "colmodel";
                     array_splice(
                         ${${"GLOBALS"}["sgwfivu"]},
-                        ${${"GLOBALS"}["gjpurobd"]},
+                        $i,
                         1
                     );
-                    ${${"GLOBALS"}["fevhaevsc"]}--;
+                    $nmodel--;
                     break;
                 }
             }
         }
         if (
-            ${${"GLOBALS"}["hjvyemwroyky"]} &&
-            ${${"GLOBALS"}["fevhaevsc"]} == ${$qstnlmheik}
+            $colmodel &&
+            $nmodel == ${$qstnlmheik}
         ) {
             ${"GLOBALS"}["quajaqxfnfs"] = "model";
             ${${"GLOBALS"}["quajaqxfnfs"]} = true;
@@ -1347,18 +1326,18 @@ class jqGridExport extends jqGrid
         ${"GLOBALS"}["gbavwwky"] = "i";
         ${${"GLOBALS"}["uscbprxx"]} = [];
         for (
-            ${${"GLOBALS"}["gjpurobd"]} = 0;
+            $i = 0;
             ${${"GLOBALS"}["gbavwwky"]} < ${${"GLOBALS"}["gghialfjac"]};
-            ${${"GLOBALS"}["gjpurobd"]}++
+            $i++
         ) {
             $tabkfjbitbj = "i";
             $odimabi = "field";
             ${"GLOBALS"}["knvyijhilw"] = "i";
-            $iigenhiazj = "replace\x4eewLine";
+            $iigenhiazj = "replaceNewLine";
             $vmvthvcss = "fname";
             $xjjknieaql = "sepreplace";
             ${"GLOBALS"}["xgcmgqmbm"] = "aselect";
-            if (${${"GLOBALS"}["szsdbu"]}) {
+            if ($model) {
                 $dcqsdotm = "colmodel";
                 ${"GLOBALS"}["ixobuyw"] = "i";
                 $patdmh = "i";
@@ -1367,7 +1346,7 @@ class jqGridExport extends jqGrid
                 $zmbzlwi = "i";
                 $hflunshk = "colmodel";
                 ${${"GLOBALS"}["incdddnykwc"]} = isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${$zmbzlwi}]["label"]
+                    $colmodel[${$zmbzlwi}]["label"]
                 )
                     ? ${${"GLOBALS"}["kfumorri"]}[${${"GLOBALS"}["ixobuyw"]}][
                         "label"
@@ -1375,40 +1354,39 @@ class jqGridExport extends jqGrid
                     : ${$hflunshk}[${$patdmh}]["name"];
                 ${"GLOBALS"}["dwzpwwnbrv"] = "field";
                 ${${"GLOBALS"}["dwzpwwnbrv"]}["name"] =
-                    ${$dcqsdotm}[${${"GLOBALS"}["gjpurobd"]}]["name"];
+                    ${$dcqsdotm}[$i]["name"];
                 ${${"GLOBALS"}["xlmyieky"]}[
-                    ${${"GLOBALS"}["gjpurobd"]}
+                    $i
                 ] = isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
+                    $colmodel[
                         ${${"GLOBALS"}["ppnekhdgfdr"]}
                     ]["sorttype"]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    ? $colmodel[
+                        $i
                     ]["sorttype"]
                     : "";
             } else {
                 $gxndixljsnn = "field";
                 ${"GLOBALS"}["mksjnlxv"] = "i";
                 ${"GLOBALS"}["xicpqfvrsoa"] = "typearr";
-                ${${"GLOBALS"}["elqhspslpod"]} = jqGridDB::getColumnMeta(
+                $field = jqGridDB::getColumnMeta(
                     ${${"GLOBALS"}["mksjnlxv"]},
-                    ${${"GLOBALS"}["ukkbuv"]}
+                    $rs
                 );
                 ${${"GLOBALS"}["incdddnykwc"]} = ${$gxndixljsnn}["name"];
                 ${${"GLOBALS"}["xicpqfvrsoa"]}[
-                    ${${"GLOBALS"}["gjpurobd"]}
+                    $i
                 ] = jqGridDB::MetaType(
-                    ${${"GLOBALS"}["elqhspslpod"]},
+                    $field,
                     $this->dbtype
                 );
             }
-            ${${"GLOBALS"}["uscbprxx"]}[${${"GLOBALS"}["gjpurobd"]}] =
+            ${${"GLOBALS"}["uscbprxx"]}[$i] =
                 ${$odimabi}["name"];
             $ivdsiqa = "i";
             $nuubyzjlvx = "i";
             ${${"GLOBALS"}["qbroefmekyoe"]} = ${$vmvthvcss};
-            $ixgunztpm = "ahidden";
             if (${${"GLOBALS"}["menmaix"]}) {
                 $sgnxxvmm = "v";
                 $tkaxzgsok = "escquotequote";
@@ -1433,33 +1411,33 @@ class jqGridExport extends jqGrid
                     )
                 )
             );
-            ${${"GLOBALS"}["ehmjvfrj"]}[${$ivdsiqa}] =
-                ${${"GLOBALS"}["szsdbu"]} &&
+            $ahidden[${$ivdsiqa}] =
+                $model &&
                 isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${$tabkfjbitbj}][
+                    $colmodel[${$tabkfjbitbj}][
                         "hidden"
                     ]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[${$nuubyzjlvx}][
+                    ? $colmodel[${$nuubyzjlvx}][
                         "hidden"
                     ]
                     : false;
-            if (!${$ixgunztpm}[${${"GLOBALS"}["knvyijhilw"]}]) {
+            if (!$ahidden[${${"GLOBALS"}["knvyijhilw"]}]) {
                 $snqkyphpsss = "v";
                 ${${"GLOBALS"}["npmqzdfcglsi"]}[] = ${$snqkyphpsss};
             }
-            ${${"GLOBALS"}["xgcmgqmbm"]}[${${"GLOBALS"}["gjpurobd"]}] = false;
+            ${${"GLOBALS"}["xgcmgqmbm"]}[$i] = false;
             if (
-                ${${"GLOBALS"}["szsdbu"]} &&
+                $model &&
                 isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    $colmodel[
+                        $i
                     ]["formatter"]
                 )
             ) {
                 if (
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    $colmodel[
+                        $i
                     ]["formatter"] == "select"
                 ) {
                     ${"GLOBALS"}["dloipgpjz"] = "colmodel";
@@ -1473,12 +1451,12 @@ class jqGridExport extends jqGrid
                             "formatoptions"
                         ]
                     )
-                        ? ${${"GLOBALS"}["hjvyemwroyky"]}[${$wbfedosjgqv}][
+                        ? $colmodel[${$wbfedosjgqv}][
                             "formatoptions"
                         ]
                         : (isset(
                             ${${"GLOBALS"}["jdcuoglnubm"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                                $i
                             ]["editoptions"]
                         )
                             ? ${${"GLOBALS"}["dloipgpjz"]}[${$oilaixizs}][
@@ -1548,12 +1526,12 @@ class jqGridExport extends jqGrid
             for (
                 ${${"GLOBALS"}["lthtpbnrblx"]} = 0;
                 ${$khqtjtrhb} < ${$semsolv};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i++
             ) {
                 ${"GLOBALS"}["qrmflcyzsb"] = "fieldnames";
-                ${${"GLOBALS"}["qrmflcyzsb"]}[${${"GLOBALS"}["gjpurobd"]} + 1] =
+                ${${"GLOBALS"}["qrmflcyzsb"]}[$i + 1] =
                     &${${"GLOBALS"}["ntkgmldy"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ];
             }
             call_user_func_array(
@@ -1579,17 +1557,15 @@ class jqGridExport extends jqGrid
             $ponbyboh = "i";
             ${$ucglmzyd} = [];
             $pdnhvkvjwuj = "line";
-            ${${"GLOBALS"}["gjpurobd"]} = 0;
+            $i = 0;
             for (
                 ${$ponbyboh} = 0;
                 ${${"GLOBALS"}["wqfocujhvyii"]} <
-                ${${"GLOBALS"}["dfctfggbjtf"]};
+                $ncols;
                 ${$drqihlcl}++
             ) {
-                ${"GLOBALS"}["zgylxwubwhih"] = "i";
                 $tjaovttsqk = "v";
                 ${"GLOBALS"}["nlhneszsrv"] = "v";
-                ${"GLOBALS"}["lidnlvhait"] = "i";
                 ${"GLOBALS"}["zwnxlm"] = "v";
                 $evjlxcpsf = "v";
                 $hlscuwdyz = "v";
@@ -1597,27 +1573,18 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["cdwcjjmih"] = "datefmt";
                 ${"GLOBALS"}["kxklfuivmouu"] = "r";
                 ${"GLOBALS"}["ewbquer"] = "sepreplace";
-                ${"GLOBALS"}["lsobcle"] = "replace\x4eewLine";
-                if (
-                    isset(
-                        ${${"GLOBALS"}["ehmjvfrj"]}[
-                            ${${"GLOBALS"}["zgylxwubwhih"]}
-                        ]
-                    ) &&
-                    ${${"GLOBALS"}["ehmjvfrj"]}[
-                        ${${"GLOBALS"}["lidnlvhait"]}
-                    ]
-                ) {
+                ${"GLOBALS"}["lsobcle"] = "replaceNewLine";
+                if (isset($ahidden[$i]) && $ahidden[$i]) {
                     continue;
                 }
                 ${"GLOBALS"}["xlqdpiefq"] = "i";
                 ${${"GLOBALS"}["qbroefmekyoe"]} =
                     ${${"GLOBALS"}["kxklfuivmouu"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ];
                 if (
                     is_array(
-                        ${${"GLOBALS"}["hrvgcwqhfp"]}[
+                        $aselect[
                             ${${"GLOBALS"}["xlqdpiefq"]}
                         ]
                     )
@@ -1636,8 +1603,8 @@ class jqGridExport extends jqGrid
                         $dnzytip = "v1";
                         ${"GLOBALS"}["nprirwh"] = "v\x31";
                         ${$dnzytip} =
-                            ${${"GLOBALS"}["hrvgcwqhfp"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                            $aselect[
+                                $i
                             ][${$gmgmljj}];
                         if (${${"GLOBALS"}["nprirwh"]}) {
                             ${${"GLOBALS"}["qbroefmekyoe"]} = ${${"GLOBALS"}[
@@ -1651,7 +1618,7 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["jjmzpvnq"] = "datefmt";
                 $plbjqcrd = "sep";
                 ${${"GLOBALS"}["boxgmd"]} =
-                    ${${"GLOBALS"}["xlmyieky"]}[${${"GLOBALS"}["gjpurobd"]}];
+                    ${${"GLOBALS"}["xlmyieky"]}[$i];
                 $jnkdrdmjrezc = "quote";
                 $ddlktvt = "v";
                 ${"GLOBALS"}["izfvizxge"] = "v";
@@ -1761,7 +1728,7 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["cjdkfwfpjg"] = "quote";
                 $cqbgrmmohqc = "ahidden";
                 if (
-                    isset(${${"GLOBALS"}["ehmjvfrj"]}[${$gqdowu}]) &&
+                    isset($ahidden[${$gqdowu}]) &&
                     ${$cqbgrmmohqc}[${${"GLOBALS"}["fnuggi"]}]
                 ) {
                     continue;
@@ -1774,7 +1741,7 @@ class jqGridExport extends jqGrid
                     ${"GLOBALS"}["hegruwvrkip"] = "key";
                     if (
                         ${${"GLOBALS"}["uscbprxx"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ] == ${${"GLOBALS"}["hegruwvrkip"]}
                     ) {
                         ${"GLOBALS"}["wpptfimuxm"] = "vv";
@@ -1930,7 +1897,7 @@ class jqGridExport extends jqGrid
             $aaeriomyzh = "ret";
             $fzhpns = "sql";
             ${${"GLOBALS"}["benxbud"]} = $this->rs2csv(
-                ${${"GLOBALS"}["lvjvvrdym"]},
+                $sql,
                 ${${"GLOBALS"}["xonqvb"]},
                 $this->CSV["separator"],
                 $this->CSV["sepreplace"],
@@ -1939,7 +1906,7 @@ class jqGridExport extends jqGrid
                 $this->CSV["addtitles"],
                 $this->CSV["quote"],
                 $this->CSV["escquote"],
-                $this->CSV["replace\x4eewLine"]
+                $this->CSV["replaceNewLine"]
             );
             jqGridDB::closeCursor(${$fzhpns});
             return ${$aaeriomyzh};
@@ -1950,210 +1917,116 @@ class jqGridExport extends jqGrid
     protected function rs2pdf($rs, &$pdf, $colmodel = false, $summary = null)
     {
         $ywpygekojcz = "pd";
-        ${"GLOBALS"}["bwpzog"] = "i";
-        ${"GLOBALS"}["vbrqvxwx"] = "ncols";
         $yvakzuorgy = "s";
-        ${"GLOBALS"}["iitmmib"] = "rs";
         ${$yvakzuorgy} = "";
         $rwjaqkyc = "pw";
-        ${"GLOBALS"}["sgraicmbkm"] = "pw";
         ${${"GLOBALS"}["curlztfmp"]} = 0;
-        ${${"GLOBALS"}["emgjeeqllvct"]} = $this->gSQLMaxRows;
-        ${"GLOBALS"}["junjfgqn"] = "ncols";
-        if (!${${"GLOBALS"}["ukkbuv"]}) {
+        $gSQLMaxRows = $this->gSQLMaxRows;
+        if (!$rs) {
             printf("Bad Record\x20set\x20rs2pdf");
             return false;
         }
-        $eamcysbiawzj = "ncols";
         ${"GLOBALS"}["kmwshjklc"] = "pdf";
         ${"GLOBALS"}["erbjtgnlqjw"] = "pd";
         ${${"GLOBALS"}["xlmyieky"]} = [];
-        ${"GLOBALS"}["vlrxgp"] = "nmodel";
         ${"GLOBALS"}["lbgrmbjfyt"] = "r";
-        ${"GLOBALS"}["opbtznpnttn"] = "colmodel";
-        ${"GLOBALS"}["gjtymqsdldhv"] = "ahidden";
         ${"GLOBALS"}["dzeunbuw"] = "colwidth";
-        ${"GLOBALS"}["ehuxtwvvy"] = "nmodel";
-        $hqhkkect = "colmodel";
         ${"GLOBALS"}["ufradf"] = "maxheigh";
-        ${${"GLOBALS"}["junjfgqn"]} = jqGridDB::columnCount(
-            ${${"GLOBALS"}["iitmmib"]}
-        );
+        $ncols = jqGridDB::columnCount($rs);
         ${"GLOBALS"}["jhhgahf"] = "pd";
-        ${${"GLOBALS"}["szsdbu"]} = false;
-        ${${"GLOBALS"}["ehuxtwvvy"]} = is_array(${$hqhkkect})
-            ? count(${${"GLOBALS"}["hjvyemwroyky"]})
-            : -1;
-        if (${${"GLOBALS"}["fevhaevsc"]} > 0) {
-            ${"GLOBALS"}["cyoxywo"] = "nmodel";
-            for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["cyoxywo"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
-            ) {
-                $xjanwmjmkk = "i";
-                $yolzzofpy = "colmodel";
-                if (${$yolzzofpy}[${$xjanwmjmkk}]["name"] == "actions") {
-                    $fjfucbfnut = "i";
-                    $jefhbqyfa = "colmodel";
-                    array_splice(${$jefhbqyfa}, ${$fjfucbfnut}, 1);
-                    ${${"GLOBALS"}["fevhaevsc"]}--;
+        $model = false;
+        $nmodel = is_array($colmodel)?count($colmodel):-1;
+        if ($nmodel > 0) {
+            for ($i = 0;$i < $nmodel;$i++) {
+                if ($colmodel[$i]["name"] == "actions") {
+                    array_splice($colmodel, $i, 1);
+                    $nmodel--;
                     break;
                 }
             }
         }
-        switch ($this->dbtype) {
-            case "oci\x38":
+		switch ($this->dbtype) {
+            case "oci8":
             case "db2":
             case "sqlsrv":
             case "odbcsqlsrv":
-                ${${"GLOBALS"}["vlrxgp"]}++;
+                $nmodel++;
                 break;
         }
-        if (
-            ${${"GLOBALS"}["opbtznpnttn"]} &&
-            ${${"GLOBALS"}["fevhaevsc"]} == ${${"GLOBALS"}["vbrqvxwx"]}
-        ) {
-            $mhmokhgpihn = "model";
-            ${$mhmokhgpihn} = true;
+        if ($colmodel && $nmodel == $ncols) {
+            $model = true;
         }
-        ${"GLOBALS"}["encjaij"] = "i";
-        ${${"GLOBALS"}["ehmjvfrj"]} = [];
-        ${${"GLOBALS"}["hrvgcwqhfp"]} = [];
-        ${${"GLOBALS"}["cjhiiotmv"]} = 0;
+        $ahidden = [];
+        $aselect = [];
+        $totw = 0;
         $mppoteivuw = "pd";
-        ${"GLOBALS"}["oxsmlknbm"] = "i";
         ${$rwjaqkyc} = $pdf->getPageWidth();
-        ${${"GLOBALS"}["rtfntggn"]} = $pdf->getMargins();
-        ${${"GLOBALS"}["sgraicmbkm"]} =
-            ${${"GLOBALS"}["hjgiew"]} -
-            ${${"GLOBALS"}["rtfntggn"]}["left"] -
-            ${${"GLOBALS"}["rtfntggn"]}["right"];
+        $margins = $pdf->getMargins();
+        $pw = $pw - $margins["left"] - $margins["right"];
         $qivdltd = "fill";
         $tcedbndm = "maxheigh";
-        for (
-            ${${"GLOBALS"}["bwpzog"]} = 0;
-            ${${"GLOBALS"}["oxsmlknbm"]} < ${$eamcysbiawzj};
-            ${${"GLOBALS"}["gjpurobd"]}++
-        ) {
-            if (
-                isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${${"GLOBALS"}["gjpurobd"]}]
-                )
-            ) {
-                ${"GLOBALS"}["ftggrdkhkpr"] = "ahidden";
+        for ($i = 0; $i < $ncols;$i++) {
+            //$ahidden[$i]=true;
+			if (isset($colmodel[$i])) {
                 $oqzqcwj = "colmodel";
-                ${"GLOBALS"}["seppqe"] = "model";
-                ${"GLOBALS"}["hpqrucpu"] = "colmodel";
-                ${"GLOBALS"}["jmflnjxeuf"] = "i";
-                ${"GLOBALS"}["iouwcxo"] = "i";
-                $jedbqpup = "colmodel";
-                ${${"GLOBALS"}["ftggrdkhkpr"]}[${${"GLOBALS"}["gjpurobd"]}] =
-                    ${${"GLOBALS"}["szsdbu"]} &&
-                    isset(${$jedbqpup}[${${"GLOBALS"}["gjpurobd"]}]["hidden"])
-                        ? ${${"GLOBALS"}["hpqrucpu"]}[
-                            ${${"GLOBALS"}["iouwcxo"]}
-                        ]["hidden"]
-                        : false;
-                $nexjftiebo = "i";
-                ${${"GLOBALS"}["psqfbbogow"]}[${${"GLOBALS"}["gjpurobd"]}] =
-                    ${${"GLOBALS"}["seppqe"]} &&
-                    isset(
-                        ${${"GLOBALS"}["hjvyemwroyky"]}[${$nexjftiebo}]["width"]
-                    )
-                        ? (int) ${$oqzqcwj}[${${"GLOBALS"}["gjpurobd"]}][
-                            "width"
-                        ]
-                        : 150;
-                if (
-                    ${${"GLOBALS"}["ehmjvfrj"]}[${${"GLOBALS"}["gjpurobd"]}]
-                ) {
+                $ahidden[$i] = $model && isset($colmodel[$i]["hidden"]) ? $colmodel[$i]["hidden"] : false;
+                $colwidth[$i] = $model && isset($colmodel[$i]["width"]) ? (int) ${$oqzqcwj}[$i]["width"] : 150;
+                if ($ahidden[$i]) {
                     continue;
                 }
-                ${${"GLOBALS"}["cjhiiotmv"]} =
-                    ${${"GLOBALS"}["cjhiiotmv"]} +
-                    ${${"GLOBALS"}["psqfbbogow"]}[
-                        ${${"GLOBALS"}["jmflnjxeuf"]}
-                    ];
+                $totw =$totw + $colwidth[$i];
             }
         }
-        ${${"GLOBALS"}["dqtpplxvk"]} = $this->PDF;
+        $pd = $this->PDF;
         $pdf->SetLineWidth(0.2);
-        ${${"GLOBALS"}["elqhspslpod"]} = [];
+        $field = [];
         ${${"GLOBALS"}["zeyxwxhvn"]} = [];
         $tbklcffh = "datefmt";
         function colorToDec($pdfl, $str)
         {
-            if (
-                method_exists(
-                    ${${"GLOBALS"}["nnqsybqotgeb"]},
-                    "convert\x48TMLColorToDec"
-                )
-            ) {
-                return $pdfl->convertHTMLColorToDec(
-                    ${${"GLOBALS"}["jteoipyqor"]}
-                );
+            if (method_exists(${${"GLOBALS"}["nnqsybqotgeb"]},"convertHTMLColorToDec")) {
+                return $pdfl->convertHTMLColorToDec(${${"GLOBALS"}["jteoipyqor"]});
             } else {
                 ${${"GLOBALS"}["jprujgcsncg"]} = $pdfl->getAllSpotColors();
-                return TCPDF_COLORS::convertHTMLColorToDec(
-                    ${${"GLOBALS"}["jteoipyqor"]},
-                    ${${"GLOBALS"}["jprujgcsncg"]}
-                );
+                return TCPDF_COLORS::convertHTMLColorToDec(${${"GLOBALS"}["jteoipyqor"]},${${"GLOBALS"}["jprujgcsncg"]});
             }
         }
-        function printTHeader(
-            $ncols,
-            $maxheigh,
-            $awidth,
-            $aname,
-            $ahidden,
-            $pdf,
-            $pd
-        ) {
+        function printTHeader($ncols,$maxheigh,$awidth,$aname,$ahidden,$pdf,$pd) {
             ${"GLOBALS"}["tvhrssormecb"] = "pd";
             $ppduddue = "pdf";
-            $qqvdsntcv = "i";
             $wxzctejca = "pd";
             $pdf->SetFillColorArray(
                 colorToDec(${$ppduddue}, ${$wxzctejca}["grid_head_color"])
             );
             $pdf->SetTextColorArray(
                 colorToDec(
-                    ${${"GLOBALS"}["ggpvnste"]},
+                    $pdf,
                     ${${"GLOBALS"}["tvhrssormecb"]}[
                         "grid_head_text_color"
                     ]
                 )
             );
-            ${"GLOBALS"}["vymmbxvmdrm"] = "i";
             $pdf->SetDrawColorArray(
                 colorToDec(
-                    ${${"GLOBALS"}["ggpvnste"]},
-                    ${${"GLOBALS"}["dqtpplxvk"]}["grid_draw_color"]
+                    $pdf,
+                    $pd["grid_draw_color"]
                 )
             );
             $pdf->SetFont("", "B");
-            for (
-                ${${"GLOBALS"}["vymmbxvmdrm"]} = 0;
-                ${$qqvdsntcv} < ${${"GLOBALS"}["dfctfggbjtf"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
-            ) {
-                ${"GLOBALS"}["kiwcpfpfpc"] = "ahidden";
-                if (
-                    ${${"GLOBALS"}["kiwcpfpfpc"]}[${${"GLOBALS"}["gjpurobd"]}]
-                ) {
+            for($i=0;$i<$ncols;$i++) {
+                if ($ahidden[$i]) {
                     continue;
                 }
-                if (!${${"GLOBALS"}["dqtpplxvk"]}["shrink_header"]) {
+                if (!$pd["shrink_header"]) {
                     ${"GLOBALS"}["vwpudre"] = "maxheigh";
                     ${"GLOBALS"}["dccqiawl"] = "aname";
                     $pdf->MultiCell(
                         ${${"GLOBALS"}["qwloaihb"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ],
                         ${${"GLOBALS"}["vwpudre"]},
                         ${${"GLOBALS"}["dccqiawl"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ],
                         1,
                         "C",
@@ -2174,11 +2047,11 @@ class jqGridExport extends jqGrid
                     ${"GLOBALS"}["dvpdomcc"] = "awidth";
                     $pdf->Cell(
                         ${${"GLOBALS"}["dvpdomcc"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ],
                         ${$szakvmxgxos}["grid_header_height"],
                         ${${"GLOBALS"}["yrghuenpe"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ],
                         1,
                         0,
@@ -2191,58 +2064,35 @@ class jqGridExport extends jqGrid
             }
         }
         ${$tcedbndm} = ${$ywpygekojcz}["grid_header_height"];
-        for (
-            ${${"GLOBALS"}["encjaij"]} = 0;
-            ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["dfctfggbjtf"]};
-            ${${"GLOBALS"}["gjpurobd"]}++
-        ) {
+        for($i = 0;$i<$ncols;$i++) {
             ${"GLOBALS"}["pvbbjsj"] = "i";
             $emomksmydr = "i";
-            $ubuvelttqcce = "i";
-            $fnygpygv = "ahidden";
             $ftzkhon = "i";
             $dgpjtjuzwxgx = "colmodel";
-            ${${"GLOBALS"}["hrvgcwqhfp"]}[${${"GLOBALS"}["pvbbjsj"]}] = false;
-            ${"GLOBALS"}["enwukvir"] = "i";
+            $aselect[${${"GLOBALS"}["pvbbjsj"]}] = false;
             ${"GLOBALS"}["binctsh"] = "colmodel";
-            ${"GLOBALS"}["ttbemesiiq"] = "colmodel";
             ${"GLOBALS"}["lgqgjwjrrm"] = "i";
-            if (
-                ${${"GLOBALS"}["szsdbu"]} &&
-                isset(
-                    ${${"GLOBALS"}["ttbemesiiq"]}[
-                        ${${"GLOBALS"}["enwukvir"]}
-                    ]
-                ) &&
-                isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
-                    ]["formatter"]
-                )
-            ) {
+            if ($model && isset($colmodel[$i]) && isset($colmodel[$i]["formatter"])) {
                 $byetfgk = "colmodel";
-                if (
-                    ${$byetfgk}[${${"GLOBALS"}["gjpurobd"]}]["formatter"] ==
-                    "select"
-                ) {
+                if (${$byetfgk}[$i]["formatter"] =="select") {
                     ${"GLOBALS"}["baxrlfhawdv"] = "colmodel";
                     $cglnmfyen = "i";
                     $xvewlwcjcdy = "colmodel";
                     ${"GLOBALS"}["ocgbybymsdis"] = "i";
                     ${${"GLOBALS"}["wyqwkwhq"]} = isset(
                         ${${"GLOBALS"}["baxrlfhawdv"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ]["formatoptions"]
                     )
-                        ? ${$xvewlwcjcdy}[${${"GLOBALS"}["gjpurobd"]}][
+                        ? ${$xvewlwcjcdy}[$i][
                             "formatoptions"
                         ]
                         : (isset(
-                            ${${"GLOBALS"}["hjvyemwroyky"]}[
+                            $colmodel[
                                 ${${"GLOBALS"}["ocgbybymsdis"]}
                             ]["editoptions"]
                         )
-                            ? ${${"GLOBALS"}["hjvyemwroyky"]}[${$cglnmfyen}][
+                            ? $colmodel[${$cglnmfyen}][
                                 "editoptions"
                             ]
                             : []);
@@ -2267,18 +2117,12 @@ class jqGridExport extends jqGrid
                             ${${"GLOBALS"}["xwandwlrh"]},
                             ${${"GLOBALS"}["wyqwkwhq"]}["value"]
                         );
-                        foreach (
-                            ${${"GLOBALS"}["coxxnkmlsht"]}
-                            as ${$hsxsfumz} => ${${"GLOBALS"}["qwgqpbnkmug"]}
-                        ) {
+                        foreach (${${"GLOBALS"}["coxxnkmlsht"]} as ${$hsxsfumz} => ${${"GLOBALS"}["qwgqpbnkmug"]}) {
                             ${"GLOBALS"}["sifpfqrs"] = "items";
                             $vdjegufgkql = "sep";
                             $ogmjndfr = "aselect";
                             ${"GLOBALS"}["ofjdwn"] = "i";
-                            ${${"GLOBALS"}["hlimukpf"]} = explode(
-                                ${$vdjegufgkql},
-                                ${${"GLOBALS"}["qwgqpbnkmug"]}
-                            );
+                            ${${"GLOBALS"}["hlimukpf"]} = explode(${$vdjegufgkql},${${"GLOBALS"}["qwgqpbnkmug"]});
                             ${$ogmjndfr}[${${"GLOBALS"}["ofjdwn"]}][
                                 ${${"GLOBALS"}["hlimukpf"]}[0]
                             ] = ${${"GLOBALS"}["sifpfqrs"]}[1];
@@ -2286,18 +2130,13 @@ class jqGridExport extends jqGrid
                     }
                 }
             }
-            $yfmsgciumha = "i";
-            ${"GLOBALS"}["hlqiltlidbf"] = "fname";
             ${"GLOBALS"}["yimwprgnb"] = "i";
-            ${${"GLOBALS"}["zeyxwxhvn"]}[${${"GLOBALS"}["gjpurobd"]}] = "";
+            ${${"GLOBALS"}["zeyxwxhvn"]}[$i] = "";
             $ufrodkuf = "i";
             $oqgnniux = "i";
             ${"GLOBALS"}["fztjycgow"] = "pd";
             $pyfoqkgt = "colwidth";
-            if (
-                ${${"GLOBALS"}["szsdbu"]} &&
-                isset(${$dgpjtjuzwxgx}[${$ubuvelttqcce}])
-            ) {
+            if ($model && isset($colmodel[$i])) {
                 ${"GLOBALS"}["ujfxjkhwp"] = "i";
                 $rycgmfuqq = "colmodel";
                 ${"GLOBALS"}["hbstodlzv"] = "i";
@@ -2312,60 +2151,40 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["zypfkfzd"] = "i";
                 ${${"GLOBALS"}["incdddnykwc"]}[
                     ${${"GLOBALS"}["gldeokckbp"]}
-                ] = isset(${$rtttxsgc}[${${"GLOBALS"}["gjpurobd"]}]["label"])
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
+                ] = isset(${$rtttxsgc}[$i]["label"])
+                    ? $colmodel[
                         ${${"GLOBALS"}["ujfxjkhwp"]}
                     ]["label"]
-                    : ${${"GLOBALS"}["hjvyemwroyky"]}[
+                    : $colmodel[
                         ${${"GLOBALS"}["kwesnct"]}
                     ]["name"];
-                ${$ixdthoers}[${${"GLOBALS"}["gjpurobd"]}] = isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                ${$ixdthoers}[$i] = isset(
+                    $colmodel[
+                        $i
                     ]["sorttype"]
                 )
                     ? ${$rycgmfuqq}[${${"GLOBALS"}["ewlinfodkq"]}]["sorttype"]
                     : "";
                 ${$rknafxuemoxt}[${${"GLOBALS"}["zypfkfzd"]}] = isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
+                    $colmodel[
                         ${${"GLOBALS"}["hbstodlzv"]}
                     ]["align"]
                 )
-                    ? strtoupper(
-                        substr(
-                            ${$nluqpnqseyi}[${${"GLOBALS"}["sepmibmbs"]}][
-                                "align"
-                            ],
-                            0,
-                            1
-                        )
-                    )
+                    ? strtoupper(substr(${$nluqpnqseyi}[${${"GLOBALS"}["sepmibmbs"]}]["align"],0,1))
                     : "L";
             } else {
                 ${"GLOBALS"}["yjsutevnkg"] = "align";
-                $tyvkjsy = "fname";
-                $gokmpfxqx = "field";
-                ${${"GLOBALS"}["elqhspslpod"]} = jqGridDB::getColumnMeta(
-                    ${${"GLOBALS"}["gjpurobd"]},
-                    ${${"GLOBALS"}["ukkbuv"]}
-                );
-                ${$tyvkjsy}[${${"GLOBALS"}["gjpurobd"]}] =
-                    ${${"GLOBALS"}["elqhspslpod"]}["name"];
-                ${${"GLOBALS"}["xlmyieky"]}[
-                    ${${"GLOBALS"}["gjpurobd"]}
-                ] = jqGridDB::MetaType(${$gokmpfxqx}, $this->dbtype);
-                $ifeprpj = "i";
-                ${${"GLOBALS"}["yjsutevnkg"]}[${$ifeprpj}] = "L";
+                $field = jqGridDB::getColumnMeta($i,$rs);
+                $fname[$i] = $field["name"];
+                ${${"GLOBALS"}["xlmyieky"]}[$i] = jqGridDB::MetaType($field, $this->dbtype);
+                ${${"GLOBALS"}["yjsutevnkg"]}[$i] = "L";
             }
             ${"GLOBALS"}["acfbmnix"] = "i";
-            if (
-                ${${"GLOBALS"}["hlqiltlidbf"]}[${$yfmsgciumha}] == "jqgrid_row"
-            ) {
-                $phdsgitwnux = "i";
-                ${${"GLOBALS"}["ehmjvfrj"]}[${$phdsgitwnux}] = true;
+            if(strtolower($fname[$i])== "jqgrid_row") {
+                $ahidden[$i] = true;
             }
             $zyhsiesrp = "colwidth";
-            if (${$fnygpygv}[${${"GLOBALS"}["gjpurobd"]}]) {
+            if ($ahidden[$i]) {
                 continue;
             }
             ${"GLOBALS"}["ovqflg"] = "fname";
@@ -2374,19 +2193,19 @@ class jqGridExport extends jqGrid
                 ${${"GLOBALS"}["yimwprgnb"]}
             ] = htmlspecialchars(${${"GLOBALS"}["incdddnykwc"]}[${$ufrodkuf}]);
             ${${"GLOBALS"}["zeyxwxhvn"]}[
-                ${${"GLOBALS"}["gjpurobd"]}
-            ] = ${${"GLOBALS"}["szsdbu"]}
+                $i
+            ] = $model
                 ? ${${"GLOBALS"}["binctsh"]}[${${"GLOBALS"}["lgqgjwjrrm"]}][
                     "name"
                 ]
                 : ${${"GLOBALS"}["incdddnykwc"]}[${${"GLOBALS"}["acfbmnix"]}];
             ${$zyhsiesrp}[${$oqgnniux}] =
-                (${${"GLOBALS"}["psqfbbogow"]}[${$ftzkhon}] /
-                    ${${"GLOBALS"}["cjhiiotmv"]}) *
+                ($colwidth[${$ftzkhon}] /
+                    $totw) *
                 100;
-            ${${"GLOBALS"}["psqfbbogow"]}[${${"GLOBALS"}["gjpurobd"]}] =
+            $colwidth[$i] =
                 (${${"GLOBALS"}["ulmhhuepmy"]} / 100) *
-                ${$pyfoqkgt}[${${"GLOBALS"}["gjpurobd"]}];
+                ${$pyfoqkgt}[$i];
             if (strlen(${${"GLOBALS"}["incdddnykwc"]}[${$emomksmydr}]) == 0) {
                 ${"GLOBALS"}["mfvcrff"] = "i";
                 ${"GLOBALS"}["kedqgtuh"] = "fname";
@@ -2397,9 +2216,9 @@ class jqGridExport extends jqGrid
                 ${${"GLOBALS"}["zrdlmlnkim"]} = max(
                     ${${"GLOBALS"}["zrdlmlnkim"]},
                     $pdf->getStringHeight(
-                        ${${"GLOBALS"}["psqfbbogow"]}[${$dncqvdeg}],
+                        $colwidth[${$dncqvdeg}],
                         ${${"GLOBALS"}["incdddnykwc"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ],
                         false,
                         true,
@@ -2410,12 +2229,12 @@ class jqGridExport extends jqGrid
             }
         }
         printTHeader(
-            ${${"GLOBALS"}["dfctfggbjtf"]},
+            $ncols,
             ${${"GLOBALS"}["ufradf"]},
             ${${"GLOBALS"}["dzeunbuw"]},
             ${${"GLOBALS"}["incdddnykwc"]},
-            ${${"GLOBALS"}["gjtymqsdldhv"]},
-            ${${"GLOBALS"}["ggpvnste"]},
+            $ahidden,
+            $pdf,
             ${${"GLOBALS"}["erbjtgnlqjw"]}
         );
         $pdf->Ln();
@@ -2426,13 +2245,13 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["ognkrrdnmgdo"] = "rs";
             ${$oyplfseqodgd}[0] = &${${"GLOBALS"}["ognkrrdnmgdo"]};
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["gqwziqeg"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i = 0;
+                $i < ${${"GLOBALS"}["gqwziqeg"]};
+                $i++
             ) {
                 $plzcgxxvb = "res_arr";
-                ${${"GLOBALS"}["yvezufu"]}[${${"GLOBALS"}["gjpurobd"]} + 1] =
-                    &${$plzcgxxvb}[${${"GLOBALS"}["gjpurobd"]}];
+                ${${"GLOBALS"}["yvezufu"]}[$i + 1] =
+                    &${$plzcgxxvb}[$i];
             }
             call_user_func_array(
                 "mysqli_stmt_bind_result",
@@ -2456,13 +2275,13 @@ class jqGridExport extends jqGrid
         );
         $pdf->SetFont("");
         ${$qivdltd} = false;
-        if (!${${"GLOBALS"}["dqtpplxvk"]}["shrink_cell"]) {
+        if (!$pd["shrink_cell"]) {
             $mcutguehlfj = "dimensions";
             ${$mcutguehlfj} = $pdf->getPageDimensions();
         }
         while (
             ${${"GLOBALS"}["lbgrmbjfyt"]} = jqGridDB::fetch_num(
-                ${${"GLOBALS"}["ukkbuv"]},
+                $rs,
                 $this->pdo
             )
         ) {
@@ -2474,11 +2293,11 @@ class jqGridExport extends jqGrid
             }
             ${$mkjmyxro} = [];
             ${${"GLOBALS"}["rydvgfnrjprj"]} =
-                ${${"GLOBALS"}["dqtpplxvk"]}["grid_row_height"];
+                $pd["grid_row_height"];
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["yuncujla"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i = 0;
+                $i < ${${"GLOBALS"}["yuncujla"]};
+                $i++
             ) {
                 $mhxwksp = "ahidden";
                 $oqkjfrw = "v";
@@ -2489,32 +2308,32 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["blsowhlpdd"] = "timefmt";
                 if (
                     isset(${$mhxwksp}[${$nfvqsfdgipt}]) &&
-                    ${${"GLOBALS"}["ehmjvfrj"]}[${${"GLOBALS"}["gjpurobd"]}]
+                    $ahidden[$i]
                 ) {
                     continue;
                 }
                 $uwjsjznbofut = "v";
                 $rtvydky = "v";
                 ${${"GLOBALS"}["qbroefmekyoe"]} =
-                    ${${"GLOBALS"}["pfsyyx"]}[${${"GLOBALS"}["gjpurobd"]}];
+                    ${${"GLOBALS"}["pfsyyx"]}[$i];
                 $rmphefxl = "v";
                 ${"GLOBALS"}["eeqnogkjet"] = "v";
                 $wmggfgcebqo = "v";
                 $mlgliijoiv = "i";
-                if (is_array(${$gbbvbbkoks}[${${"GLOBALS"}["gjpurobd"]}])) {
+                if (is_array(${$gbbvbbkoks}[$i])) {
                     ${"GLOBALS"}["kdjmdem"] = "v";
                     $inveyntspxk = "aselect";
                     if (
                         isset(
-                            ${$inveyntspxk}[${${"GLOBALS"}["gjpurobd"]}][
+                            ${$inveyntspxk}[$i][
                                 ${${"GLOBALS"}["kdjmdem"]}
                             ]
                         )
                     ) {
                         ${"GLOBALS"}["zxmtmpmv"] = "v1";
                         ${${"GLOBALS"}["wuzexrtfjn"]} =
-                            ${${"GLOBALS"}["hrvgcwqhfp"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                            $aselect[
+                                $i
                             ][${${"GLOBALS"}["qbroefmekyoe"]}];
                         ${"GLOBALS"}["xwwblqwefv"] = "v";
                         if (${${"GLOBALS"}["wuzexrtfjn"]}) {
@@ -2524,7 +2343,7 @@ class jqGridExport extends jqGrid
                         }
                     }
                     ${${"GLOBALS"}["xlmyieky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ] = "string";
                 }
                 ${${"GLOBALS"}["boxgmd"]} =
@@ -2566,13 +2385,13 @@ class jqGridExport extends jqGrid
                     $dvnuwdwocm = "v";
                     ${"GLOBALS"}["ahzyqoafii"] = "colwidth";
                     ${${"GLOBALS"}["xcwssjn"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ] = ${${"GLOBALS"}["qbroefmekyoe"]};
                     ${${"GLOBALS"}["rydvgfnrjprj"]} = max(
                         ${${"GLOBALS"}["rydvgfnrjprj"]},
                         $pdf->getStringHeight(
                             ${${"GLOBALS"}["ahzyqoafii"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                                $i
                             ],
                             ${$dvnuwdwocm},
                             false,
@@ -2586,13 +2405,13 @@ class jqGridExport extends jqGrid
                     $tkqypu = "i";
                     ${"GLOBALS"}["zjpbvurz"] = "pd";
                     $pdf->Cell(
-                        ${${"GLOBALS"}["psqfbbogow"]}[${$tkqypu}],
+                        $colwidth[${$tkqypu}],
                         ${${"GLOBALS"}["zjpbvurz"]}["grid_row_height"],
                         ${${"GLOBALS"}["qbroefmekyoe"]},
                         1,
                         0,
                         ${${"GLOBALS"}["dhojgadfn"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ],
                         ${$agajuqloprc},
                         "",
@@ -2602,7 +2421,7 @@ class jqGridExport extends jqGrid
             }
             $hfcfkfi = "gS\x51LMaxRows";
             ${"GLOBALS"}["kysfzvhqlsb"] = "rows";
-            if (!${${"GLOBALS"}["dqtpplxvk"]}["shrink_cell"]) {
+            if (!$pd["shrink_cell"]) {
                 $bzcqqrjtdxw = "startY";
                 ${"GLOBALS"}["hlsofrfs"] = "dimensions";
                 ${${"GLOBALS"}["nuxoipvneiq"]} = $pdf->GetY();
@@ -2615,7 +2434,7 @@ class jqGridExport extends jqGrid
                 ) {
                     $pdf->AddPage();
                     if (
-                        ${${"GLOBALS"}["dqtpplxvk"]}["reprint_grid_header"]
+                        $pd["reprint_grid_header"]
                     ) {
                         $yvvrnvxvum = "ncols";
                         $wrysplxed = "colwidth";
@@ -2625,21 +2444,21 @@ class jqGridExport extends jqGrid
                             ${${"GLOBALS"}["zrdlmlnkim"]},
                             ${$wrysplxed},
                             ${${"GLOBALS"}["incdddnykwc"]},
-                            ${${"GLOBALS"}["ehmjvfrj"]},
-                            ${${"GLOBALS"}["ggpvnste"]},
-                            ${${"GLOBALS"}["dqtpplxvk"]}
+                            $ahidden,
+                            $pdf,
+                            $pd
                         );
                         $pdf->Ln();
                         $pdf->SetFillColorArray(
                             colorToDec(
-                                ${${"GLOBALS"}["ggpvnste"]},
+                                $pdf,
                                 ${$tiroukvkqy}["grid_row_color"]
                             )
                         );
                         $pdf->SetTextColorArray(
                             colorToDec(
-                                ${${"GLOBALS"}["ggpvnste"]},
-                                ${${"GLOBALS"}["dqtpplxvk"]}[
+                                $pdf,
+                                $pd[
                                     "grid_row_text_color"
                                 ]
                             )
@@ -2649,9 +2468,9 @@ class jqGridExport extends jqGrid
                 }
                 $otvogof = "i";
                 for (
-                    ${${"GLOBALS"}["gjpurobd"]} = 0;
+                    $i = 0;
                     ${$otvogof} < ${$genbdqkun};
-                    ${${"GLOBALS"}["gjpurobd"]}++
+                    $i++
                 ) {
                     ${"GLOBALS"}["xhpzcqxjwd"] = "i";
                     ${"GLOBALS"}["lgvkvg"] = "fill";
@@ -2661,17 +2480,17 @@ class jqGridExport extends jqGrid
                     ${"GLOBALS"}["lgtqqfstxn"] = "maxh";
                     if (
                         isset(
-                            ${${"GLOBALS"}["ehmjvfrj"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                            $ahidden[
+                                $i
                             ]
                         ) &&
-                        ${${"GLOBALS"}["ehmjvfrj"]}[${${"GLOBALS"}["uahjlljk"]}]
+                        $ahidden[${${"GLOBALS"}["uahjlljk"]}]
                     ) {
                         continue;
                     }
                     $pdf->MultiCell(
-                        ${${"GLOBALS"}["psqfbbogow"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                        $colwidth[
+                            $i
                         ],
                         ${${"GLOBALS"}["lgtqqfstxn"]},
                         ${$hxngmmrmv}[${${"GLOBALS"}["pyoselg"]}],
@@ -2709,8 +2528,8 @@ class jqGridExport extends jqGrid
             $pdf->SetFont("", "B");
             for (
                 ${$cenvsbhi} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["vdulhdudm"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i < ${${"GLOBALS"}["vdulhdudm"]};
+                $i++
             ) {
                 $ndufpjuqvch = "i";
                 $fqfxmnlp = "vv";
@@ -2722,7 +2541,7 @@ class jqGridExport extends jqGrid
                 $dgjruyu = "align";
                 if (
                     isset(${$emusgvtmcst}[${${"GLOBALS"}["gtbemhkjx"]}]) &&
-                    ${${"GLOBALS"}["ehmjvfrj"]}[${$koqhbnriuy}]
+                    $ahidden[${$koqhbnriuy}]
                 ) {
                     continue;
                 }
@@ -2738,7 +2557,7 @@ class jqGridExport extends jqGrid
                     $vntjali = "key";
                     $vghyvaxlrxz = "fnmkeys";
                     if (
-                        ${$vghyvaxlrxz}[${${"GLOBALS"}["gjpurobd"]}] ==
+                        ${$vghyvaxlrxz}[$i] ==
                         ${$vntjali}
                     ) {
                         ${${"GLOBALS"}["cdpuirmgomj"]} = ${${"GLOBALS"}[
@@ -2753,7 +2572,7 @@ class jqGridExport extends jqGrid
                     ${$fqfxmnlp},
                     1,
                     0,
-                    ${$dgjruyu}[${${"GLOBALS"}["gjpurobd"]}],
+                    ${$dgjruyu}[$i],
                     ${${"GLOBALS"}["zbuuzekgxoq"]},
                     "",
                     1
@@ -2770,20 +2589,20 @@ class jqGridExport extends jqGrid
         ${"GLOBALS"}["cutvtaf"] = "grpopt";
         ${$tzddsofuc} = count($grpinfo->columns);
         $mbfpmrsgrib = "pdf";
-        ${${"GLOBALS"}["cjhiiotmv"]} = 0;
+        $totw = 0;
         ${"GLOBALS"}["zxooqu"] = "pw";
         $ypzvcuhf = "margins";
-        ${${"GLOBALS"}["hjgiew"]} = $pdf->getPageWidth();
+        $pw = $pdf->getPageWidth();
         $ixvtgle = "fill";
         $mnjtkjbk = "pd";
         ${${"GLOBALS"}["wkmcumcxjmlu"]} = $pdf->getMargins();
         ${${"GLOBALS"}["zxooqu"]} =
-            ${${"GLOBALS"}["hjgiew"]} -
+            $pw -
             ${$ypzvcuhf}["left"] -
-            ${${"GLOBALS"}["rtfntggn"]}["right"];
+            $margins["right"];
         ${"GLOBALS"}["wvfcdsjneirp"] = "grpopt";
         ${"GLOBALS"}["qeiptzothen"] = "pd";
-        ${${"GLOBALS"}["dqtpplxvk"]} = $this->PDF;
+        $pd = $this->PDF;
         ${"GLOBALS"}["xeopomitvvf"] = "maxheigh";
         ${"GLOBALS"}["hlfplqy"] = "i";
         $qcldxksyol = "pdf";
@@ -2840,10 +2659,10 @@ class jqGridExport extends jqGrid
             $pdf->SetFont("", "B");
             for (
                 ${${"GLOBALS"}["auwisejxp"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["dfctfggbjtf"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i < $ncols;
+                $i++
             ) {
-                if ($grinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["hidden"]) {
+                if ($grinfo->columns[$i]["hidden"]) {
                     continue;
                 }
                 ${"GLOBALS"}["fboieilzdkb"] = "pd";
@@ -2855,7 +2674,7 @@ class jqGridExport extends jqGrid
                             "width"
                         ],
                         ${${"GLOBALS"}["rjezspi"]},
-                        $grinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["label"],
+                        $grinfo->columns[$i]["label"],
                         1,
                         "C",
                         true,
@@ -2876,7 +2695,7 @@ class jqGridExport extends jqGrid
                     $pdf->Cell(
                         $grinfo->columns[${$bkedkuuhfc}]["width"],
                         ${${"GLOBALS"}["xqitehqskq"]}["grid_header_height"],
-                        $grinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["label"],
+                        $grinfo->columns[$i]["label"],
                         1,
                         0,
                         "C",
@@ -2887,40 +2706,39 @@ class jqGridExport extends jqGrid
                 }
             }
         }
-        ${${"GLOBALS"}["cjhiiotmv"]} = 0;
+        $totw = 0;
         ${${"GLOBALS"}["xeopomitvvf"]} =
             ${${"GLOBALS"}["qeiptzothen"]}["grid_header_height"];
         for (
             ${${"GLOBALS"}["hlfplqy"]} = 0;
-            ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["dfctfggbjtf"]};
-            ${${"GLOBALS"}["gjpurobd"]}++
+            $i < $ncols;
+            $i++
         ) {
-            $yeuismhvffr = "i";
             ${"GLOBALS"}["xxuyxspfwg"] = "i";
             $ckqpyuepc = "i";
             ${"GLOBALS"}["twukhsdj"] = "i";
-            if ($grpinfo->columns[${$yeuismhvffr}]["name"] == "jqgrid_row") {
+            if (strtolower($grpinfo->columns[$i]["name"]) == "jqgrid_row") {
                 ${"GLOBALS"}["xllupqce"] = "i";
                 $grpinfo->columns[${${"GLOBALS"}["xllupqce"]}]["hidden"] = true;
             }
-            if ($grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["hidden"]) {
+            if ($grpinfo->columns[$i]["hidden"]) {
                 continue;
             }
             $grpinfo->columns[${${"GLOBALS"}["twukhsdj"]}]["width"] =
                 ($grpinfo->columns[${$ckqpyuepc}]["width"] /
                     $grpinfo->totalwidth) *
-                ${${"GLOBALS"}["hjgiew"]};
-            ${${"GLOBALS"}["cjhiiotmv"]} +=
+                $pw;
+            $totw +=
                 $grpinfo->columns[${${"GLOBALS"}["xxuyxspfwg"]}]["width"];
-            if (!${${"GLOBALS"}["dqtpplxvk"]}["shrink_header"]) {
+            if (!$pd["shrink_header"]) {
                 $mriffxb = "i";
                 $eqjlkfafeue = "maxheigh";
                 $hexaydyuky = "maxheigh";
                 ${$eqjlkfafeue} = max(
                     ${$hexaydyuky},
                     $pdf->getStringHeight(
-                        ${${"GLOBALS"}["psqfbbogow"]}[${$mriffxb}],
-                        $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["label"],
+                        $colwidth[${$mriffxb}],
+                        $grpinfo->columns[$i]["label"],
                         false,
                         true,
                         "",
@@ -2930,11 +2748,11 @@ class jqGridExport extends jqGrid
             }
         }
         printTHeader2(
-            ${${"GLOBALS"}["dfctfggbjtf"]},
+            $ncols,
             ${${"GLOBALS"}["zrdlmlnkim"]},
             ${${"GLOBALS"}["dqertcuk"]},
-            ${${"GLOBALS"}["ggpvnste"]},
-            ${${"GLOBALS"}["dqtpplxvk"]}
+            $pdf,
+            $pd
         );
         $pdf->Ln();
         ${${"GLOBALS"}["gkfjvbd"]} = $this->userdateformat;
@@ -2942,13 +2760,13 @@ class jqGridExport extends jqGrid
         $pdf->SetFillColorArray(
             colorToDec2(
                 ${$mbfpmrsgrib},
-                ${${"GLOBALS"}["dqtpplxvk"]}["grid_row_color"]
+                $pd["grid_row_color"]
             )
         );
         $pdf->SetTextColorArray(
             colorToDec2(
                 ${$qcldxksyol},
-                ${${"GLOBALS"}["dqtpplxvk"]}["grid_row_text_color"]
+                $pd["grid_row_text_color"]
             )
         );
         $pdf->SetFont("");
@@ -2973,7 +2791,7 @@ class jqGridExport extends jqGrid
         }
         foreach (
             $grpinfo->groups
-            as ${${"GLOBALS"}["gjpurobd"]} => ${${"GLOBALS"}["kfrdwpf"]}
+            as $i => ${${"GLOBALS"}["kfrdwpf"]}
         ) {
             $osdmjt = "v";
             $hgmeniw = "leaf";
@@ -3028,7 +2846,7 @@ class jqGridExport extends jqGrid
                 $tixfozvtiv = "end";
                 ${"GLOBALS"}["sbrwwxkuxgvc"] = "gg";
                 ${"GLOBALS"}["pkcsqdphr"] = "toEnd";
-                if (isset($grpinfo->groups[${${"GLOBALS"}["gjpurobd"]} + 1])) {
+                if (isset($grpinfo->groups[$i + 1])) {
                     ${"GLOBALS"}["scbcdpthnes"] = "gg";
                     ${"GLOBALS"}["fflhimkedybw"] = "i";
                     $cupmyjetoo = "gg";
@@ -3111,7 +2929,7 @@ class jqGridExport extends jqGrid
                         $wwzfjvyti = "v";
                         $hmcfsvka = "timefmt";
                         ${${"GLOBALS"}["rydvgfnrjprj"]} =
-                            ${${"GLOBALS"}["dqtpplxvk"]}["grid_row_height"];
+                            $pd["grid_row_height"];
                         ${"GLOBALS"}["xblcmhcota"] = "v";
                         switch ($grpinfo->columns[${$pbcyxbfw}]["type"]) {
                             case "date":
@@ -3153,7 +2971,7 @@ class jqGridExport extends jqGrid
                                     ${${"GLOBALS"}["qbroefmekyoe"]} = "";
                                 }
                         }
-                        if (!${${"GLOBALS"}["dqtpplxvk"]}["shrink_cell"]) {
+                        if (!$pd["shrink_cell"]) {
                             $jrdjeqs = "v";
                             ${"GLOBALS"}["encmzoabkep"] = "varr";
                             $xhcgbplzn = "maxh";
@@ -3195,7 +3013,7 @@ class jqGridExport extends jqGrid
                         }
                         ${${"GLOBALS"}["dlqafubuedv"]}++;
                     }
-                    if (!${${"GLOBALS"}["dqtpplxvk"]}["shrink_cell"]) {
+                    if (!$pd["shrink_cell"]) {
                         ${"GLOBALS"}["iuzslwrw"] = "start\x59";
                         $wnyyixif = "ii";
                         ${${"GLOBALS"}["nuxoipvneiq"]} = $pdf->GetY();
@@ -3216,7 +3034,7 @@ class jqGridExport extends jqGrid
                                 ${"GLOBALS"}["dukhivcx"] = "maxheigh";
                                 ${"GLOBALS"}["fnwbqbjcjid"] = "pd";
                                 printTHeader2(
-                                    ${${"GLOBALS"}["dfctfggbjtf"]},
+                                    $ncols,
                                     ${${"GLOBALS"}["dukhivcx"]},
                                     ${${"GLOBALS"}["qrgaavsld"]},
                                     ${${"GLOBALS"}["nqhnzmx"]},
@@ -3226,7 +3044,7 @@ class jqGridExport extends jqGrid
                                 $pdf->SetFillColorArray(
                                     colorToDec2(
                                         ${$bmfrenkizam},
-                                        ${${"GLOBALS"}["dqtpplxvk"]}[
+                                        $pd[
                                             "grid_row_color"
                                         ]
                                     )
@@ -3234,7 +3052,7 @@ class jqGridExport extends jqGrid
                                 $pdf->SetTextColorArray(
                                     colorToDec2(
                                         ${$riodckin},
-                                        ${${"GLOBALS"}["dqtpplxvk"]}[
+                                        $pd[
                                             "grid_row_text_color"
                                         ]
                                     )
@@ -3287,7 +3105,7 @@ class jqGridExport extends jqGrid
                         }
                     }
                     if (
-                        ${${"GLOBALS"}["dqtpplxvk"]}[
+                        $pd[
                             "grid_alternate_rows"
                         ]
                     ) {
@@ -3349,7 +3167,7 @@ class jqGridExport extends jqGrid
                     for (
                         ${${"GLOBALS"}["ygtpwesvvpd"]} = 0;
                         ${${"GLOBALS"}["ygtpwesvvpd"]} <
-                        ${${"GLOBALS"}["dfctfggbjtf"]};
+                        $ncols;
                         ${${"GLOBALS"}["godckub"]}++
                     ) {
                         $ahbddt = "fdata";
@@ -3474,14 +3292,14 @@ class jqGridExport extends jqGrid
             $pdf->SetFont("", "B");
             ${"GLOBALS"}["rxvfpkpcc"] = "ncols";
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["rxvfpkpcc"]};
+                $i = 0;
+                $i < ${${"GLOBALS"}["rxvfpkpcc"]};
                 ${${"GLOBALS"}["dqppvi"]}++
             ) {
                 ${"GLOBALS"}["ujaknnkqd"] = "fill";
                 ${"GLOBALS"}["ntfltxmbklze"] = "v";
                 if (
-                    $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["hidden"] ==
+                    $grpinfo->columns[$i]["hidden"] ==
                     true
                 ) {
                     continue;
@@ -3507,12 +3325,12 @@ class jqGridExport extends jqGrid
                 }
                 ${"GLOBALS"}["zzfensxkm"] = "pd";
                 $pdf->Cell(
-                    $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["width"],
+                    $grpinfo->columns[$i]["width"],
                     ${${"GLOBALS"}["zzfensxkm"]}["grid_row_height"],
                     ${${"GLOBALS"}["cdpuirmgomj"]},
                     1,
                     0,
-                    $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["align"],
+                    $grpinfo->columns[$i]["align"],
                     ${${"GLOBALS"}["ujaknnkqd"]},
                     "",
                     1
@@ -3526,10 +3344,7 @@ class jqGridExport extends jqGrid
         array $colmodel = null,
         $filename = "exportdata.pdf"
     ) {
-        ${"GLOBALS"}["sgmwfhuu"] = "sql";
-        $shdoexeymuh = "summary";
-        ${${"GLOBALS"}["sgmwfhuu"]} = null;
-        $wkvspibnl = "sql";
+        $sql = null;
         global $l;
         ${${"GLOBALS"}["xqjdxyyvxk"]} =
             isset($this->gridOptions["grouping"]) &&
@@ -3542,11 +3357,8 @@ class jqGridExport extends jqGrid
                 $this->pdo->SetFetchMode(ADODB_FETCH_NUM);
             }
         }
-        ${${"GLOBALS"}["lvjvvrdym"]} = $this->_rs(
-            ${${"GLOBALS"}["lqmjwykg"]},
-            ${$shdoexeymuh}
-        );
-        if (${$wkvspibnl}) {
+        $sql = $this->_rs($params,$summary);
+        if ($sql) {
             ${"GLOBALS"}["ehdyfrfnkk"] = "pd";
             ${${"GLOBALS"}["ehdyfrfnkk"]} = $this->PDF;
             try {
@@ -3556,26 +3368,25 @@ class jqGridExport extends jqGrid
                 $hqvitwus = "pd";
                 $ruubywvwr = "pd";
                 $wcnrocdfo = "pd";
-                ${${"GLOBALS"}["ggpvnste"]} = new TCPDF(
-                    ${${"GLOBALS"}["dqtpplxvk"]}["page_orientation"],
+                $pdf = new TCPDF(
+                    $pd["page_orientation"],
                     ${$ruubywvwr}["unit"],
                     ${$hqvitwus}["page_format"],
-                    ${${"GLOBALS"}["dqtpplxvk"]}["unicode"],
+                    $pd["unicode"],
                     ${$nqwoyxmyczvz}["encoding"],
                     false
                 );
-                ${"GLOBALS"}["kvtlxbk"] = "grouping";
                 $ixykcp = "pd";
                 ${"GLOBALS"}["snwplqgl"] = "pd";
                 $cltzeuqxhh = "pd";
-                $pdf->SetCreator(${${"GLOBALS"}["dqtpplxvk"]}["creator"]);
+                $pdf->SetCreator($pd["creator"]);
                 ${"GLOBALS"}["sghnmoqgymj"] = "pd";
                 ${"GLOBALS"}["ppthvovose"] = "pd";
                 $pdf->SetAuthor(${${"GLOBALS"}["snwplqgl"]}["author"]);
                 $fesmiodsqn = "pd";
-                $pdf->SetTitle(${${"GLOBALS"}["dqtpplxvk"]}["title"]);
+                $pdf->SetTitle($pd["title"]);
                 ${"GLOBALS"}["lshhxwb"] = "pd";
-                $pdf->SetSubject(${${"GLOBALS"}["dqtpplxvk"]}["subject"]);
+                $pdf->SetSubject($pd["subject"]);
                 $pflldgz = "pd";
                 $pdf->SetKeywords(${${"GLOBALS"}["ctwinnn"]}["keywords"]);
                 ${"GLOBALS"}["wdxvumjffv"] = "file_t";
@@ -3583,7 +3394,7 @@ class jqGridExport extends jqGrid
                 $pdf->SetMargins(
                     ${$cltzeuqxhh}["margin_left"],
                     ${${"GLOBALS"}["lshhxwb"]}["margin_top"],
-                    ${${"GLOBALS"}["dqtpplxvk"]}["margin_right"]
+                    $pd["margin_right"]
                 );
                 $pdf->SetHeaderMargin(${$pflldgz}["margin_header"]);
                 $jnvguh = "pd";
@@ -3592,7 +3403,7 @@ class jqGridExport extends jqGrid
                     "",
                     ${$fesmiodsqn}["font_size_main"],
                 ]);
-                if (${${"GLOBALS"}["dqtpplxvk"]}["header"] === true) {
+                if ($pd["header"] === true) {
                     ${"GLOBALS"}["mtssorwtbcgp"] = "pd";
                     $fgdhhmwcrpmu = "pd";
                     ${"GLOBALS"}["subzagpdqye"] = "pd";
@@ -3609,7 +3420,7 @@ class jqGridExport extends jqGrid
                     $pdf->setPrintHeader(false);
                 }
                 $pdf->SetDefaultMonospacedFont(
-                    ${${"GLOBALS"}["dqtpplxvk"]}["font_monospaced"]
+                    $pd["font_monospaced"]
                 );
                 ${"GLOBALS"}["qcvovbk"] = "pd";
                 $pdf->setFooterFont([
@@ -3621,48 +3432,22 @@ class jqGridExport extends jqGrid
                 $pdf->SetFooterMargin(
                     ${${"GLOBALS"}["sghnmoqgymj"]}["margin_footer"]
                 );
-                if (${${"GLOBALS"}["dqtpplxvk"]}["footer"] !== true) {
+                if ($pd["footer"] !== true) {
                     $pdf->setPrintFooter(false);
                 }
-                $pdf->setImageScale(
-                    ${${"GLOBALS"}["dqtpplxvk"]}["image_scale_ratio"]
-                );
+                $pdf->setImageScale($pd["image_scale_ratio"]);
                 $pdf->SetAutoPageBreak(true, 17);
-                $pdf->setLanguageArray(${${"GLOBALS"}["elqjri"]});
+                $pdf->setLanguageArray($l);
                 $pdf->AddPage();
-                $pdf->SetFont(
-                    ${${"GLOBALS"}["dqtpplxvk"]}["font_name_data"],
-                    "",
-                    ${$jnvguh}["font_size_data"]
-                );
-                if (${${"GLOBALS"}["kvtlxbk"]}) {
-                    ${"GLOBALS"}["iytyvunu"] = "colmodel";
-                    ${"GLOBALS"}["dowdxefsqg"] = "groupinfo";
-                    $couqaekm = "ret";
-                    ${${"GLOBALS"}["dowdxefsqg"]} = $this->groupingSetup(
-                        ${${"GLOBALS"}["lvjvvrdym"]},
-                        ${${"GLOBALS"}["iytyvunu"]}
-                    );
-                    ${$couqaekm} = $this->rs2pdf2(
-                        ${${"GLOBALS"}["ggpvnste"]},
-                        ${${"GLOBALS"}["jswgskgsnw"]}
-                    );
+                $pdf->SetFont($pd["font_name_data"],"",${$jnvguh}["font_size_data"]);
+                if ($grouping) {
+                    $groupinfo = $this->groupingSetup($sql,$colmodel);
+                    $ret = $this->rs2pdf2($pdf,$groupinfo);
                 } else {
-                    ${"GLOBALS"}["llyponfyw"] = "ret";
-                    $zbfhmlh = "summary";
-                    ${${"GLOBALS"}["llyponfyw"]} = $this->rs2pdf(
-                        ${${"GLOBALS"}["lvjvvrdym"]},
-                        ${${"GLOBALS"}["ggpvnste"]},
-                        ${${"GLOBALS"}["hjvyemwroyky"]},
-                        ${$zbfhmlh}
-                    );
+					$ret = $this->rs2pdf($sql,$pdf,$colmodel,$summary);
                 }
-                jqGridDB::closeCursor(${${"GLOBALS"}["lvjvvrdym"]});
-                if (
-                    !isset(
-                        ${${"GLOBALS"}["dqtpplxvk"]}["save_to_disk_only"]
-                    )
-                ) {
+                jqGridDB::closeCursor($sql);
+                if (!isset($pd["save_to_disk_only"])) {
                     ${"GLOBALS"}["cijlmnmrfahn"] = "pd";
                     ${${"GLOBALS"}["cijlmnmrfahn"]}[
                         "save_to_disk_only"
@@ -3673,7 +3458,7 @@ class jqGridExport extends jqGrid
                 );
                 ${${"GLOBALS"}["wdxvumjffv"]} .= ".pdf";
                 if (
-                    ${${"GLOBALS"}["dqtpplxvk"]}["save_to_disk_only"] ===
+                    $pd["save_to_disk_only"] ===
                     true
                 ) {
                     $jkdwbapdu = "file_t";
@@ -3723,12 +3508,12 @@ class jqGridExport extends jqGrid
         ${$hegwwwx} = $this->gSQLMaxRows;
         $ftfplhjfwg = "hdr";
         $sfdbxybrk = "hdr";
-        if (!${${"GLOBALS"}["ukkbuv"]}) {
+        if (!$rs) {
             printf("Bad Record\x20set\x20rs\x32excel");
             return false;
         }
         ${${"GLOBALS"}["xlmyieky"]} = [];
-        ${$xnpkekbqpj} = jqGridDB::columnCount(${${"GLOBALS"}["ukkbuv"]});
+        ${$xnpkekbqpj} = jqGridDB::columnCount($rs);
         ${"GLOBALS"}["ikfckvtpp"] = "s";
         $solplwqs = "aSum";
         ${${"GLOBALS"}["hajrejt"]} =
@@ -3745,12 +3530,12 @@ class jqGridExport extends jqGrid
             "<ss:Style\x20ss:ID\x3d\"sd\">\x3cNumberFormat\x20ss:Format\x3d\x22Short Date\"/></ss:Style\x3e" .
             "\x3css:Style\x20ss:ID\x3d\"ld\"\x3e<Number\x46ormat\x20ss:\x46ormat\x3d\"General\x20Date\"/\x3e</ss:Style\x3e" .
             "<ss:Style\x20ss:ID\x3d\x22nmb\">\x3cNumberFormat ss:Format\x3d\x22Standard\"/\x3e\x3c/ss:Style\x3e" .
-            "\x3css:Style\x20ss:ID=\x22intnm\x22\x3e\x3c\x4eumberFormat\x20ss:Format\x3d\"General\x20Number\"/></ss:Style>" .
+            "\x3css:Style\x20ss:ID=\x22intnm\x22\x3e\x3cNumberFormat\x20ss:Format\x3d\"General\x20Number\"/></ss:Style>" .
             "\x3c/ss:Styles\x3e";
-        ${$ftfplhjfwg} .= "\x3css:\x57orksheet ss:\x4eame=\"Sheet1\x22\x3e";
+        ${$ftfplhjfwg} .= "\x3css:Worksheet ss:Name=\"Sheet1\x22\x3e";
         ${${"GLOBALS"}["qtfnftgyjqe"]} .= "<ss:Table\x3e";
         ${${"GLOBALS"}["rhpnpygfeok"]} = is_array(${$tmbblcdsjl})
-            ? count(${${"GLOBALS"}["hjvyemwroyky"]})
+            ? count($colmodel)
             : -1;
         if (${$vbbdsiygkj} > 0) {
             $awuhhjymq = "nmodel";
@@ -3759,11 +3544,11 @@ class jqGridExport extends jqGrid
             for (
                 ${$tjmwxweid} = 0;
                 ${$sduiypjvdtxl} < ${$awuhhjymq};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i++
             ) {
                 $wgbbkgbx = "i";
                 if (
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${$wgbbkgbx}]["name"] ==
+                    $colmodel[${$wgbbkgbx}]["name"] ==
                     "actions"
                 ) {
                     $ziagsebhum = "i";
@@ -3777,7 +3562,7 @@ class jqGridExport extends jqGrid
         }
         $evpewwlh = "model";
         switch ($this->dbtype) {
-            case "oci\x38":
+            case "oci8":
             case "db2":
             case "sqlsrv":
             case "odbcsqlsrv":
@@ -3787,23 +3572,18 @@ class jqGridExport extends jqGrid
         $uceppbtxi = "colmodel";
         ${"GLOBALS"}["rnhyzku"] = "aSum";
         ${$evpewwlh} = false;
-        if (${$uceppbtxi} && ${${"GLOBALS"}["fevhaevsc"]} == ${$jmmyidynyu}) {
-            ${${"GLOBALS"}["szsdbu"]} = true;
+        if (${$uceppbtxi} && $nmodel == ${$jmmyidynyu}) {
+            $model = true;
         }
         ${${"GLOBALS"}["xejqpx"]} = "<ss:Row\x20ss:StyleID=\x221\">";
         ${${"GLOBALS"}["rnhyzku"]} = [];
         ${${"GLOBALS"}["wprtajvuc"]} = [];
         ${"GLOBALS"}["cyvmtpnw"] = "hdr";
         ${${"GLOBALS"}["pdxmlmnwb"]} = [];
-        ${${"GLOBALS"}["hrvgcwqhfp"]} = [];
+        $aselect = [];
         $honaqmvl = "hiddencount";
-        $gmmhmeog = "i";
         ${$honaqmvl} = 0;
-        for (
-            ${$gmmhmeog} = 0;
-            ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["dfctfggbjtf"]};
-            ${${"GLOBALS"}["gjpurobd"]}++
-        ) {
+        for ($i = 0; $i < $ncols; $i++) {
             $fdzndnmqw = "model";
             ${"GLOBALS"}["ufhmbwt"] = "summary";
             ${"GLOBALS"}["nuutvmspegcy"] = "fname";
@@ -3815,30 +3595,14 @@ class jqGridExport extends jqGrid
             $newinicto = "column";
             ${"GLOBALS"}["xtkxloocf"] = "model";
             ${"GLOBALS"}["rbdqwhg"] = "field";
-            $jojlwqka = "field";
-            ${"GLOBALS"}["ysrwgg"] = "colmodel";
             ${"GLOBALS"}["ahljyef"] = "model";
             ${"GLOBALS"}["pqiynvsqkc"] = "colmodel";
-            ${"GLOBALS"}["qfcqldsfujjj"] = "i";
-            ${"GLOBALS"}["dgohci"] = "model";
-            $vblbnxxits = "i";
             ${"GLOBALS"}["vibgjfc"] = "summary";
             $tirfjlfqm = "colmodel";
-            ${"GLOBALS"}["mwsfwohv"] = "colmodel";
             $rrmnxxt = "hdr";
             $tdclqnjx = "i";
-            ${${"GLOBALS"}["ehmjvfrj"]}[${$vblbnxxits}] =
-                ${${"GLOBALS"}["dgohci"]} &&
-                isset(
-                    ${${"GLOBALS"}["ysrwgg"]}[${${"GLOBALS"}["gjpurobd"]}][
-                        "hidden"
-                    ]
-                )
-                    ? ${${"GLOBALS"}["mwsfwohv"]}[
-                        ${${"GLOBALS"}["qfcqldsfujjj"]}
-                    ]["hidden"]
-                    : false;
-            ${$ctrwjsv}[${${"GLOBALS"}["gjpurobd"]}] = false;
+            $ahidden[$i] = $model && isset($colmodel[$i]["hidden"]) ? $colmodel[$i]["hidden"] : false;
+            ${$ctrwjsv}[$i] = false;
             ${"GLOBALS"}["rnswwdfb"] = "i";
             if (
                 ${${"GLOBALS"}["xtkxloocf"]} &&
@@ -3846,11 +3610,7 @@ class jqGridExport extends jqGrid
                     ${$tirfjlfqm}[${${"GLOBALS"}["rnswwdfb"]}]["formatter"]
                 )
             ) {
-                if (
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
-                    ]["formatter"] == "select"
-                ) {
+                if ($colmodel[$i]["formatter"] == "select") {
                     ${"GLOBALS"}["xozqwtdevkw"] = "colmodel";
                     $tnjsxe = "asl";
                     ${"GLOBALS"}["yycsjupswv"] = "asl";
@@ -3858,19 +3618,19 @@ class jqGridExport extends jqGrid
                     ${"GLOBALS"}["rfepzhaifmgp"] = "colmodel";
                     ${$tnjsxe} = isset(
                         ${${"GLOBALS"}["xozqwtdevkw"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ]["formatoptions"]
                     )
-                        ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                        ? $colmodel[
+                            $i
                         ]["formatoptions"]
                         : (isset(
                             ${${"GLOBALS"}["rfepzhaifmgp"]}[
                                 ${${"GLOBALS"}["nbkpaenotyo"]}
                             ]["editoptions"]
                         )
-                            ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                            ? $colmodel[
+                                $i
                             ]["editoptions"]
                             : []);
                     if (isset(${${"GLOBALS"}["yycsjupswv"]}["value"])) {
@@ -3916,8 +3676,8 @@ class jqGridExport extends jqGrid
             }
             ${${"GLOBALS"}["ckuocwht"]} =
                 ${$fdzndnmqw} && isset(${$ffcvubcxv}[${$tdclqnjx}]["width"])
-                    ? (int) ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    ? (int) $colmodel[
+                        $i
                     ]["width"]
                     : 0;
             if (${$newinicto} > 0) {
@@ -3926,7 +3686,7 @@ class jqGridExport extends jqGrid
                 ${${"GLOBALS"}["ckuocwht"]} =
                     (${${"GLOBALS"}["awvvkhdor"]} * 72) / 96;
                 ${${"GLOBALS"}["ggutvvrb"]} .=
-                    "<ss:Column ss:\x57idth=\x22" .
+                    "<ss:Column ss:Width=\x22" .
                     ${${"GLOBALS"}["ckuocwht"]} .
                     "\x22/\x3e";
             } else {
@@ -3954,20 +3714,20 @@ class jqGridExport extends jqGrid
                     ${$hylnnuo}[${$lxmdylwvlxzp}]["label"]
                 )
                     ? ${$hexppqk}[${${"GLOBALS"}["uiuokpc"]}]["label"]
-                    : ${$gelfgsehpyce}[${${"GLOBALS"}["gjpurobd"]}]["name"];
+                    : ${$gelfgsehpyce}[$i]["name"];
                 ${$lwmqhjm}["name"] =
-                    ${$amgrxxcglqb}[${${"GLOBALS"}["gjpurobd"]}]["name"];
+                    ${$amgrxxcglqb}[$i]["name"];
                 ${${"GLOBALS"}["xlmyieky"]}[${$odltxdp}] = isset(
-                    ${$xeffalqzmti}[${${"GLOBALS"}["gjpurobd"]}]["sorttype"]
+                    ${$xeffalqzmti}[$i]["sorttype"]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    ? $colmodel[
+                        $i
                     ]["sorttype"]
                     : "";
             } else {
                 $lqvtiz = "i";
                 $skfwcrarp = "rs";
-                ${${"GLOBALS"}["elqhspslpod"]} = jqGridDB::getColumnMeta(
+                $field = jqGridDB::getColumnMeta(
                     ${$lqvtiz},
                     ${$skfwcrarp}
                 );
@@ -3979,17 +3739,14 @@ class jqGridExport extends jqGrid
                 ${${"GLOBALS"}["ucijxofj"]}[
                     ${$fvyhyvnpmnd}
                 ] = jqGridDB::MetaType(
-                    ${${"GLOBALS"}["elqhspslpod"]},
+                    $field,
                     $this->dbtype
                 );
             }
-            if (${$jojlwqka}["name"] == "jqgrid_row") {
-                ${"GLOBALS"}["iogqrkrgy"] = "ahidden";
-                ${${"GLOBALS"}["iogqrkrgy"]}[
-                    ${${"GLOBALS"}["gjpurobd"]}
-                ] = true;
+            if (strtolower($field["name"])== "jqgrid_row") {
+                $ahidden[$i] = true;
             }
-            if (${${"GLOBALS"}["ehmjvfrj"]}[${${"GLOBALS"}["zxbrytrov"]}]) {
+            if ($ahidden[${${"GLOBALS"}["zxbrytrov"]}]) {
                 $qztnkvjduwsi = "hiddencount";
                 ${$qztnkvjduwsi}++;
                 continue;
@@ -4013,14 +3770,14 @@ class jqGridExport extends jqGrid
                             as ${$qioyollb} => ${${"GLOBALS"}["dvszudrsf"]}
                         ) {
                             if (
-                                ${${"GLOBALS"}["elqhspslpod"]}["name"] ==
+                                $field["name"] ==
                                 ${${"GLOBALS"}["dglvfwquwyy"]}
                             ) {
                                 $pttsrkhnhrvh = "hiddencount";
                                 $jiivkygri = "formula";
                                 $oevjshpmovni = "a\x46ormula";
                                 ${${"GLOBALS"}["nfohkbk"]}[] =
-                                    ${${"GLOBALS"}["gjpurobd"]} -
+                                    $i -
                                     ${$pttsrkhnhrvh};
                                 ${$oevjshpmovni}[] = ${$jiivkygri};
                             }
@@ -4070,14 +3827,14 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["eccbbwbhnnv"] = "i";
             for (
                 ${$ibuquobupzbk} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${$watnntf};
+                $i < ${$watnntf};
                 ${${"GLOBALS"}["eccbbwbhnnv"]}++
             ) {
                 ${"GLOBALS"}["cvsygwiikhbz"] = "res_arr";
                 $wpkcjes = "i";
                 ${${"GLOBALS"}["yvezufu"]}[${$wpkcjes} + 1] =
                     &${${"GLOBALS"}["cvsygwiikhbz"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ];
             }
             call_user_func_array("mysqli_stmt_bind_result", ${$jzqnctxpgi});
@@ -4100,9 +3857,9 @@ class jqGridExport extends jqGrid
             ${${"GLOBALS"}["hztcbyjuwh"]} .= "\x3css:Row\x3e";
             $ekjgjyfl = "gS\x51LMaxRows";
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${$plwgfvfj};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i = 0;
+                $i < ${$plwgfvfj};
+                $i++
             ) {
                 $pqulqc = "i";
                 ${"GLOBALS"}["ibgixeprol"] = "v";
@@ -4111,7 +3868,7 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["mmajlscmpwo"] = "ahidden";
                 $potzaxdls = "i";
                 if (
-                    isset(${${"GLOBALS"}["ehmjvfrj"]}[${$potzaxdls}]) &&
+                    isset($ahidden[${$potzaxdls}]) &&
                     ${${"GLOBALS"}["mmajlscmpwo"]}[${$pqulqc}]
                 ) {
                     continue;
@@ -4121,19 +3878,19 @@ class jqGridExport extends jqGrid
                     ${${"GLOBALS"}["pfsyyx"]}[${${"GLOBALS"}["ccefbnws"]}];
                 $zotbidpni = "typearr";
                 $bgzlvkmkqcfk = "v";
-                if (is_array(${$hhnevyfwjq}[${${"GLOBALS"}["gjpurobd"]}])) {
+                if (is_array(${$hhnevyfwjq}[$i])) {
                     ${"GLOBALS"}["xjumerg"] = "aselect";
                     if (
                         isset(
                             ${${"GLOBALS"}["xjumerg"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                                $i
                             ][${${"GLOBALS"}["qbroefmekyoe"]}]
                         )
                     ) {
                         $rlfscrmpf = "aselect";
                         $ctlbjxm = "v\x31";
                         ${$ctlbjxm} =
-                            ${$rlfscrmpf}[${${"GLOBALS"}["gjpurobd"]}][
+                            ${$rlfscrmpf}[$i][
                                 ${${"GLOBALS"}["qbroefmekyoe"]}
                             ];
                         if (${${"GLOBALS"}["wuzexrtfjn"]}) {
@@ -4144,21 +3901,21 @@ class jqGridExport extends jqGrid
                     }
                     ${"GLOBALS"}["ksjewvfrxnt"] = "typearr";
                     ${${"GLOBALS"}["ksjewvfrxnt"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                        $i
                     ] = "string";
                 }
                 ${"GLOBALS"}["grhuwvs"] = "s";
                 $flmckddmkwmm = "v";
-                switch (${$zotbidpni}[${${"GLOBALS"}["gjpurobd"]}]) {
+                switch (${$zotbidpni}[$i]) {
                     case "date":
                         if (
                             substr(${${"GLOBALS"}["qbroefmekyoe"]}, 0, 4) ==
                                 "\x300\x300" ||
                             empty(${${"GLOBALS"}["qbroefmekyoe"]}) ||
-                            ${${"GLOBALS"}["qbroefmekyoe"]} == "\x4eULL"
+                            ${${"GLOBALS"}["qbroefmekyoe"]} == "NULL"
                         ) {
                             ${${"GLOBALS"}["qbroefmekyoe"]} =
-                                "\x31\x389\x39-12-31\x5400:\x300:\x30\x30\x2e0\x300";
+                                "\x3189\x39-12-31\x5400:\x300:\x30\x30\x2e0\x300";
                             ${"GLOBALS"}["wjipfscgta"] = "s";
                             ${${"GLOBALS"}["wjipfscgta"]} .=
                                 "<ss:Cell\x20ss:StyleID\x3d\x22sd\x22>\x3css:Data ss:\x54ype=\x22Date\x54ime\"\x3e" .
@@ -4203,11 +3960,11 @@ class jqGridExport extends jqGrid
                         if (
                             substr(${$bgzlvkmkqcfk}, 0, 4) == "000\x30" ||
                             empty(${${"GLOBALS"}["ibgixeprol"]}) ||
-                            ${${"GLOBALS"}["qbroefmekyoe"]} == "\x4e\x55LL"
+                            ${${"GLOBALS"}["qbroefmekyoe"]} == "N\x55LL"
                         ) {
                             $apkefbhvb = "v";
                             ${$apkefbhvb} =
-                                "1\x38\x39\x39-12-3\x31\x5400:0\x30:00\x2e00\x30";
+                                "18\x39\x39-12-3\x31\x5400:0\x30:00\x2e00\x30";
                             ${${"GLOBALS"}["gckdpyw"]} .=
                                 "<ss:Cell\x20ss:StyleID\x3d\x22ld\x22>\x3css:Data\x20ss:Type=\"DateTime\"\x3e" .
                                 ${${"GLOBALS"}["qbroefmekyoe"]} .
@@ -4243,7 +4000,7 @@ class jqGridExport extends jqGrid
                         break;
                     case "int":
                         ${${"GLOBALS"}["gckdpyw"]} .=
-                            "<ss:Cell\x20ss:StyleID=\"intnm\"><ss:Data ss:Type=\x22\x4eumber\">" .
+                            "<ss:Cell\x20ss:StyleID=\"intnm\"><ss:Data ss:Type=\x22Number\">" .
                             stripslashes(trim(${$flmckddmkwmm})) .
                             "</ss:Data\x3e</ss:Cell>";
                         break;
@@ -4301,7 +4058,7 @@ class jqGridExport extends jqGrid
             ${${"GLOBALS"}["qtfnftgyjqe"]} .
             ${${"GLOBALS"}["xejqpx"]} .
             ${${"GLOBALS"}["ikfckvtpp"]} .
-            "\x3c/ss:Table\x3e</ss:\x57orksheet></ss:Workbook>";
+            "\x3c/ss:Table\x3e</ss:Worksheet></ss:Workbook>";
         ${${"GLOBALS"}["bryhzxmk"]} = $this->getExcelOptions();
         if (!isset(${$mmnesot}["save_to_disk_only"])) {
             ${"GLOBALS"}["widqjmxjf"] = "es";
@@ -4350,7 +4107,7 @@ class jqGridExport extends jqGrid
         ${${"GLOBALS"}["gckdpyw"]} = "";
         $oovjmqcnkrx = "hiddencount";
         ${"GLOBALS"}["pmvflbt"] = "hdr";
-        ${${"GLOBALS"}["dfctfggbjtf"]} = count($grpinfo->columns);
+        $ncols = count($grpinfo->columns);
         $nnrcxmjubi = "s";
         $exjktruk = "grpopt";
         $ombcoeedix = "i";
@@ -4365,21 +4122,21 @@ class jqGridExport extends jqGrid
         $yusihzvegtp = "hdr";
         ${"GLOBALS"}["ctbaifjhe"] = "ncols";
         ${${"GLOBALS"}["qtfnftgyjqe"]} .=
-            "<ss:\x57orkbook xmlns=\x22urn:schemas-microsoft-com:office:spreadsheet\" xmlns:o\x3d\"urn:schemas-microsoft-com:office:office\x22 xmlns:x=\x22urn:schemas-microsoft-com:office:excel\x22\x20xmlns:ss\x3d\x22urn:schemas-microsoft-com:office:spreadsheet\x22 xmlns:html\x3d\"http://www\x2ew3\x2eorg/\x54R/REC-html4\x30\x22>";
+            "<ss:Workbook xmlns=\x22urn:schemas-microsoft-com:office:spreadsheet\" xmlns:o\x3d\"urn:schemas-microsoft-com:office:office\x22 xmlns:x=\x22urn:schemas-microsoft-com:office:excel\x22\x20xmlns:ss\x3d\x22urn:schemas-microsoft-com:office:spreadsheet\x22 xmlns:html\x3d\"http://www\x2ew3\x2eorg/\x54R/REC-html4\x30\x22>";
         $jdgkmuiepbrw = "es";
         $yysvrycwy = "hdr";
         ${${"GLOBALS"}["qtfnftgyjqe"]} .=
             "<ss:Styles>" .
             "<ss:Style\x20ss:ID\x3d\"1\"\x3e\x3css:Font ss:Bold=\"\x31\x22/>\x3c/ss:Style>" .
-            "<ss:Style\x20ss:ID=\x22sd\"\x3e<\x4eumberFormat ss:\x46ormat\x3d\"Short Date\x22/></ss:Style\x3e" .
-            "<ss:Style\x20ss:ID=\x22ld\"\x3e<\x4eumber\x46ormat\x20ss:\x46ormat=\"General Date\"/\x3e</ss:Style>" .
+            "<ss:Style\x20ss:ID=\x22sd\"\x3e<NumberFormat ss:\x46ormat\x3d\"Short Date\x22/></ss:Style\x3e" .
+            "<ss:Style\x20ss:ID=\x22ld\"\x3e<Number\x46ormat\x20ss:\x46ormat=\"General Date\"/\x3e</ss:Style>" .
             "\x3css:Style ss:ID\x3d\x22nmb\"\x3e\x3cNumber\x46ormat ss:\x46ormat=\x22Standard\"/></ss:Style>" .
-            "<ss:Style\x20ss:ID=\x22intnm\"><\x4eumberFormat ss:Format=\x22General \x4eumber\x22/\x3e\x3c/ss:Style\x3e" .
+            "<ss:Style\x20ss:ID=\x22intnm\"><NumberFormat ss:Format=\x22General Number\x22/\x3e\x3c/ss:Style\x3e" .
             "\x3css:Style ss:ID=\x22headcol\"\x3e\x3css:\x46ont\x20ss:Bold=\x22\x31\"/>\x3c/ss:Style\x3e" .
-            "\x3css:Style ss:ID\x3d\"Default\" ss:\x4eame\x3d\"Normal\"\x3e <Alignment ss:\x56ertical\x3d\"Bottom\"/><Borders/><Interior/\x3e\x3c\x4eumberFormat/>\x3cProtection/></ss:Style\x3e" .
+            "\x3css:Style ss:ID\x3d\"Default\" ss:Name\x3d\"Normal\"\x3e <Alignment ss:\x56ertical\x3d\"Bottom\"/><Borders/><Interior/\x3e\x3cNumberFormat/>\x3cProtection/></ss:Style\x3e" .
             "\x3c/ss:Styles\x3e";
         ${$yysvrycwy} .=
-            "\x3css:\x57orksheet\x20ss:\x4eame\x3d\x22Sheet\x31\x22\x3e";
+            "\x3css:Worksheet\x20ss:Name\x3d\x22Sheet\x31\x22\x3e";
         ${${"GLOBALS"}["qhxhhoffdqeg"]} .= "\x3css:Table>";
         $fguutsdum = "i";
         $qsvfib = "hdr\x31";
@@ -4389,27 +4146,24 @@ class jqGridExport extends jqGrid
         for (
             ${$fguutsdum} = 0;
             ${$dhmltnorovz} < ${${"GLOBALS"}["ctbaifjhe"]};
-            ${${"GLOBALS"}["gjpurobd"]}++
+            $i++
         ) {
-            if (
-                $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["name"] ==
-                "jqgrid_row"
-            ) {
+            if (strtolower($grpinfo->columns[$i]["name"])=="jqgrid_row") {
                 $osjxakbjls = "i";
                 $grpinfo->columns[${$osjxakbjls}]["hidden"] = true;
             }
             ${"GLOBALS"}["vptjhoegs"] = "fname";
             if (
-                $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["hidden"] == true
+                $grpinfo->columns[$i]["hidden"] == true
             ) {
                 ${"GLOBALS"}["hmyotyocyxr"] = "hiddencount";
                 ${${"GLOBALS"}["hmyotyocyxr"]}++;
                 continue;
             }
-            if ($grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["width"] > 0) {
+            if ($grpinfo->columns[$i]["width"] > 0) {
                 $ftdgazmz = "i";
                 ${${"GLOBALS"}["qtfnftgyjqe"]} .=
-                    "\x3css:Column ss:\x57idth\x3d\"" .
+                    "\x3css:Column ss:Width\x3d\"" .
                     ((int) $grpinfo->columns[${$ftdgazmz}]["width"] * 72) / 96 .
                     "\"/\x3e";
             } else {
@@ -4417,7 +4171,7 @@ class jqGridExport extends jqGrid
                     "\x3css:Column ss:AutoFitWidth\x3d\x22\x31\"/>";
             }
             ${${"GLOBALS"}["incdddnykwc"]} = htmlspecialchars(
-                $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["label"]
+                $grpinfo->columns[$i]["label"]
             );
             if (strlen(${${"GLOBALS"}["vptjhoegs"]}) == 0) {
                 ${${"GLOBALS"}["incdddnykwc"]} = "";
@@ -4472,7 +4226,7 @@ class jqGridExport extends jqGrid
             }
             ${${"GLOBALS"}["gckdpyw"]} .=
                 "<ss:Row\x3e\x3css:Cell\x20ss:MergeAcross=\x22" .
-                (${${"GLOBALS"}["dfctfggbjtf"]} -
+                ($ncols -
                     ${${"GLOBALS"}["kympdfk"]} -
                     1) .
                 "\"\x20ss:StyleID=\"headcol\"\x3e<ss:Data\x20ss:Type\x3d\x22String\"\x3e" .
@@ -4494,12 +4248,12 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["bkbfckbpmd"] = "jj";
                 ${"GLOBALS"}["hotrphq"] = "toEnd";
                 ${"GLOBALS"}["khqajcfvsm"] = "toEnd";
-                if (isset($grpinfo->groups[${${"GLOBALS"}["gjpurobd"]} + 1])) {
+                if (isset($grpinfo->groups[$i + 1])) {
                     $hjnkgj = "gg";
                     $curfbme = "end";
                     $epmcbyqsuej = "gg";
                     ${$epmcbyqsuej} =
-                        $grpinfo->groups[${${"GLOBALS"}["gjpurobd"]} + 1];
+                        $grpinfo->groups[$i + 1];
                     ${$curfbme} = ${$hjnkgj}["startRow"];
                 } else {
                     ${${"GLOBALS"}["bnkmlts"]} = false;
@@ -4597,10 +4351,10 @@ class jqGridExport extends jqGrid
                                         4
                                     ) == "\x300\x300" ||
                                     empty(${${"GLOBALS"}["qbroefmekyoe"]}) ||
-                                    ${$jwnzrbb} == "\x4eULL"
+                                    ${$jwnzrbb} == "NULL"
                                 ) {
                                     ${${"GLOBALS"}["qbroefmekyoe"]} =
-                                        "1\x389\x39-12-\x33\x31\x54\x300:\x300:0\x30.\x30\x30\x30";
+                                        "189\x39-12-\x33\x31\x54\x300:\x300:0\x30.\x30\x30\x30";
                                     ${${"GLOBALS"}["gckdpyw"]} .=
                                         "<ss:Cell\x20ss:StyleID\x3d\"sd\"><ss:Data\x20ss:\x54ype\x3d\"DateTime\x22>" .
                                         ${${"GLOBALS"}["qbroefmekyoe"]} .
@@ -4794,7 +4548,7 @@ class jqGridExport extends jqGrid
                     for (
                         ${${"GLOBALS"}["ygtpwesvvpd"]} = 0;
                         ${${"GLOBALS"}["ygtpwesvvpd"]} <
-                        ${${"GLOBALS"}["dfctfggbjtf"]};
+                        $ncols;
                         ${${"GLOBALS"}["bvopornxxxym"]}++
                     ) {
                         ${"GLOBALS"}["sfpsygo"] = "fdata";
@@ -4939,7 +4693,7 @@ class jqGridExport extends jqGrid
             ${${"GLOBALS"}["cwmjdt"]} .= "\x3css:Row>";
             $rbmrgwacg = "i";
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
+                $i = 0;
                 ${$rbmrgwacg} < ${$fkjvkhxc};
                 ${${"GLOBALS"}["giqffypob"]}++
             ) {
@@ -4955,7 +4709,7 @@ class jqGridExport extends jqGrid
                 ) {
                     $wmitpbvmiaq = "key";
                     if (
-                        $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}][
+                        $grpinfo->columns[$i][
                             "name"
                         ] == ${$wmitpbvmiaq}
                     ) {
@@ -4968,7 +4722,7 @@ class jqGridExport extends jqGrid
                     ${"GLOBALS"}["ggsiiskjys"] = "vv";
                     ${"GLOBALS"}["sskuvhb"] = "s";
                     ${${"GLOBALS"}["sskuvhb"]} .=
-                        "\x3css:Cell\x20ss:StyleID=\"nmb\x22>\x3css:Data ss:\x54ype\x3d\x22\x4eumber\"\x3e" .
+                        "\x3css:Cell\x20ss:StyleID=\"nmb\x22>\x3css:Data ss:\x54ype\x3d\x22Number\"\x3e" .
                         stripslashes(${${"GLOBALS"}["ggsiiskjys"]}) .
                         "</ss:Data\x3e\x3c/ss:Cell>";
                 } else {
@@ -4983,7 +4737,7 @@ class jqGridExport extends jqGrid
             ${$yusihzvegtp} .
             ${${"GLOBALS"}["xejqpx"]} .
             ${$nnrcxmjubi} .
-            "\x3c/ss:\x54able\x3e\x3c/ss:Worksheet\x3e\x3c/ss:\x57orkbook\x3e";
+            "\x3c/ss:\x54able\x3e\x3c/ss:Worksheet\x3e\x3c/ss:Workbook\x3e";
         ${${"GLOBALS"}["bryhzxmk"]} = $this->getExcelOptions();
         if (!isset(${$jdgkmuiepbrw}["save_to_disk_only"])) {
             ${${"GLOBALS"}["bryhzxmk"]}["save_to_disk_only"] = false;
@@ -5036,7 +4790,7 @@ class jqGridExport extends jqGrid
             ->setTitle(${${"GLOBALS"}["bryhzxmk"]}["title"])
             ->setSubject(${${"GLOBALS"}["bryhzxmk"]}["subject"])
             ->setDescription(
-                "Test\x20document\x20for\x20Office \x3200\x37 XLSX,\x20generated\x20using\x20\x50H\x50\x20classes."
+                "Test\x20document\x20for\x20Office \x3200\x37 XLSX,\x20generated\x20using\x20PHP\x20classes."
             )
             ->setKeywords(${${"GLOBALS"}["bryhzxmk"]}["keywords"]);
         if (${${"GLOBALS"}["bryhzxmk"]}["protect"] === true) {
@@ -5069,11 +4823,11 @@ class jqGridExport extends jqGrid
         $ekuwotkc = "ext";
         ${${"GLOBALS"}["bryhzxmk"]} = $this->getExcelOptions();
         $bitryorocf = "es";
-        $gcpxxluele = "obj\x50H\x50Excel";
+        $gcpxxluele = "objPHPExcel";
         ${"GLOBALS"}["mkmbuuyjr"] = "filename";
         $lfsfreab = "objWriter";
         $wxmdldzfxkp = "es";
-        $dmtowfknjzq = "obj\x57riter";
+        $dmtowfknjzq = "objWriter";
         ${"GLOBALS"}["edpbcsncsz"] = "es";
         ${${"GLOBALS"}["blmhysxivb"]} =
             ${${"GLOBALS"}["bfoqjrfg"]}["file"] !== ""
@@ -5083,7 +4837,7 @@ class jqGridExport extends jqGrid
             $bcvybmr = "es";
             ${$bcvybmr}["save_to_disk_only"] = false;
         }
-        ${"GLOBALS"}["rbcvuq"] = "objP\x48PExcel";
+        ${"GLOBALS"}["rbcvuq"] = "objPHPExcel";
         ${${"GLOBALS"}["mkmbuuyjr"]} = $this->tmp_file_name(
             ${$glcqoo}["disk_file"]
         );
@@ -5169,11 +4923,11 @@ class jqGridExport extends jqGrid
                 );
                 header(
                     "Last-Modified: " .
-                        gmdate("D, d M\x20\x59\x20\x48:i:s") .
+                        gmdate("D, d M\x20\x59\x20H:i:s") .
                         " GM\x54"
                 );
                 header("Cache-Control: cache,\x20must-revalidate");
-                header("\x50ragma: public");
+                header("Pragma: public");
                 $objWriter->save("php://output");
                 break;
             default:
@@ -5233,7 +4987,7 @@ class jqGridExport extends jqGrid
         ${"GLOBALS"}["ovhvonrxs"] = "i";
         ${"GLOBALS"}["tufaius"] = "ncols";
         try {
-            ${"GLOBALS"}["ymwwabwjumk"] = "objP\x48\x50Excel";
+            ${"GLOBALS"}["ymwwabwjumk"] = "objPHPExcel";
             require_once ${${"GLOBALS"}[
                 "bryhzxmk"
             ]}["path_to_phpexcel_class"];
@@ -5245,17 +4999,17 @@ class jqGridExport extends jqGrid
         }
         ${${"GLOBALS"}["xlmyieky"]} = [];
         ${"GLOBALS"}["psuwhtfq"] = "aSum";
-        ${${"GLOBALS"}["dfctfggbjtf"]} = jqGridDB::columnCount(
+        $ncols = jqGridDB::columnCount(
             ${${"GLOBALS"}["vglfjbmuodxf"]}
         );
         ${"GLOBALS"}["nuqcynr"] = "ncols";
         $mdbgvjcx = "colmodel";
         $cznedgkoijq = "nmodel";
         ${"GLOBALS"}["wctubcbfcdt"] = "nmodel";
-        ${${"GLOBALS"}["fevhaevsc"]} = is_array(
-            ${${"GLOBALS"}["hjvyemwroyky"]}
+        $nmodel = is_array(
+            $colmodel
         )
-            ? count(${${"GLOBALS"}["hjvyemwroyky"]})
+            ? count($colmodel)
             : -1;
         ${"GLOBALS"}["xcthsnlq"] = "aFormula";
         if (${$cznedgkoijq} > 0) {
@@ -5264,7 +5018,7 @@ class jqGridExport extends jqGrid
             $ssxftnkv = "i";
             for (
                 ${$syvdxnnyc} = 0;
-                ${$ssxftnkv} < ${${"GLOBALS"}["fevhaevsc"]};
+                ${$ssxftnkv} < $nmodel;
                 ${${"GLOBALS"}["pzrfuou"]}++
             ) {
                 $ogovclhpsdr = "i";
@@ -5282,11 +5036,11 @@ class jqGridExport extends jqGrid
         $ckakgdqlwjc = "hiddencount";
         ${"GLOBALS"}["ccnssoul"] = "startColumn";
         switch ($this->dbtype) {
-            case "oci\x38":
+            case "oci8":
             case "db2":
             case "sqlsrv":
             case "odbcsqlsrv":
-                ${${"GLOBALS"}["fevhaevsc"]}++;
+                $nmodel++;
                 break;
         }
         ${$fxesfonggbn} = false;
@@ -5299,9 +5053,9 @@ class jqGridExport extends jqGrid
         }
         ${${"GLOBALS"}["psuwhtfq"]} = [];
         ${${"GLOBALS"}["xcthsnlq"]} = [];
-        ${${"GLOBALS"}["ehmjvfrj"]} = [];
+        $ahidden = [];
         ${"GLOBALS"}["twfuhnl"] = "startRow";
-        ${${"GLOBALS"}["hrvgcwqhfp"]} = [];
+        $aselect = [];
         ${"GLOBALS"}["wdgdtwtfjf"] = "r";
         $zyrgzrx = "startColumn";
         ${$ckakgdqlwjc} = 0;
@@ -5333,12 +5087,11 @@ class jqGridExport extends jqGrid
         }
         for (
             ${${"GLOBALS"}["ovhvonrxs"]} = 0;
-            ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["tufaius"]};
-            ${${"GLOBALS"}["gjpurobd"]}++
+            $i < ${${"GLOBALS"}["tufaius"]};
+            $i++
         ) {
             ${"GLOBALS"}["cifghhbc"] = "i";
             ${"GLOBALS"}["iychkckr"] = "colmodel";
-            ${"GLOBALS"}["vgpogf"] = "i";
             ${"GLOBALS"}["bplser"] = "i";
             ${"GLOBALS"}["obeckoy"] = "startRow";
             $vvgndoj = "fmtstr";
@@ -5348,15 +5101,14 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["dhxhvyyrv"] = "fnmkeys";
             $yfgluwvnbl = "i";
             ${"GLOBALS"}["omiqjrawv"] = "i";
-            ${${"GLOBALS"}["elqhspslpod"]} = [];
-            $dzoelumlvcr = "colmodel";
+            $field = [];
             $qrywzp = "i";
             $vhaoboq = "colmodel";
             ${${"GLOBALS"}["dhxhvyyrv"]}[${$lqsgihtcerd}] = "";
             ${"GLOBALS"}["hvevfshpw"] = "currentColumn";
             $cwxvffwsp = "i";
             if (
-                ${${"GLOBALS"}["szsdbu"]} &&
+                $model &&
                 isset(${$vhaoboq}[${${"GLOBALS"}["cifghhbc"]}])
             ) {
                 $emlbon = "typearr";
@@ -5373,19 +5125,19 @@ class jqGridExport extends jqGrid
                         ${${"GLOBALS"}["lvexluboh"]}
                     ]["label"]
                 )
-                    ? ${$spsnetv}[${${"GLOBALS"}["gjpurobd"]}]["label"]
+                    ? ${$spsnetv}[$i]["label"]
                     : ${${"GLOBALS"}["kzjwblg"]}[${${"GLOBALS"}["jlgteunc"]}][
                         "name"
                     ];
                 ${$mridwtmpsyr}["name"] =
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    $colmodel[
+                        $i
                     ]["name"];
-                ${$emlbon}[${${"GLOBALS"}["gjpurobd"]}] = isset(
+                ${$emlbon}[$i] = isset(
                     ${$tpgcvcjqjkv}[${$eetlibltjij}]["sorttype"]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    ? $colmodel[
+                        $i
                     ]["sorttype"]
                     : "";
             } else {
@@ -5395,32 +5147,26 @@ class jqGridExport extends jqGrid
                 $cydconndgbi = "field";
                 ${"GLOBALS"}["dlaovz"] = "rs";
                 ${$cydconndgbi} = jqGridDB::getColumnMeta(
-                    ${${"GLOBALS"}["gjpurobd"]},
+                    $i,
                     ${${"GLOBALS"}["dlaovz"]}
                 );
                 ${$ljydrrlma} = ${$vkwwtpyt}["name"];
                 ${${"GLOBALS"}["qpekub"]}[
-                    ${${"GLOBALS"}["gjpurobd"]}
+                    $i
                 ] = jqGridDB::MetaType(
-                    ${${"GLOBALS"}["elqhspslpod"]},
+                    $field,
                     $this->dbtype
                 );
             }
             $wkfpwimdctc = "aselect";
             ${"GLOBALS"}["bzvjlpurhn"] = "currentColumn";
-            ${${"GLOBALS"}["ehmjvfrj"]}[${${"GLOBALS"}["gjpurobd"]}] =
-                ${${"GLOBALS"}["szsdbu"]} &&
-                isset(${$dzoelumlvcr}[${${"GLOBALS"}["gjpurobd"]}]["hidden"])
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["vgpogf"]}
-                    ]["hidden"]
-                    : false;
+            $ahidden[$i] = $model && isset($colmodel[$i]["hidden"]) ? $colmodel[$i]["hidden"] : false;
             ${"GLOBALS"}["frtqufpxqsck"] = "fmtstr";
             ${$wkfpwimdctc}[${$cwxvffwsp}] = false;
             ${"GLOBALS"}["wqzluxgytge"] = "colmodel";
             $eebnjsrtlf = "typearr";
             if (
-                ${${"GLOBALS"}["szsdbu"]} &&
+                $model &&
                 isset(
                     ${${"GLOBALS"}["wqzluxgytge"]}[${$qrywzp}]["formatter"]
                 )
@@ -5435,23 +5181,23 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["gcqujfpw"] = "colmodel";
                 ${"GLOBALS"}["bxqrcy"] = "i";
                 ${${"GLOBALS"}["qhjkimlumhe"]} =
-                    ${${"GLOBALS"}["nokxopbvtht"]}[${${"GLOBALS"}["gjpurobd"]}][
+                    ${${"GLOBALS"}["nokxopbvtht"]}[$i][
                         "formatter"
                     ];
                 $brycxfbonj = "colmodel";
                 ${$tddmgf} = isset(
-                    ${${"GLOBALS"}["onujiqihjk"]}[${${"GLOBALS"}["gjpurobd"]}][
+                    ${${"GLOBALS"}["onujiqihjk"]}[$i][
                         "formatoptions"
                     ]
                 )
-                    ? ${${"GLOBALS"}["hjvyemwroyky"]}[
-                        ${${"GLOBALS"}["gjpurobd"]}
+                    ? $colmodel[
+                        $i
                     ]["formatoptions"]
                     : (isset(
                         ${$brycxfbonj}[${${"GLOBALS"}["bxqrcy"]}]["editoptions"]
                     )
                         ? ${${"GLOBALS"}["gcqujfpw"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ]["editoptions"]
                         : []);
                 ${"GLOBALS"}["phqvydrthsd"] = "i";
@@ -5505,12 +5251,12 @@ class jqGridExport extends jqGrid
                             ${${"GLOBALS"}["wyqwkwhq"]}["newformat"] !== ""
                         ) {
                             ${${"GLOBALS"}["rkrfujn"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                                $i
                             ] = ${${"GLOBALS"}["wyqwkwhq"]}["newformat"];
                         } else {
                             if (
                                 ${${"GLOBALS"}["xlmyieky"]}[
-                                    ${${"GLOBALS"}["gjpurobd"]}
+                                    $i
                                 ] == "date"
                             ) {
                                 ${"GLOBALS"}["wpvsplh"] = "i";
@@ -5539,16 +5285,16 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["jftwjmqmpu"] = "ahidden";
             $gotwpmr = "fname";
             ${${"GLOBALS"}["rkrfujn"]}[${${"GLOBALS"}["bplser"]}] = !isset(
-                ${${"GLOBALS"}["frtqufpxqsck"]}[${${"GLOBALS"}["gjpurobd"]}]
+                ${${"GLOBALS"}["frtqufpxqsck"]}[$i]
             )
                 ? $this->excel_fmt(
                     ${$eebnjsrtlf}[${${"GLOBALS"}["omiqjrawv"]}],
                     ${${"GLOBALS"}["bryhzxmk"]}
                 )
-                : ${$vvgndoj}[${${"GLOBALS"}["gjpurobd"]}];
+                : ${$vvgndoj}[$i];
             if (
                 isset(
-                    ${${"GLOBALS"}["hjvyemwroyky"]}[${$yfgluwvnbl}][
+                    $colmodel[${$yfgluwvnbl}][
                         "formatoptions"
                     ]
                 )
@@ -5562,13 +5308,13 @@ class jqGridExport extends jqGrid
                 if (isset(${${"GLOBALS"}["kudqvk"]}["excel_format"])) {
                     $oxxfyjt = "fmtstr";
                     ${"GLOBALS"}["aoujjbuuq"] = "cmfo";
-                    ${$oxxfyjt}[${${"GLOBALS"}["gjpurobd"]}] =
+                    ${$oxxfyjt}[$i] =
                         ${${"GLOBALS"}["aoujjbuuq"]}["excel_format"];
                 }
             }
-            if (${${"GLOBALS"}["elqhspslpod"]}["name"] == "jqgrid_row") {
+            if (strtolower($field["name"])== "jqgrid_row") {
                 $abuxopuk = "i";
-                ${${"GLOBALS"}["ehmjvfrj"]}[${$abuxopuk}] = true;
+                $ahidden[${$abuxopuk}] = true;
             }
             if (
                 ${${"GLOBALS"}["jftwjmqmpu"]}[${${"GLOBALS"}["ftslew"]}]
@@ -5579,11 +5325,11 @@ class jqGridExport extends jqGrid
             }
             ${${"GLOBALS"}["zeyxwxhvn"]}[
                 ${${"GLOBALS"}["xlaumvevq"]}
-            ] = ${${"GLOBALS"}["szsdbu"]}
-                ? ${${"GLOBALS"}["iychkckr"]}[${${"GLOBALS"}["gjpurobd"]}][
+            ] = $model
+                ? ${${"GLOBALS"}["iychkckr"]}[$i][
                     "name"
                 ]
-                : ${$gotwpmr}[${${"GLOBALS"}["gjpurobd"]}];
+                : ${$gotwpmr}[$i];
             $objWorksheet->setCellValue(
                 ${${"GLOBALS"}["exklqjjhkx"]} . ${${"GLOBALS"}["obeckoy"]},
                 ${${"GLOBALS"}["ebbhpxvn"]}
@@ -5607,16 +5353,16 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["rsbqchkyqs"] = "fieldnames";
             $eiaohftgyy = "fld";
             ${$eiaohftgyy} = $rs->field_count;
-            ${${"GLOBALS"}["rsbqchkyqs"]}[0] = &${${"GLOBALS"}["ukkbuv"]};
+            ${${"GLOBALS"}["rsbqchkyqs"]}[0] = &$rs;
             $jevqlgyfinq = "fld";
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${$jevqlgyfinq};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i = 0;
+                $i < ${$jevqlgyfinq};
+                $i++
             ) {
                 ${"GLOBALS"}["wqvmekx"] = "i";
                 ${"GLOBALS"}["dfmezkfc"] = "res_arr";
-                ${${"GLOBALS"}["yvezufu"]}[${${"GLOBALS"}["gjpurobd"]} + 1] =
+                ${${"GLOBALS"}["yvezufu"]}[$i + 1] =
                     &${${"GLOBALS"}["dfmezkfc"]}[
                         ${${"GLOBALS"}["wqvmekx"]}
                     ];
@@ -5629,7 +5375,7 @@ class jqGridExport extends jqGrid
         }
         while (
             ${${"GLOBALS"}["wdgdtwtfjf"]} = jqGridDB::fetch_num(
-                ${${"GLOBALS"}["ukkbuv"]},
+                $rs,
                 $this->pdo
             )
         ) {
@@ -5645,9 +5391,9 @@ class jqGridExport extends jqGrid
                 ]};
             }
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
-                ${${"GLOBALS"}["gjpurobd"]} < ${${"GLOBALS"}["dfctfggbjtf"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i = 0;
+                $i < $ncols;
+                $i++
             ) {
                 $vtddvobddsbe = "i";
                 ${"GLOBALS"}["ldtnfzpvdw"] = "aselect";
@@ -5656,8 +5402,8 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["njskdlxpr"] = "ahidden";
                 ${"GLOBALS"}["jtcitmdmy"] = "i";
                 if (
-                    isset(${${"GLOBALS"}["ehmjvfrj"]}[${$vtddvobddsbe}]) &&
-                    ${${"GLOBALS"}["njskdlxpr"]}[${${"GLOBALS"}["gjpurobd"]}]
+                    isset($ahidden[${$vtddvobddsbe}]) &&
+                    ${${"GLOBALS"}["njskdlxpr"]}[$i]
                 ) {
                     continue;
                 }
@@ -5669,7 +5415,7 @@ class jqGridExport extends jqGrid
                 if (
                     is_array(
                         ${${"GLOBALS"}["ldtnfzpvdw"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ]
                     )
                 ) {
@@ -5679,7 +5425,7 @@ class jqGridExport extends jqGrid
                     if (
                         isset(
                             ${${"GLOBALS"}["mjfddhgclp"]}[
-                                ${${"GLOBALS"}["gjpurobd"]}
+                                $i
                             ][${$ycbhwmvkgd}]
                         )
                     ) {
@@ -5687,7 +5433,7 @@ class jqGridExport extends jqGrid
                         ${"GLOBALS"}["hsekstulkdf"] = "v\x31";
                         $yxxrksj = "aselect";
                         ${${"GLOBALS"}["hsekstulkdf"]} =
-                            ${$yxxrksj}[${${"GLOBALS"}["gjpurobd"]}][
+                            ${$yxxrksj}[$i][
                                 ${${"GLOBALS"}["kkiglyhwu"]}
                             ];
                         if (${${"GLOBALS"}["wuzexrtfjn"]}) {
@@ -5695,11 +5441,11 @@ class jqGridExport extends jqGrid
                             ${$qartdiyczr} = ${${"GLOBALS"}["wuzexrtfjn"]};
                         }
                     }
-                    ${${"GLOBALS"}["pnjqksik"]}[${${"GLOBALS"}["gjpurobd"]}] =
+                    ${${"GLOBALS"}["pnjqksik"]}[$i] =
                         "string";
                 }
                 ${"GLOBALS"}["ljcetjpbfbv"] = "startRow";
-                switch (${$nltzwitpubv}[${${"GLOBALS"}["gjpurobd"]}]) {
+                switch (${$nltzwitpubv}[$i]) {
                     case "date":
                     case "datetime":
                         if (
@@ -5735,7 +5481,7 @@ class jqGridExport extends jqGrid
                             PHPExcel_Cell_DataType::TYPE_STRING
                         );
                 }
-                if (${${"GLOBALS"}["rkrfujn"]}[${${"GLOBALS"}["gjpurobd"]}]) {
+                if (${${"GLOBALS"}["rkrfujn"]}[$i]) {
                     $dwccktsjf = "currentColumn";
                     $mlhfkxqrtliv = "i";
                     $uvynnggtesr = "fmtstr";
@@ -5765,7 +5511,7 @@ class jqGridExport extends jqGrid
             for (
                 ${${"GLOBALS"}["mfjffyupjg"]} = 0;
                 ${$imawkky} < ${${"GLOBALS"}["uqwpgrczhoh"]};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i++
             ) {
                 ${"GLOBALS"}["tcokapyjfh"] = "i";
                 $mowiiaxwjuc = "currentColumn";
@@ -5778,7 +5524,7 @@ class jqGridExport extends jqGrid
                             ${${"GLOBALS"}["tcokapyjfh"]}
                         ]
                     ) &&
-                    ${${"GLOBALS"}["ehmjvfrj"]}[${${"GLOBALS"}["gjpurobd"]}]
+                    $ahidden[$i]
                 ) {
                     continue;
                 }
@@ -5792,7 +5538,7 @@ class jqGridExport extends jqGrid
                     ${"GLOBALS"}["hdttdzkqfus"] = "key";
                     if (
                         ${${"GLOBALS"}["zeyxwxhvn"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ] == ${${"GLOBALS"}["hdttdzkqfus"]}
                     ) {
                         ${${"GLOBALS"}["cdpuirmgomj"]} = ${${"GLOBALS"}[
@@ -5825,7 +5571,7 @@ class jqGridExport extends jqGrid
                     $e->getMessage();
             }
         } elseif (function_exists($this->excelFunc)) {
-            ${"GLOBALS"}["fjnvyvkugk"] = "obj\x50\x48\x50Excel";
+            ${"GLOBALS"}["fjnvyvkugk"] = "objPHPExcel";
             ${${"GLOBALS"}["bomjgd"]} = call_user_func(
                 $this->excelFunc,
                 ${${"GLOBALS"}["fjnvyvkugk"]}
@@ -5845,8 +5591,8 @@ class jqGridExport extends jqGrid
         $lxrnsnet = "hiddencount";
         ${"GLOBALS"}["eygcjs"] = "s";
         ${${"GLOBALS"}["eygcjs"]} = "";
-        ${"GLOBALS"}["pugcnhbtylj"] = "obj\x50HPExcel";
-        ${${"GLOBALS"}["dfctfggbjtf"]} = count($grpinfo->columns);
+        ${"GLOBALS"}["pugcnhbtylj"] = "objPHPExcel";
+        $ncols = count($grpinfo->columns);
         $ebechifpbg = "toEnd";
         ${"GLOBALS"}["efflxeuzulx"] = "startColumn";
         ${"GLOBALS"}["ybcjomgqqp"] = "currentColumn";
@@ -5856,7 +5602,7 @@ class jqGridExport extends jqGrid
         ${"GLOBALS"}["jndtrnyxumi"] = "i";
         $znptrcso = "startRow";
         try {
-            $suykldkedit = "obj\x50\x48\x50Excel";
+            $suykldkedit = "objPHPExcel";
             $dncyobfcp = "objWorksheet";
             $redyssdnem = "es";
             require_once ${$redyssdnem}["path_to_phpexcel_class"];
@@ -5899,11 +5645,10 @@ class jqGridExport extends jqGrid
         $vjhppygpgw = "grpopt";
         for (
             ${${"GLOBALS"}["upxmkkplgosh"]} = 0;
-            ${$gbkxqurpr} < ${${"GLOBALS"}["dfctfggbjtf"]};
+            ${$gbkxqurpr} < $ncols;
             ${$qnsugyc}++
         ) {
             ${"GLOBALS"}["oiqxyj"] = "fmtstr";
-            ${"GLOBALS"}["vklvzoguhxm"] = "i";
             $izmxninsa = "i";
             ${"GLOBALS"}["npncldox"] = "i";
             $pexhwytpd = "currentColumn";
@@ -5913,11 +5658,8 @@ class jqGridExport extends jqGrid
             $sqnqtg = "i";
             ${"GLOBALS"}["dpvrhuyaai"] = "fname";
             $cfxhfjd = "es";
-            if (
-                $grpinfo->columns[${${"GLOBALS"}["vklvzoguhxm"]}]["name"] ==
-                "jqgrid_row"
-            ) {
-                $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["hidden"] = true;
+            if ($grpinfo->columns[$i]["name"] =="jqgrid_row") {
+                $grpinfo->columns[$i]["hidden"] = true;
             }
             if ($grpinfo->columns[${$izmxninsa}]["hidden"] == true) {
                 $jydfdtx = "hiddencount";
@@ -5926,15 +5668,15 @@ class jqGridExport extends jqGrid
             }
             if (
                 isset(
-                    $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["formatter"]
+                    $grpinfo->columns[$i]["formatter"]
                 ) &&
-                $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}][
+                $grpinfo->columns[$i][
                     "formatter"
                 ] == "date"
             ) {
                 ${"GLOBALS"}["bigqvenif"] = "i";
                 ${${"GLOBALS"}["wyqwkwhq"]} =
-                    $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}][
+                    $grpinfo->columns[$i][
                         "formatoptions"
                     ];
                 $qbqobnq = "fmtstr";
@@ -5948,31 +5690,31 @@ class jqGridExport extends jqGrid
                         ${${"GLOBALS"}["wyqwkwhq"]}["newformat"];
                 } else {
                     if (
-                        $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}][
+                        $grpinfo->columns[$i][
                             "type"
                         ] == "date"
                     ) {
                         ${${"GLOBALS"}["rkrfujn"]}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ] = $this->getUserDate();
                     } else {
                         $fyvdpyglqh = "fmtstr";
                         ${$fyvdpyglqh}[
-                            ${${"GLOBALS"}["gjpurobd"]}
+                            $i
                         ] = $this->getUserTime();
                     }
                 }
                 ${$qbqobnq}[
-                    ${${"GLOBALS"}["gjpurobd"]}
+                    $i
                 ] = jqGridUtils::phpToExcelDate(
                     ${${"GLOBALS"}["rkrfujn"]}[${${"GLOBALS"}["bigqvenif"]}]
                 );
             }
-            ${${"GLOBALS"}["rkrfujn"]}[${${"GLOBALS"}["gjpurobd"]}] = !isset(
+            ${${"GLOBALS"}["rkrfujn"]}[$i] = !isset(
                 ${${"GLOBALS"}["rkrfujn"]}[${$sqnqtg}]
             )
                 ? $this->excel_fmt(
-                    $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["type"],
+                    $grpinfo->columns[$i]["type"],
                     ${$cfxhfjd}
                 )
                 : ${${"GLOBALS"}["oiqxyj"]}[${${"GLOBALS"}["vfdvuubxv"]}];
@@ -5999,7 +5741,7 @@ class jqGridExport extends jqGrid
             }
             ${"GLOBALS"}["pphxnbqxi"] = "currentColumn";
             ${${"GLOBALS"}["incdddnykwc"]} =
-                $grpinfo->columns[${${"GLOBALS"}["gjpurobd"]}]["label"];
+                $grpinfo->columns[$i]["label"];
             $objWorksheet->setCellValue(
                 ${${"GLOBALS"}["pphxnbqxi"]} . ${${"GLOBALS"}["cluxprmjjib"]},
                 ${${"GLOBALS"}["dpvrhuyaai"]}
@@ -6102,7 +5844,7 @@ class jqGridExport extends jqGrid
                 ${"GLOBALS"}["jkttqkj"] = "gg";
                 if (isset($grpinfo->groups[${$nrulbjb} + 1])) {
                     ${${"GLOBALS"}["bnkmlts"]} =
-                        $grpinfo->groups[${${"GLOBALS"}["gjpurobd"]} + 1];
+                        $grpinfo->groups[$i + 1];
                     ${${"GLOBALS"}["xwprfqtb"]} =
                         ${${"GLOBALS"}["bnkmlts"]}["startRow"];
                 } else {
@@ -6305,7 +6047,7 @@ class jqGridExport extends jqGrid
                     ]};
                     for (
                         ${${"GLOBALS"}["eaxdvied"]} = 0;
-                        ${$otuzrwxkj} < ${${"GLOBALS"}["dfctfggbjtf"]};
+                        ${$otuzrwxkj} < $ncols;
                         ${${"GLOBALS"}["rbcnutpoy"]}++
                     ) {
                         if (
@@ -6448,9 +6190,9 @@ class jqGridExport extends jqGrid
             ${"GLOBALS"}["gkcebfuc"] = "i";
             $tmkkoqg = "ncols";
             for (
-                ${${"GLOBALS"}["gjpurobd"]} = 0;
+                $i = 0;
                 ${${"GLOBALS"}["gkcebfuc"]} < ${$tmkkoqg};
-                ${${"GLOBALS"}["gjpurobd"]}++
+                $i++
             ) {
                 ${"GLOBALS"}["wyqfdxuygmc"] = "vv";
                 $eouoeiwhnt = "i";
@@ -6505,8 +6247,8 @@ class jqGridExport extends jqGrid
         $this->setExcelProp(${${"GLOBALS"}["bomjgd"]});
         if ($this->excelClass) {
             try {
-                ${"GLOBALS"}["qeikzwhbx"] = "objP\x48PExcel";
-                ${"GLOBALS"}["lfzefeevjp"] = "obj\x50H\x50Excel";
+                ${"GLOBALS"}["qeikzwhbx"] = "objPHPExcel";
+                ${"GLOBALS"}["lfzefeevjp"] = "objPHPExcel";
                 ${${"GLOBALS"}["qeikzwhbx"]} = call_user_func(
                     [$this->excelClass, $this->excelFunc],
                     ${${"GLOBALS"}["lfzefeevjp"]}
@@ -6516,7 +6258,7 @@ class jqGridExport extends jqGrid
                     $e->getMessage();
             }
         } elseif (function_exists($this->excelFunc)) {
-            $twyfkwq = "obj\x50HPExcel";
+            $twyfkwq = "objPHPExcel";
             ${${"GLOBALS"}["bomjgd"]} = call_user_func(
                 $this->excelFunc,
                 ${$twyfkwq}
@@ -6533,7 +6275,7 @@ class jqGridExport extends jqGrid
         $filename = "exportdata.xml"
     ) {
         ${"GLOBALS"}["mfrwmexyglo"] = "grouping";
-        ${${"GLOBALS"}["lvjvvrdym"]} = null;
+        $sql = null;
         ${${"GLOBALS"}["mfrwmexyglo"]} =
             isset($this->gridOptions["grouping"]) &&
             $this->gridOptions["grouping"] == true;
@@ -6549,10 +6291,10 @@ class jqGridExport extends jqGrid
         $dfrzmlt = "summary";
         $uhvimeeytxo = "sql";
         ${$uhvimeeytxo} = $this->_rs(
-            ${${"GLOBALS"}["lqmjwykg"]},
+            $params,
             ${$dfrzmlt}
         );
-        if (!${${"GLOBALS"}["lvjvvrdym"]}) {
+        if (!$sql) {
             return "Error:Could\x20not execute\x20the query";
         }
         ${${"GLOBALS"}["bryhzxmk"]} = $this->getExcelOptions();
@@ -6561,8 +6303,8 @@ class jqGridExport extends jqGrid
             $joaywgwy = "es";
             $ymgvkddxh = "groupinfo";
             ${$ymgvkddxh} = $this->groupingSetup(
-                ${${"GLOBALS"}["lvjvvrdym"]},
-                ${${"GLOBALS"}["hjvyemwroyky"]}
+                $sql,
+                $colmodel
             );
             jqGridDB::closeCursor(${${"GLOBALS"}["wisvvzdxmbrw"]});
             if (strtolower(${$joaywgwy}["file_type"]) == "xml") {
@@ -6600,11 +6342,11 @@ class jqGridExport extends jqGrid
                 );
             } else {
                 ${${"GLOBALS"}["benxbud"]} = $this->rs2phpexcel(
-                    ${${"GLOBALS"}["lvjvvrdym"]},
-                    ${${"GLOBALS"}["hjvyemwroyky"]}
+                    $sql,
+                    $colmodel
                 );
             }
-            jqGridDB::closeCursor(${${"GLOBALS"}["lvjvvrdym"]});
+            jqGridDB::closeCursor($sql);
         }
         return ${${"GLOBALS"}["benxbud"]};
     }

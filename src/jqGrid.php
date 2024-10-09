@@ -598,7 +598,101 @@ class jqGrid{
 		if($this->debug)
 			$this->debugout();
 	}
-	public function getSqlQuery(){return$this->select;}public function getQueryParams(){return$this->params;}protected function _rs($params=null,$summary=null,$excel=false){${"GLOBALS"}["odeiirmyo"]="sqlId";$ottmudhkuhx="sidx";${"GLOBALS"}["liiwngcpt"]="sidx";${"GLOBALS"}["nmbszfmboj"]="sidx";$kstwnlvpcie="sord";${"GLOBALS"}["blvlkym"]="search";if($this->ExportCommand&&strlen($this->ExportCommand)>0){${"GLOBALS"}["xolxhlo"]="sqlId";${${"GLOBALS"}["xolxhlo"]}=$this->ExportCommand;}else{${"GLOBALS"}["jfviuaadyvj"]="sqlId";${${"GLOBALS"}["jfviuaadyvj"]}=$this->_setSQL();}if(!${${"GLOBALS"}["odeiirmyo"]}){return false;}${"GLOBALS"}["jdtdrmmm"]="sord";$sidx=jqGridUtils::GetParam($this->GridParams["sort"],"");${${"GLOBALS"}["jdtdrmmm"]}=jqGridUtils::GetParam($this->GridParams["order"],"");$sgiwjblxtxe="summary";$search=jqGridUtils::GetParam($this->GridParams["search"],"false");$sord=preg_replace("/[^a-zA-\x5a0-\x39]/","",${$kstwnlvpcie});$ureypfzydqu="sql";${${"GLOBALS"}["liiwngcpt"]}=preg_replace("/[^a-zA-\x5a0-9. _,]/","",${$ottmudhkuhx});if(${${"GLOBALS"}["blvlkym"]}=="true"){if($this->dbtype=="mongodb"){$params=jqGridDB::_mongoSearch($params,$this->GridParams,$this->encoding,$this->datearray,$this->mongointegers);}else{${"GLOBALS"}["hbubemj"]="params";${"GLOBALS"}["oobbgagi"]="sGrid";${"GLOBALS"}["iisrzjwmrxg"]="params";$sGrid=$this->_buildSearch(${${"GLOBALS"}["hbubemj"]});if($this->dbtype=="array"){$szduyohq="whr";${$szduyohq}="";if($sGrid[0]){${"GLOBALS"}["eknlxnewua"]="sqlId";if(preg_match("/\x5cs+WHERE\\s+/is",${${"GLOBALS"}["eknlxnewua"]})){$whr=" AND ".$sGrid[0];}else{${"GLOBALS"}["khdqdhwmiy"]="whr";$dpspdod="sGrid";${${"GLOBALS"}["khdqdhwmiy"]}=" WHERE ".${$dpspdod}[0];}}$uxrsixon="sqlId";${$uxrsixon}.=$whr;}else{${"GLOBALS"}["nfhdkfx"]="sqlId";${"GLOBALS"}["tgsxeqdjcf"]="sqlId";$whr=$sGrid[0]?" WHERE ".$sGrid[0]:"";${${"GLOBALS"}["nfhdkfx"]}="SELECT * FROM (".${${"GLOBALS"}["tgsxeqdjcf"]}.") gridsearch".$whr;}${${"GLOBALS"}["iisrzjwmrxg"]}=${${"GLOBALS"}["oobbgagi"]}[1];}}if($this->dbtype!=="mongodb"&&$this->dbtype!=="sqlsrv"&&$this->dbtype!=="odbcsqlsrv"){if($sidx){$sqlId.=" ORDER BY ".$sidx." ".$sord;}}if(is_array(${$sgiwjblxtxe})){${"GLOBALS"}["otmzfikv"]="v";if($this->dbtype=="mongodb"){$ymiigs="params";$qryData=jqGridDB::_mongocount($sqlId,${$ymiigs},$summary);}else{${"GLOBALS"}["xqzcxo"]="qryData";$xjgoylgoz="summary";${${"GLOBALS"}["xqzcxo"]}=$this->_getcount($sqlId,$params,${$xjgoylgoz});}${"GLOBALS"}["wssakfdwd"]="qryData";unset($qryData->COUNTR,$qryData->countr);foreach(${${"GLOBALS"}["wssakfdwd"]} as${${"GLOBALS"}["mkvvnlsckeh"]}=>${${"GLOBALS"}["otmzfikv"]}){${"GLOBALS"}["qxzvkvdjxip"]="v";if(${${"GLOBALS"}["dncmjohqwo"]}==null){$khshjlicc="v";${$khshjlicc}=0;}$this->tmpvar[${${"GLOBALS"}["mkvvnlsckeh"]}]=${${"GLOBALS"}["qxzvkvdjxip"]};}}if($this->userdata){if(!$this->tmpvar){$this->tmpvar=array();}$this->tmpvar=jqGridUtils::array_extend($this->tmpvar,$this->userdata);}if($this->debug){$tcsjckif="sqlId";$ljgbne="params";$this->logQuery(${$tcsjckif},${$ljgbne});$this->debugout();}$this->execute($sqlId,$params,${$ureypfzydqu},true,$this->gSQLMaxRows,0,${${"GLOBALS"}["nmbszfmboj"]},$sord);return$sql;}public function querySubGrid($params,$echo=true){if($this->SubgridCommand&&strlen($this->SubgridCommand)>0){$bdcnmslio="params";$jxucook="result";${$jxucook}=new stdClass();$result->rows=$this->queryForObject($this->SubgridCommand,${$bdcnmslio},true);if($echo){${"GLOBALS"}["bsqvsfwucd"]="result";$this->_gridResponse(${${"GLOBALS"}["bsqvsfwucd"]},jqGridUtils::GetParam("callback",false));}else{${"GLOBALS"}["pveiblp"]="result";return${${"GLOBALS"}["pveiblp"]};}}}
+	public function getSqlQuery(){return$this->select;}public function getQueryParams(){return$this->params;}
+	protected function _rs($params=null,$summary=null,$excel=false){
+		${"GLOBALS"}["odeiirmyo"]="sqlId";
+		$ottmudhkuhx="sidx";
+		${"GLOBALS"}["liiwngcpt"]="sidx";
+		$kstwnlvpcie="sord";
+		if($this->ExportCommand&&strlen($this->ExportCommand)>0){
+			$sqlId=$this->ExportCommand;
+		}
+		else{
+			$sqlId=$this->_setSQL();
+		}
+		if(!${${"GLOBALS"}["odeiirmyo"]}){
+			return false;
+		}
+		${"GLOBALS"}["jdtdrmmm"]="sord";
+		$sidx=jqGridUtils::GetParam($this->GridParams["sort"],"");
+		${${"GLOBALS"}["jdtdrmmm"]}=jqGridUtils::GetParam($this->GridParams["order"],"");
+		$sgiwjblxtxe="summary";
+		$search=jqGridUtils::GetParam($this->GridParams["search"],"false");
+		$sord=preg_replace("/[^a-zA-\x5a0-\x39]/","",${$kstwnlvpcie});
+		${${"GLOBALS"}["liiwngcpt"]}=preg_replace("/[^a-zA-\x5a0-9. _,]/","",${$ottmudhkuhx});
+		if($search=="true"){
+			if($this->dbtype=="mongodb"){
+				$params=jqGridDB::_mongoSearch($params,$this->GridParams,$this->encoding,$this->datearray,$this->mongointegers);
+			}
+			else{
+				${"GLOBALS"}["hbubemj"]="params";
+				${"GLOBALS"}["oobbgagi"]="sGrid";
+				${"GLOBALS"}["iisrzjwmrxg"]="params";
+				$sGrid=$this->_buildSearch(${${"GLOBALS"}["hbubemj"]});
+				if($this->dbtype=="array"){
+					$szduyohq="whr";
+					${$szduyohq}="";
+					if($sGrid[0]){
+						${"GLOBALS"}["eknlxnewua"]="sqlId";
+						if(preg_match("/\x5cs+WHERE\\s+/is",${${"GLOBALS"}["eknlxnewua"]})){
+							$whr=" AND ".$sGrid[0];
+						}
+						else{
+							${"GLOBALS"}["khdqdhwmiy"]="whr";
+							$dpspdod="sGrid";
+							${${"GLOBALS"}["khdqdhwmiy"]}=" WHERE ".${$dpspdod}[0];
+						}
+					}
+					$sqlId.=$whr;
+				}
+				else{
+					${"GLOBALS"}["tgsxeqdjcf"]="sqlId";
+					$whr=$sGrid[0]?" WHERE ".$sGrid[0]:"";
+					$sqlId="SELECT * FROM (".${${"GLOBALS"}["tgsxeqdjcf"]}.") gridsearch".$whr;
+				}
+				${${"GLOBALS"}["iisrzjwmrxg"]}=${${"GLOBALS"}["oobbgagi"]}[1];
+			}
+		}
+		if($this->dbtype!=="mongodb"&&$this->dbtype!=="sqlsrv"&&$this->dbtype!=="odbcsqlsrv"){
+			if($sidx){
+				$sqlId.=" ORDER BY ".$sidx." ".$sord;
+			}
+		}
+		if(is_array(${$sgiwjblxtxe})){
+			${"GLOBALS"}["otmzfikv"]="v";
+			if($this->dbtype=="mongodb"){
+				$ymiigs="params";
+				$qryData=jqGridDB::_mongocount($sqlId,${$ymiigs},$summary);
+			}else{
+				${"GLOBALS"}["xqzcxo"]="qryData";
+				$xjgoylgoz="summary";
+				${${"GLOBALS"}["xqzcxo"]}=$this->_getcount($sqlId,$params,${$xjgoylgoz});
+			}
+			${"GLOBALS"}["wssakfdwd"]="qryData";
+			unset($qryData->COUNTR,$qryData->countr);
+			foreach(${${"GLOBALS"}["wssakfdwd"]} as${${"GLOBALS"}["mkvvnlsckeh"]}=>${${"GLOBALS"}["otmzfikv"]}){
+				${"GLOBALS"}["qxzvkvdjxip"]="v";
+				if(${${"GLOBALS"}["dncmjohqwo"]}==null){
+					$khshjlicc="v";
+					${$khshjlicc}=0;
+				}
+				$this->tmpvar[${${"GLOBALS"}["mkvvnlsckeh"]}]=${${"GLOBALS"}["qxzvkvdjxip"]};
+			}
+		}
+		if($this->userdata){
+			if(!$this->tmpvar){
+				$this->tmpvar=array();
+			}
+			$this->tmpvar=jqGridUtils::array_extend($this->tmpvar,$this->userdata);
+		}
+		if($this->debug){
+			$this->logQuery($sqlId,$params);
+			$this->debugout();
+		}
+		$this->execute($sqlId,$params,$sql,true,$this->gSQLMaxRows,0,$sidx,$sord);
+		return$sql;
+	}
+	public function querySubGrid($params,$echo=true){if($this->SubgridCommand&&strlen($this->SubgridCommand)>0){$bdcnmslio="params";$jxucook="result";${$jxucook}=new stdClass();$result->rows=$this->queryForObject($this->SubgridCommand,${$bdcnmslio},true);if($echo){${"GLOBALS"}["bsqvsfwucd"]="result";$this->_gridResponse(${${"GLOBALS"}["bsqvsfwucd"]},jqGridUtils::GetParam("callback",false));}else{${"GLOBALS"}["pveiblp"]="result";return${${"GLOBALS"}["pveiblp"]};}}}
 	protected function _gridResponse($response,$callback=null)
 	{
 		if($this->dataType=="xml")

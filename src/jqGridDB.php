@@ -85,6 +85,32 @@ class jqGridDB
 				else
 					$psql.=strpos(strtoupper($psql),'WHERE')?" and 1=2":" WHERE 1=2";
 				break;
+			case"oci8":
+				$nrows=intval($nrows);
+				if($nrows<0)
+					return false;
+				$offset=intval($offset);
+				if($offset<0)
+					return false;
+				if($offset>=0&&$nrows>0)
+				{
+					if($order&&strlen($order)>0)
+					{
+						$order=" ORDER BY ".$order." ";
+						if($sort)
+						{
+							$order.=$sort;
+						}
+					}
+					else
+					{
+						$order="";
+					}
+					$psql="SELECT z2\x2e*\n\t\t\t\t\t\tFROM (\n\t\t\t\t\t\t\tSELECT z\x31\x2e*, ROW_NUMBER() OVER(".$order.") AS jqgrid_row \n\t\t\t\t\t\t\t\tFROM (\n\t\t\t\t\t\t\t\t\t".$psql."\n\t\t\t\t\t\t\t\t) z1\n\t\t\t\t\t\t) z\x32\n\t\t\t\t\tWHERE z2.jqgrid_row BETWEEN ".($offset+1)." AND ".($offset+$nrows);
+				}
+				else
+					$psql.=strpos(strtoupper($psql),'WHERE')?" and 1=2":" WHERE 1=2";
+				break;
 		}
 		return$psql;
 	}
@@ -124,20 +150,26 @@ class jqGridDB
 			$sql->closeCursor();
 		}
 	}
-	public static function columnCount($rs){${"GLOBALS"}["tkassxqrirw"]="rs";if(${${"GLOBALS"}["tkassxqrirw"]}){return$rs->columnCount();}else{return 0;}}public static function getColumnMeta($index,$sql){if($sql&&${${"GLOBALS"}["vcwsuphnbfx"]}>=0){$qyrnllc="index";return$sql->getColumnMeta(${$qyrnllc});}}
+	public static function columnCount($rs){${"GLOBALS"}["tkassxqrirw"]="rs";if(${${"GLOBALS"}["tkassxqrirw"]}){return$rs->columnCount();}else{return 0;}}
+	public static function getColumnMeta($index,$sql)
+	{
+		if($sql&&${${"GLOBALS"}["vcwsuphnbfx"]}>=0)
+		{
+			$qyrnllc="index";
+			return$sql->getColumnMeta(${$qyrnllc});
+		}
+	}
 	public static function MetaType($t,$dbtype)
 	{
-		$meta="numeric";
+		$meta="string";
 		if(is_array($t))
 		{
-			${"GLOBALS"}["gunoclwgumnh"]="len";
-			$oicyfmljj="len";
-			${${"GLOBALS"}["gunoclwgumnh"]}=$t["len"];
+			$len=$t["len"];
 			switch($dbtype)
 			{
 				case"pgsql":
 					$type=$t["native_type"];
-					$meta=self::MetaPgsql($type,${$oicyfmljj});
+					$meta=self::MetaPgsql($type,$len);
 					break;
 				case"mysql":
 					$type=isset($t["native_type"])?$t["native_type"]:"int";
